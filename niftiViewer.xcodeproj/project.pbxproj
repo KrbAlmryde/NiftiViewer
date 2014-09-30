@@ -1,0 +1,879 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		831FF057199034B2008005F7 /* kyle_brain.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 831FF056199034AC008005F7 /* kyle_brain.nii.gz */; };
+		8330CD421982C1D40004660B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8330CD3D1982C1D40004660B /* AVFoundation.framework */; };
+		8330CD431982C1D40004660B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8330CD3E1982C1D40004660B /* Carbon.framework */; };
+		8330CD441982C1D40004660B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8330CD3F1982C1D40004660B /* Cocoa.framework */; };
+		8330CD451982C1D40004660B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8330CD401982C1D40004660B /* CoreMedia.framework */; };
+		8330CD461982C1D40004660B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8330CD411982C1D40004660B /* QuartzCore.framework */; };
+		8330CD5A198328D20004660B /* NiftiViewer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8330CD58198328D20004660B /* NiftiViewer.mm */; };
+		8330CD5B198344A10004660B /* Main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 92A20F8F186168C800640343 /* Main.mm */; };
+		83537F0F198997D800940A7E /* nifti1_io.c in Sources */ = {isa = PBXBuildFile; fileRef = D21322A518BD27850024DCB6 /* nifti1_io.c */; };
+		83537F10198997D800940A7E /* nifti1_io.h in Sources */ = {isa = PBXBuildFile; fileRef = D21322A618BD27850024DCB6 /* nifti1_io.h */; };
+		83537F11198997D800940A7E /* nifti1.h in Sources */ = {isa = PBXBuildFile; fileRef = D21322A718BD27850024DCB6 /* nifti1.h */; };
+		83537F13198997D800940A7E /* znzlib.c in Sources */ = {isa = PBXBuildFile; fileRef = D21322A818BD27850024DCB6 /* znzlib.c */; };
+		83537F14198997D800940A7E /* znzlib.h in Sources */ = {isa = PBXBuildFile; fileRef = D21322A918BD27850024DCB6 /* znzlib.h */; };
+		83537F1619899A8000940A7E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 83537F1519899A8000940A7E /* libz.dylib */; };
+		8371C50A198C739E00EE1548 /* ball1.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C501198C738D00EE1548 /* ball1.nii.gz */; };
+		8371C50B198C739E00EE1548 /* ball2.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C502198C738D00EE1548 /* ball2.nii.gz */; };
+		8371C50C198C739E00EE1548 /* ball3.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C503198C738D00EE1548 /* ball3.nii.gz */; };
+		8371C50D198C739E00EE1548 /* ball4.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C504198C738D00EE1548 /* ball4.nii.gz */; };
+		8371C50E198C739E00EE1548 /* ball5.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C505198C738D00EE1548 /* ball5.nii.gz */; };
+		8371C50F198C739E00EE1548 /* ball6.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C506198C738D00EE1548 /* ball6.nii.gz */; };
+		8371C510198C739E00EE1548 /* ball7.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C507198C738D00EE1548 /* ball7.nii.gz */; };
+		8371C511198C739E00EE1548 /* ball8.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C508198C738D00EE1548 /* ball8.nii.gz */; };
+		8371C512198C739E00EE1548 /* ball9.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C509198C738D00EE1548 /* ball9.nii.gz */; };
+		8371C515198C892900EE1548 /* axis.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C513198C891700EE1548 /* axis.fsh */; };
+		8371C516198C892900EE1548 /* axis.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C514198C891700EE1548 /* axis.vsh */; };
+		83BFE5C919ABF168009E5C84 /* blend.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83BFE5C819ABF049009E5C84 /* blend.fsh */; };
+		83BFE5CA19ABF168009E5C84 /* blend.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83BFE5C719ABF03A009E5C84 /* blend.vsh */; };
+		83BFE5CB19ABF168009E5C84 /* cluster.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83BFE5C519ABDF12009E5C84 /* cluster.vsh */; };
+		83BFE5CC19ABF168009E5C84 /* cluster.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83BFE5C619ABDF12009E5C84 /* cluster.fsh */; };
+		83BFE5CD19ABF168009E5C84 /* brain.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8374636719A54ED400F71A2A /* brain.fsh */; };
+		83BFE5CE19ABF168009E5C84 /* brain.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8374636819A54ED400F71A2A /* brain.vsh */; };
+		83D9D2A0198AFB9E006E6ACB /* IC11_s1.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D23D198AFB44006E6ACB /* IC11_s1.nii.gz */; };
+		83D9D2A1198AFB9E006E6ACB /* IC11_s2.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D23E198AFB44006E6ACB /* IC11_s2.nii.gz */; };
+		83D9D2A2198AFB9E006E6ACB /* IC11_s3.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D23F198AFB44006E6ACB /* IC11_s3.nii.gz */; };
+		83D9D2A3198AFB9E006E6ACB /* IC11_s4.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D240198AFB44006E6ACB /* IC11_s4.nii.gz */; };
+		83D9D2A4198AFB9E006E6ACB /* IC12_s1.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D241198AFB44006E6ACB /* IC12_s1.nii.gz */; };
+		83D9D2A5198AFB9E006E6ACB /* IC12_s2.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D242198AFB44006E6ACB /* IC12_s2.nii.gz */; };
+		83D9D2A6198AFB9E006E6ACB /* IC12_s3.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D243198AFB44006E6ACB /* IC12_s3.nii.gz */; };
+		83D9D2A7198AFB9E006E6ACB /* IC12_s4.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D244198AFB44006E6ACB /* IC12_s4.nii.gz */; };
+		83D9D2A8198AFB9E006E6ACB /* IC18_s1.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D245198AFB44006E6ACB /* IC18_s1.nii.gz */; };
+		83D9D2A9198AFB9E006E6ACB /* IC18_s2.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D246198AFB44006E6ACB /* IC18_s2.nii.gz */; };
+		83D9D2AA198AFB9E006E6ACB /* IC18_s3.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D247198AFB44006E6ACB /* IC18_s3.nii.gz */; };
+		83D9D2AB198AFB9E006E6ACB /* IC18_s4.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D248198AFB44006E6ACB /* IC18_s4.nii.gz */; };
+		83D9D2AC198AFB9E006E6ACB /* IC2_s1.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D249198AFB44006E6ACB /* IC2_s1.nii.gz */; };
+		83D9D2AD198AFB9E006E6ACB /* IC2_s2.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D24A198AFB44006E6ACB /* IC2_s2.nii.gz */; };
+		83D9D2AE198AFB9E006E6ACB /* IC2_s3.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D24B198AFB44006E6ACB /* IC2_s3.nii.gz */; };
+		83D9D2AF198AFB9E006E6ACB /* IC2_s4.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D24C198AFB44006E6ACB /* IC2_s4.nii.gz */; };
+		83D9D2B0198AFB9E006E6ACB /* IC4_s1.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D24D198AFB44006E6ACB /* IC4_s1.nii.gz */; };
+		83D9D2B1198AFB9E006E6ACB /* IC4_s2.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D24E198AFB44006E6ACB /* IC4_s2.nii.gz */; };
+		83D9D2B2198AFB9E006E6ACB /* IC4_s3.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D24F198AFB44006E6ACB /* IC4_s3.nii.gz */; };
+		83D9D2B3198AFB9E006E6ACB /* IC4_s4.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D250198AFB44006E6ACB /* IC4_s4.nii.gz */; };
+		83D9D2B4198AFB9E006E6ACB /* all_s1_IC25_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D252198AFB44006E6ACB /* all_s1_IC25_caez_2blur_LR.nii.gz */; };
+		83D9D2B5198AFB9E006E6ACB /* all_s1_IC2_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D253198AFB44006E6ACB /* all_s1_IC2_caez_2blur_LR.nii.gz */; };
+		83D9D2B6198AFB9E006E6ACB /* all_s1_IC31_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D254198AFB44006E6ACB /* all_s1_IC31_caez_2blur_LR.nii.gz */; };
+		83D9D2B7198AFB9E006E6ACB /* all_s1_IC39_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D255198AFB44006E6ACB /* all_s1_IC39_caez_2blur_LR.nii.gz */; };
+		83D9D2B8198AFB9E006E6ACB /* all_s1_IC7_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D256198AFB44006E6ACB /* all_s1_IC7_caez_2blur_LR.nii.gz */; };
+		83D9D2B9198AFB9E006E6ACB /* all_s2_IC25_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D257198AFB44006E6ACB /* all_s2_IC25_caez_2blur_LR.nii.gz */; };
+		83D9D2BA198AFB9E006E6ACB /* all_s2_IC2_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D258198AFB44006E6ACB /* all_s2_IC2_caez_2blur_LR.nii.gz */; };
+		83D9D2BB198AFB9E006E6ACB /* all_s2_IC31_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D259198AFB44006E6ACB /* all_s2_IC31_caez_2blur_LR.nii.gz */; };
+		83D9D2BC198AFB9E006E6ACB /* all_s2_IC39_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D25A198AFB44006E6ACB /* all_s2_IC39_caez_2blur_LR.nii.gz */; };
+		83D9D2BD198AFB9E006E6ACB /* all_s2_IC7_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D25B198AFB44006E6ACB /* all_s2_IC7_caez_2blur_LR.nii.gz */; };
+		83D9D2BE198AFB9E006E6ACB /* all_s3_IC25_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D25C198AFB44006E6ACB /* all_s3_IC25_caez_2blur_LR.nii.gz */; };
+		83D9D2BF198AFB9E006E6ACB /* all_s3_IC2_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D25D198AFB44006E6ACB /* all_s3_IC2_caez_2blur_LR.nii.gz */; };
+		83D9D2C0198AFB9E006E6ACB /* all_s3_IC31_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D25E198AFB44006E6ACB /* all_s3_IC31_caez_2blur_LR.nii.gz */; };
+		83D9D2C1198AFB9E006E6ACB /* all_s3_IC39_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D25F198AFB44006E6ACB /* all_s3_IC39_caez_2blur_LR.nii.gz */; };
+		83D9D2C2198AFB9E006E6ACB /* all_s3_IC7_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D260198AFB44006E6ACB /* all_s3_IC7_caez_2blur_LR.nii.gz */; };
+		83D9D2C3198AFB9E006E6ACB /* mean_s1_IC2.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D26C198AFB44006E6ACB /* mean_s1_IC2.1D */; };
+		83D9D2C4198AFB9E006E6ACB /* mean_s1_IC25.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D26D198AFB44006E6ACB /* mean_s1_IC25.1D */; };
+		83D9D2C5198AFB9E006E6ACB /* mean_s1_IC31.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D26E198AFB44006E6ACB /* mean_s1_IC31.1D */; };
+		83D9D2C6198AFB9E006E6ACB /* mean_s1_IC39.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D26F198AFB44006E6ACB /* mean_s1_IC39.1D */; };
+		83D9D2C7198AFB9E006E6ACB /* mean_s1_IC7.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D270198AFB44006E6ACB /* mean_s1_IC7.1D */; };
+		83D9D2C8198AFB9E006E6ACB /* mean_s2_IC2.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D271198AFB44006E6ACB /* mean_s2_IC2.1D */; };
+		83D9D2C9198AFB9E006E6ACB /* mean_s2_IC25.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D272198AFB44006E6ACB /* mean_s2_IC25.1D */; };
+		83D9D2CA198AFB9E006E6ACB /* mean_s2_IC31.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D273198AFB44006E6ACB /* mean_s2_IC31.1D */; };
+		83D9D2CB198AFB9E006E6ACB /* mean_s2_IC39.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D274198AFB44006E6ACB /* mean_s2_IC39.1D */; };
+		83D9D2CC198AFB9E006E6ACB /* mean_s2_IC7.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D275198AFB44006E6ACB /* mean_s2_IC7.1D */; };
+		83D9D2CD198AFB9E006E6ACB /* mean_s3_IC2.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D276198AFB44006E6ACB /* mean_s3_IC2.1D */; };
+		83D9D2CE198AFB9E006E6ACB /* mean_s3_IC25.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D277198AFB44006E6ACB /* mean_s3_IC25.1D */; };
+		83D9D2CF198AFB9E006E6ACB /* mean_s3_IC31.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D278198AFB44006E6ACB /* mean_s3_IC31.1D */; };
+		83D9D2D0198AFB9E006E6ACB /* mean_s3_IC39.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D279198AFB44006E6ACB /* mean_s3_IC39.1D */; };
+		83D9D2D1198AFB9E006E6ACB /* mean_s3_IC7.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D27A198AFB44006E6ACB /* mean_s3_IC7.1D */; };
+		83D9D2F0198AFB9E006E6ACB /* ice.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D29A198AFB44006E6ACB /* ice.fsh */; };
+		83D9D2F1198AFB9E006E6ACB /* ice.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D29B198AFB44006E6ACB /* ice.vsh */; };
+		83D9D2F2198AFB9E006E6ACB /* wb1.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D29C198AFB44006E6ACB /* wb1.fsh */; };
+		83D9D2F3198AFB9E006E6ACB /* wb1.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D29D198AFB44006E6ACB /* wb1.vsh */; };
+		83D9D2F7198AFC74006E6ACB /* MNI_2mm.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D2F5198AFC5E006E6ACB /* MNI_2mm.nii.gz */; };
+		83D9D2F8198AFC74006E6ACB /* MNI_caez_N27.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D2F6198AFC5E006E6ACB /* MNI_caez_N27.nii.gz */; };
+		83ED57B51994373400FAE194 /* all_s1_IC2.nii in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83ED57A61994371A00FAE194 /* all_s1_IC2.nii */; };
+		83ED57B61994373400FAE194 /* all_s1_IC25.nii in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83ED57A71994371A00FAE194 /* all_s1_IC25.nii */; };
+		83ED57B71994373400FAE194 /* all_s1_IC31.nii in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83ED57A81994371A00FAE194 /* all_s1_IC31.nii */; };
+		83ED57B81994373400FAE194 /* all_s1_IC39.nii in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83ED57A91994371A00FAE194 /* all_s1_IC39.nii */; };
+		83ED57B91994373400FAE194 /* all_s1_IC7.nii in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83ED57AA1994371A00FAE194 /* all_s1_IC7.nii */; };
+		83ED57BA1994373400FAE194 /* all_s2_IC2.nii in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83ED57AB1994371A00FAE194 /* all_s2_IC2.nii */; };
+		83ED57BB1994373400FAE194 /* all_s2_IC25.nii in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83ED57AC1994371A00FAE194 /* all_s2_IC25.nii */; };
+		83ED57BC1994373400FAE194 /* all_s2_IC31.nii in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83ED57AD1994371A00FAE194 /* all_s2_IC31.nii */; };
+		83ED57BD1994373400FAE194 /* all_s2_IC39.nii in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83ED57AE1994371A00FAE194 /* all_s2_IC39.nii */; };
+		83ED57BE1994373400FAE194 /* all_s2_IC7.nii in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83ED57AF1994371A00FAE194 /* all_s2_IC7.nii */; };
+		83ED57BF1994373400FAE194 /* all_s3_IC2.nii in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83ED57B01994371A00FAE194 /* all_s3_IC2.nii */; };
+		83ED57C01994373400FAE194 /* all_s3_IC25.nii in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83ED57B11994371A00FAE194 /* all_s3_IC25.nii */; };
+		83ED57C11994373400FAE194 /* all_s3_IC31.nii in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83ED57B21994371A00FAE194 /* all_s3_IC31.nii */; };
+		83ED57C21994373400FAE194 /* all_s3_IC39.nii in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83ED57B31994371A00FAE194 /* all_s3_IC39.nii */; };
+		83ED57C31994373400FAE194 /* all_s3_IC7.nii in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83ED57B41994371A00FAE194 /* all_s3_IC7.nii */; };
+		83ED57C61994466A00FAE194 /* wire.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83ED57C4199445BF00FAE194 /* wire.vsh */; };
+		83ED57C71994466A00FAE194 /* wire.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83ED57C51994463000FAE194 /* wire.fsh */; };
+		83F1727D19DB480500E5AB06 /* Aluminum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F1727C19DB480500E5AB06 /* Aluminum.framework */; };
+		83F1727F19DB52A500E5AB06 /* NiftiData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83F1727E19DB52A500E5AB06 /* NiftiData.mm */; };
+		83F1728419DB53D600E5AB06 /* NiftiImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83F1728319DB53D600E5AB06 /* NiftiImage.mm */; };
+		AF1C603AF346E0CEE762D846 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1C60F47E1E14BEB16E0E17 /* Foundation.framework */; };
+		AF1C682900BD13EA359EDC78 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1C655EE4FE4DC1B25A1AD2 /* OpenGL.framework */; };
+		AF1C6A5BF480E07C71804794 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1C6CF7FFC6FE12E6DA059F /* AppKit.framework */; };
+		AF1C6C0071FD7E4796FCF229 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1C668D306F787DE5E8A6D9 /* CoreFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B5E384D81780C9B400E8C57D /* Copy Files (86 items) */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				83BFE5C919ABF168009E5C84 /* blend.fsh in Copy Files (86 items) */,
+				83BFE5CA19ABF168009E5C84 /* blend.vsh in Copy Files (86 items) */,
+				83BFE5CB19ABF168009E5C84 /* cluster.vsh in Copy Files (86 items) */,
+				83BFE5CC19ABF168009E5C84 /* cluster.fsh in Copy Files (86 items) */,
+				83BFE5CD19ABF168009E5C84 /* brain.fsh in Copy Files (86 items) */,
+				83BFE5CE19ABF168009E5C84 /* brain.vsh in Copy Files (86 items) */,
+				83ED57C61994466A00FAE194 /* wire.vsh in Copy Files (86 items) */,
+				83ED57C71994466A00FAE194 /* wire.fsh in Copy Files (86 items) */,
+				83ED57B51994373400FAE194 /* all_s1_IC2.nii in Copy Files (86 items) */,
+				83ED57B61994373400FAE194 /* all_s1_IC25.nii in Copy Files (86 items) */,
+				83ED57B71994373400FAE194 /* all_s1_IC31.nii in Copy Files (86 items) */,
+				83ED57B81994373400FAE194 /* all_s1_IC39.nii in Copy Files (86 items) */,
+				83ED57B91994373400FAE194 /* all_s1_IC7.nii in Copy Files (86 items) */,
+				83ED57BA1994373400FAE194 /* all_s2_IC2.nii in Copy Files (86 items) */,
+				83ED57BB1994373400FAE194 /* all_s2_IC25.nii in Copy Files (86 items) */,
+				83ED57BC1994373400FAE194 /* all_s2_IC31.nii in Copy Files (86 items) */,
+				83ED57BD1994373400FAE194 /* all_s2_IC39.nii in Copy Files (86 items) */,
+				83ED57BE1994373400FAE194 /* all_s2_IC7.nii in Copy Files (86 items) */,
+				83ED57BF1994373400FAE194 /* all_s3_IC2.nii in Copy Files (86 items) */,
+				83ED57C01994373400FAE194 /* all_s3_IC25.nii in Copy Files (86 items) */,
+				83ED57C11994373400FAE194 /* all_s3_IC31.nii in Copy Files (86 items) */,
+				83ED57C21994373400FAE194 /* all_s3_IC39.nii in Copy Files (86 items) */,
+				83ED57C31994373400FAE194 /* all_s3_IC7.nii in Copy Files (86 items) */,
+				8371C515198C892900EE1548 /* axis.fsh in Copy Files (86 items) */,
+				8371C516198C892900EE1548 /* axis.vsh in Copy Files (86 items) */,
+				8371C50A198C739E00EE1548 /* ball1.nii.gz in Copy Files (86 items) */,
+				8371C50B198C739E00EE1548 /* ball2.nii.gz in Copy Files (86 items) */,
+				8371C50C198C739E00EE1548 /* ball3.nii.gz in Copy Files (86 items) */,
+				8371C50D198C739E00EE1548 /* ball4.nii.gz in Copy Files (86 items) */,
+				8371C50E198C739E00EE1548 /* ball5.nii.gz in Copy Files (86 items) */,
+				8371C50F198C739E00EE1548 /* ball6.nii.gz in Copy Files (86 items) */,
+				8371C510198C739E00EE1548 /* ball7.nii.gz in Copy Files (86 items) */,
+				8371C511198C739E00EE1548 /* ball8.nii.gz in Copy Files (86 items) */,
+				8371C512198C739E00EE1548 /* ball9.nii.gz in Copy Files (86 items) */,
+				83D9D2F7198AFC74006E6ACB /* MNI_2mm.nii.gz in Copy Files (86 items) */,
+				83D9D2F8198AFC74006E6ACB /* MNI_caez_N27.nii.gz in Copy Files (86 items) */,
+				83D9D2A0198AFB9E006E6ACB /* IC11_s1.nii.gz in Copy Files (86 items) */,
+				83D9D2A1198AFB9E006E6ACB /* IC11_s2.nii.gz in Copy Files (86 items) */,
+				83D9D2A2198AFB9E006E6ACB /* IC11_s3.nii.gz in Copy Files (86 items) */,
+				83D9D2A3198AFB9E006E6ACB /* IC11_s4.nii.gz in Copy Files (86 items) */,
+				83D9D2A4198AFB9E006E6ACB /* IC12_s1.nii.gz in Copy Files (86 items) */,
+				83D9D2A5198AFB9E006E6ACB /* IC12_s2.nii.gz in Copy Files (86 items) */,
+				83D9D2A6198AFB9E006E6ACB /* IC12_s3.nii.gz in Copy Files (86 items) */,
+				83D9D2A7198AFB9E006E6ACB /* IC12_s4.nii.gz in Copy Files (86 items) */,
+				83D9D2A8198AFB9E006E6ACB /* IC18_s1.nii.gz in Copy Files (86 items) */,
+				83D9D2A9198AFB9E006E6ACB /* IC18_s2.nii.gz in Copy Files (86 items) */,
+				83D9D2AA198AFB9E006E6ACB /* IC18_s3.nii.gz in Copy Files (86 items) */,
+				83D9D2AB198AFB9E006E6ACB /* IC18_s4.nii.gz in Copy Files (86 items) */,
+				83D9D2AC198AFB9E006E6ACB /* IC2_s1.nii.gz in Copy Files (86 items) */,
+				83D9D2AD198AFB9E006E6ACB /* IC2_s2.nii.gz in Copy Files (86 items) */,
+				83D9D2AE198AFB9E006E6ACB /* IC2_s3.nii.gz in Copy Files (86 items) */,
+				83D9D2AF198AFB9E006E6ACB /* IC2_s4.nii.gz in Copy Files (86 items) */,
+				83D9D2B0198AFB9E006E6ACB /* IC4_s1.nii.gz in Copy Files (86 items) */,
+				83D9D2B1198AFB9E006E6ACB /* IC4_s2.nii.gz in Copy Files (86 items) */,
+				83D9D2B2198AFB9E006E6ACB /* IC4_s3.nii.gz in Copy Files (86 items) */,
+				831FF057199034B2008005F7 /* kyle_brain.nii.gz in Copy Files (86 items) */,
+				83D9D2B3198AFB9E006E6ACB /* IC4_s4.nii.gz in Copy Files (86 items) */,
+				83D9D2B4198AFB9E006E6ACB /* all_s1_IC25_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
+				83D9D2B5198AFB9E006E6ACB /* all_s1_IC2_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
+				83D9D2B6198AFB9E006E6ACB /* all_s1_IC31_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
+				83D9D2B7198AFB9E006E6ACB /* all_s1_IC39_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
+				83D9D2B8198AFB9E006E6ACB /* all_s1_IC7_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
+				83D9D2B9198AFB9E006E6ACB /* all_s2_IC25_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
+				83D9D2BA198AFB9E006E6ACB /* all_s2_IC2_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
+				83D9D2BB198AFB9E006E6ACB /* all_s2_IC31_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
+				83D9D2BC198AFB9E006E6ACB /* all_s2_IC39_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
+				83D9D2BD198AFB9E006E6ACB /* all_s2_IC7_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
+				83D9D2BE198AFB9E006E6ACB /* all_s3_IC25_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
+				83D9D2BF198AFB9E006E6ACB /* all_s3_IC2_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
+				83D9D2C0198AFB9E006E6ACB /* all_s3_IC31_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
+				83D9D2C1198AFB9E006E6ACB /* all_s3_IC39_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
+				83D9D2C2198AFB9E006E6ACB /* all_s3_IC7_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
+				83D9D2C3198AFB9E006E6ACB /* mean_s1_IC2.1D in Copy Files (86 items) */,
+				83D9D2C4198AFB9E006E6ACB /* mean_s1_IC25.1D in Copy Files (86 items) */,
+				83D9D2C5198AFB9E006E6ACB /* mean_s1_IC31.1D in Copy Files (86 items) */,
+				83D9D2C6198AFB9E006E6ACB /* mean_s1_IC39.1D in Copy Files (86 items) */,
+				83D9D2C7198AFB9E006E6ACB /* mean_s1_IC7.1D in Copy Files (86 items) */,
+				83D9D2C8198AFB9E006E6ACB /* mean_s2_IC2.1D in Copy Files (86 items) */,
+				83D9D2C9198AFB9E006E6ACB /* mean_s2_IC25.1D in Copy Files (86 items) */,
+				83D9D2CA198AFB9E006E6ACB /* mean_s2_IC31.1D in Copy Files (86 items) */,
+				83D9D2CB198AFB9E006E6ACB /* mean_s2_IC39.1D in Copy Files (86 items) */,
+				83D9D2CC198AFB9E006E6ACB /* mean_s2_IC7.1D in Copy Files (86 items) */,
+				83D9D2CD198AFB9E006E6ACB /* mean_s3_IC2.1D in Copy Files (86 items) */,
+				83D9D2CE198AFB9E006E6ACB /* mean_s3_IC25.1D in Copy Files (86 items) */,
+				83D9D2CF198AFB9E006E6ACB /* mean_s3_IC31.1D in Copy Files (86 items) */,
+				83D9D2D0198AFB9E006E6ACB /* mean_s3_IC39.1D in Copy Files (86 items) */,
+				83D9D2D1198AFB9E006E6ACB /* mean_s3_IC7.1D in Copy Files (86 items) */,
+				83D9D2F0198AFB9E006E6ACB /* ice.fsh in Copy Files (86 items) */,
+				83D9D2F1198AFB9E006E6ACB /* ice.vsh in Copy Files (86 items) */,
+				83D9D2F2198AFB9E006E6ACB /* wb1.fsh in Copy Files (86 items) */,
+				83D9D2F3198AFB9E006E6ACB /* wb1.vsh in Copy Files (86 items) */,
+			);
+			name = "Copy Files (86 items)";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4C034D9E41282D3A90DC046F /* ActionProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActionProxy.h; path = niftiViewer/ActionProxy.h; sourceTree = "<group>"; };
+		831FF056199034AC008005F7 /* kyle_brain.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = kyle_brain.nii.gz; sourceTree = "<group>"; };
+		8330CD3D1982C1D40004660B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8330CD3E1982C1D40004660B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		8330CD3F1982C1D40004660B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		8330CD401982C1D40004660B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		8330CD411982C1D40004660B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8330CD561982E4960004660B /* nifti1_test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = nifti1_test.c; path = niftiViewer/niftilib/nifti1_test.c; sourceTree = "<group>"; };
+		8330CD58198328D20004660B /* NiftiViewer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NiftiViewer.mm; sourceTree = "<group>"; };
+		83537F1519899A8000940A7E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		8371C501198C738D00EE1548 /* ball1.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = ball1.nii.gz; sourceTree = "<group>"; };
+		8371C502198C738D00EE1548 /* ball2.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = ball2.nii.gz; sourceTree = "<group>"; };
+		8371C503198C738D00EE1548 /* ball3.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = ball3.nii.gz; sourceTree = "<group>"; };
+		8371C504198C738D00EE1548 /* ball4.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = ball4.nii.gz; sourceTree = "<group>"; };
+		8371C505198C738D00EE1548 /* ball5.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = ball5.nii.gz; sourceTree = "<group>"; };
+		8371C506198C738D00EE1548 /* ball6.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = ball6.nii.gz; sourceTree = "<group>"; };
+		8371C507198C738D00EE1548 /* ball7.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = ball7.nii.gz; sourceTree = "<group>"; };
+		8371C508198C738D00EE1548 /* ball8.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = ball8.nii.gz; sourceTree = "<group>"; };
+		8371C509198C738D00EE1548 /* ball9.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = ball9.nii.gz; sourceTree = "<group>"; };
+		8371C513198C891700EE1548 /* axis.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = axis.fsh; sourceTree = "<group>"; };
+		8371C514198C891700EE1548 /* axis.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = axis.vsh; sourceTree = "<group>"; };
+		8374636719A54ED400F71A2A /* brain.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = brain.fsh; sourceTree = "<group>"; };
+		8374636819A54ED400F71A2A /* brain.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = brain.vsh; sourceTree = "<group>"; };
+		83BFE5C519ABDF12009E5C84 /* cluster.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = cluster.vsh; sourceTree = "<group>"; };
+		83BFE5C619ABDF12009E5C84 /* cluster.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = cluster.fsh; sourceTree = "<group>"; };
+		83BFE5C719ABF03A009E5C84 /* blend.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = blend.vsh; path = ../../niftiViewer/blend.vsh; sourceTree = "<group>"; };
+		83BFE5C819ABF049009E5C84 /* blend.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = blend.fsh; path = ../../niftiViewer/blend.fsh; sourceTree = "<group>"; };
+		83D9D23D198AFB44006E6ACB /* IC11_s1.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC11_s1.nii.gz; sourceTree = "<group>"; };
+		83D9D23E198AFB44006E6ACB /* IC11_s2.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC11_s2.nii.gz; sourceTree = "<group>"; };
+		83D9D23F198AFB44006E6ACB /* IC11_s3.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC11_s3.nii.gz; sourceTree = "<group>"; };
+		83D9D240198AFB44006E6ACB /* IC11_s4.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC11_s4.nii.gz; sourceTree = "<group>"; };
+		83D9D241198AFB44006E6ACB /* IC12_s1.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC12_s1.nii.gz; sourceTree = "<group>"; };
+		83D9D242198AFB44006E6ACB /* IC12_s2.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC12_s2.nii.gz; sourceTree = "<group>"; };
+		83D9D243198AFB44006E6ACB /* IC12_s3.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC12_s3.nii.gz; sourceTree = "<group>"; };
+		83D9D244198AFB44006E6ACB /* IC12_s4.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC12_s4.nii.gz; sourceTree = "<group>"; };
+		83D9D245198AFB44006E6ACB /* IC18_s1.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC18_s1.nii.gz; sourceTree = "<group>"; };
+		83D9D246198AFB44006E6ACB /* IC18_s2.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC18_s2.nii.gz; sourceTree = "<group>"; };
+		83D9D247198AFB44006E6ACB /* IC18_s3.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC18_s3.nii.gz; sourceTree = "<group>"; };
+		83D9D248198AFB44006E6ACB /* IC18_s4.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC18_s4.nii.gz; sourceTree = "<group>"; };
+		83D9D249198AFB44006E6ACB /* IC2_s1.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC2_s1.nii.gz; sourceTree = "<group>"; };
+		83D9D24A198AFB44006E6ACB /* IC2_s2.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC2_s2.nii.gz; sourceTree = "<group>"; };
+		83D9D24B198AFB44006E6ACB /* IC2_s3.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC2_s3.nii.gz; sourceTree = "<group>"; };
+		83D9D24C198AFB44006E6ACB /* IC2_s4.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC2_s4.nii.gz; sourceTree = "<group>"; };
+		83D9D24D198AFB44006E6ACB /* IC4_s1.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC4_s1.nii.gz; sourceTree = "<group>"; };
+		83D9D24E198AFB44006E6ACB /* IC4_s2.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC4_s2.nii.gz; sourceTree = "<group>"; };
+		83D9D24F198AFB44006E6ACB /* IC4_s3.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC4_s3.nii.gz; sourceTree = "<group>"; };
+		83D9D250198AFB44006E6ACB /* IC4_s4.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC4_s4.nii.gz; sourceTree = "<group>"; };
+		83D9D252198AFB44006E6ACB /* all_s1_IC25_caez_2blur_LR.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = all_s1_IC25_caez_2blur_LR.nii.gz; sourceTree = "<group>"; };
+		83D9D253198AFB44006E6ACB /* all_s1_IC2_caez_2blur_LR.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = all_s1_IC2_caez_2blur_LR.nii.gz; sourceTree = "<group>"; };
+		83D9D254198AFB44006E6ACB /* all_s1_IC31_caez_2blur_LR.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = all_s1_IC31_caez_2blur_LR.nii.gz; sourceTree = "<group>"; };
+		83D9D255198AFB44006E6ACB /* all_s1_IC39_caez_2blur_LR.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = all_s1_IC39_caez_2blur_LR.nii.gz; sourceTree = "<group>"; };
+		83D9D256198AFB44006E6ACB /* all_s1_IC7_caez_2blur_LR.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = all_s1_IC7_caez_2blur_LR.nii.gz; sourceTree = "<group>"; };
+		83D9D257198AFB44006E6ACB /* all_s2_IC25_caez_2blur_LR.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = all_s2_IC25_caez_2blur_LR.nii.gz; sourceTree = "<group>"; };
+		83D9D258198AFB44006E6ACB /* all_s2_IC2_caez_2blur_LR.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = all_s2_IC2_caez_2blur_LR.nii.gz; sourceTree = "<group>"; };
+		83D9D259198AFB44006E6ACB /* all_s2_IC31_caez_2blur_LR.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = all_s2_IC31_caez_2blur_LR.nii.gz; sourceTree = "<group>"; };
+		83D9D25A198AFB44006E6ACB /* all_s2_IC39_caez_2blur_LR.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = all_s2_IC39_caez_2blur_LR.nii.gz; sourceTree = "<group>"; };
+		83D9D25B198AFB44006E6ACB /* all_s2_IC7_caez_2blur_LR.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = all_s2_IC7_caez_2blur_LR.nii.gz; sourceTree = "<group>"; };
+		83D9D25C198AFB44006E6ACB /* all_s3_IC25_caez_2blur_LR.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = all_s3_IC25_caez_2blur_LR.nii.gz; sourceTree = "<group>"; };
+		83D9D25D198AFB44006E6ACB /* all_s3_IC2_caez_2blur_LR.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = all_s3_IC2_caez_2blur_LR.nii.gz; sourceTree = "<group>"; };
+		83D9D25E198AFB44006E6ACB /* all_s3_IC31_caez_2blur_LR.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = all_s3_IC31_caez_2blur_LR.nii.gz; sourceTree = "<group>"; };
+		83D9D25F198AFB44006E6ACB /* all_s3_IC39_caez_2blur_LR.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = all_s3_IC39_caez_2blur_LR.nii.gz; sourceTree = "<group>"; };
+		83D9D260198AFB44006E6ACB /* all_s3_IC7_caez_2blur_LR.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = all_s3_IC7_caez_2blur_LR.nii.gz; sourceTree = "<group>"; };
+		83D9D26C198AFB44006E6ACB /* mean_s1_IC2.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = mean_s1_IC2.1D; sourceTree = "<group>"; };
+		83D9D26D198AFB44006E6ACB /* mean_s1_IC25.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = mean_s1_IC25.1D; sourceTree = "<group>"; };
+		83D9D26E198AFB44006E6ACB /* mean_s1_IC31.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = mean_s1_IC31.1D; sourceTree = "<group>"; };
+		83D9D26F198AFB44006E6ACB /* mean_s1_IC39.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = mean_s1_IC39.1D; sourceTree = "<group>"; };
+		83D9D270198AFB44006E6ACB /* mean_s1_IC7.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = mean_s1_IC7.1D; sourceTree = "<group>"; };
+		83D9D271198AFB44006E6ACB /* mean_s2_IC2.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = mean_s2_IC2.1D; sourceTree = "<group>"; };
+		83D9D272198AFB44006E6ACB /* mean_s2_IC25.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = mean_s2_IC25.1D; sourceTree = "<group>"; };
+		83D9D273198AFB44006E6ACB /* mean_s2_IC31.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = mean_s2_IC31.1D; sourceTree = "<group>"; };
+		83D9D274198AFB44006E6ACB /* mean_s2_IC39.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = mean_s2_IC39.1D; sourceTree = "<group>"; };
+		83D9D275198AFB44006E6ACB /* mean_s2_IC7.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = mean_s2_IC7.1D; sourceTree = "<group>"; };
+		83D9D276198AFB44006E6ACB /* mean_s3_IC2.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = mean_s3_IC2.1D; sourceTree = "<group>"; };
+		83D9D277198AFB44006E6ACB /* mean_s3_IC25.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = mean_s3_IC25.1D; sourceTree = "<group>"; };
+		83D9D278198AFB44006E6ACB /* mean_s3_IC31.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = mean_s3_IC31.1D; sourceTree = "<group>"; };
+		83D9D279198AFB44006E6ACB /* mean_s3_IC39.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = mean_s3_IC39.1D; sourceTree = "<group>"; };
+		83D9D27A198AFB44006E6ACB /* mean_s3_IC7.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = mean_s3_IC7.1D; sourceTree = "<group>"; };
+		83D9D27B198AFB44006E6ACB /* std_s1_IC2.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = std_s1_IC2.1D; sourceTree = "<group>"; };
+		83D9D27C198AFB44006E6ACB /* std_s1_IC25.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = std_s1_IC25.1D; sourceTree = "<group>"; };
+		83D9D27D198AFB44006E6ACB /* std_s1_IC31.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = std_s1_IC31.1D; sourceTree = "<group>"; };
+		83D9D27E198AFB44006E6ACB /* std_s1_IC39.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = std_s1_IC39.1D; sourceTree = "<group>"; };
+		83D9D27F198AFB44006E6ACB /* std_s1_IC7.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = std_s1_IC7.1D; sourceTree = "<group>"; };
+		83D9D280198AFB44006E6ACB /* std_s2_IC2.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = std_s2_IC2.1D; sourceTree = "<group>"; };
+		83D9D281198AFB44006E6ACB /* std_s2_IC25.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = std_s2_IC25.1D; sourceTree = "<group>"; };
+		83D9D282198AFB44006E6ACB /* std_s2_IC31.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = std_s2_IC31.1D; sourceTree = "<group>"; };
+		83D9D283198AFB44006E6ACB /* std_s2_IC39.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = std_s2_IC39.1D; sourceTree = "<group>"; };
+		83D9D284198AFB44006E6ACB /* std_s2_IC7.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = std_s2_IC7.1D; sourceTree = "<group>"; };
+		83D9D285198AFB44006E6ACB /* std_s3_IC2.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = std_s3_IC2.1D; sourceTree = "<group>"; };
+		83D9D286198AFB44006E6ACB /* std_s3_IC25.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = std_s3_IC25.1D; sourceTree = "<group>"; };
+		83D9D287198AFB44006E6ACB /* std_s3_IC31.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = std_s3_IC31.1D; sourceTree = "<group>"; };
+		83D9D288198AFB44006E6ACB /* std_s3_IC39.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = std_s3_IC39.1D; sourceTree = "<group>"; };
+		83D9D289198AFB44006E6ACB /* std_s3_IC7.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = std_s3_IC7.1D; sourceTree = "<group>"; };
+		83D9D28A198AFB44006E6ACB /* tmap_s1_IC2.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = tmap_s1_IC2.1D; sourceTree = "<group>"; };
+		83D9D28B198AFB44006E6ACB /* tmap_s1_IC25.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = tmap_s1_IC25.1D; sourceTree = "<group>"; };
+		83D9D28C198AFB44006E6ACB /* tmap_s1_IC31.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = tmap_s1_IC31.1D; sourceTree = "<group>"; };
+		83D9D28D198AFB44006E6ACB /* tmap_s1_IC39.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = tmap_s1_IC39.1D; sourceTree = "<group>"; };
+		83D9D28E198AFB44006E6ACB /* tmap_s1_IC7.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = tmap_s1_IC7.1D; sourceTree = "<group>"; };
+		83D9D28F198AFB44006E6ACB /* tmap_s2_IC2.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = tmap_s2_IC2.1D; sourceTree = "<group>"; };
+		83D9D290198AFB44006E6ACB /* tmap_s2_IC25.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = tmap_s2_IC25.1D; sourceTree = "<group>"; };
+		83D9D291198AFB44006E6ACB /* tmap_s2_IC31.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = tmap_s2_IC31.1D; sourceTree = "<group>"; };
+		83D9D292198AFB44006E6ACB /* tmap_s2_IC39.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = tmap_s2_IC39.1D; sourceTree = "<group>"; };
+		83D9D293198AFB44006E6ACB /* tmap_s2_IC7.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = tmap_s2_IC7.1D; sourceTree = "<group>"; };
+		83D9D294198AFB44006E6ACB /* tmap_s3_IC2.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = tmap_s3_IC2.1D; sourceTree = "<group>"; };
+		83D9D295198AFB44006E6ACB /* tmap_s3_IC25.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = tmap_s3_IC25.1D; sourceTree = "<group>"; };
+		83D9D296198AFB44006E6ACB /* tmap_s3_IC31.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = tmap_s3_IC31.1D; sourceTree = "<group>"; };
+		83D9D297198AFB44006E6ACB /* tmap_s3_IC39.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = tmap_s3_IC39.1D; sourceTree = "<group>"; };
+		83D9D298198AFB44006E6ACB /* tmap_s3_IC7.1D */ = {isa = PBXFileReference; lastKnownFileType = text; path = tmap_s3_IC7.1D; sourceTree = "<group>"; };
+		83D9D29A198AFB44006E6ACB /* ice.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = ice.fsh; sourceTree = "<group>"; };
+		83D9D29B198AFB44006E6ACB /* ice.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = ice.vsh; sourceTree = "<group>"; };
+		83D9D29C198AFB44006E6ACB /* wb1.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = wb1.fsh; sourceTree = "<group>"; };
+		83D9D29D198AFB44006E6ACB /* wb1.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = wb1.vsh; sourceTree = "<group>"; };
+		83D9D2F5198AFC5E006E6ACB /* MNI_2mm.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = MNI_2mm.nii.gz; sourceTree = "<group>"; };
+		83D9D2F6198AFC5E006E6ACB /* MNI_caez_N27.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = MNI_caez_N27.nii.gz; sourceTree = "<group>"; };
+		83ED57A61994371A00FAE194 /* all_s1_IC2.nii */ = {isa = PBXFileReference; lastKnownFileType = file; path = all_s1_IC2.nii; sourceTree = "<group>"; };
+		83ED57A71994371A00FAE194 /* all_s1_IC25.nii */ = {isa = PBXFileReference; lastKnownFileType = file; path = all_s1_IC25.nii; sourceTree = "<group>"; };
+		83ED57A81994371A00FAE194 /* all_s1_IC31.nii */ = {isa = PBXFileReference; lastKnownFileType = file; path = all_s1_IC31.nii; sourceTree = "<group>"; };
+		83ED57A91994371A00FAE194 /* all_s1_IC39.nii */ = {isa = PBXFileReference; lastKnownFileType = file; path = all_s1_IC39.nii; sourceTree = "<group>"; };
+		83ED57AA1994371A00FAE194 /* all_s1_IC7.nii */ = {isa = PBXFileReference; lastKnownFileType = file; path = all_s1_IC7.nii; sourceTree = "<group>"; };
+		83ED57AB1994371A00FAE194 /* all_s2_IC2.nii */ = {isa = PBXFileReference; lastKnownFileType = file; path = all_s2_IC2.nii; sourceTree = "<group>"; };
+		83ED57AC1994371A00FAE194 /* all_s2_IC25.nii */ = {isa = PBXFileReference; lastKnownFileType = file; path = all_s2_IC25.nii; sourceTree = "<group>"; };
+		83ED57AD1994371A00FAE194 /* all_s2_IC31.nii */ = {isa = PBXFileReference; lastKnownFileType = file; path = all_s2_IC31.nii; sourceTree = "<group>"; };
+		83ED57AE1994371A00FAE194 /* all_s2_IC39.nii */ = {isa = PBXFileReference; lastKnownFileType = file; path = all_s2_IC39.nii; sourceTree = "<group>"; };
+		83ED57AF1994371A00FAE194 /* all_s2_IC7.nii */ = {isa = PBXFileReference; lastKnownFileType = file; path = all_s2_IC7.nii; sourceTree = "<group>"; };
+		83ED57B01994371A00FAE194 /* all_s3_IC2.nii */ = {isa = PBXFileReference; lastKnownFileType = file; path = all_s3_IC2.nii; sourceTree = "<group>"; };
+		83ED57B11994371A00FAE194 /* all_s3_IC25.nii */ = {isa = PBXFileReference; lastKnownFileType = file; path = all_s3_IC25.nii; sourceTree = "<group>"; };
+		83ED57B21994371A00FAE194 /* all_s3_IC31.nii */ = {isa = PBXFileReference; lastKnownFileType = file; path = all_s3_IC31.nii; sourceTree = "<group>"; };
+		83ED57B31994371A00FAE194 /* all_s3_IC39.nii */ = {isa = PBXFileReference; lastKnownFileType = file; path = all_s3_IC39.nii; sourceTree = "<group>"; };
+		83ED57B41994371A00FAE194 /* all_s3_IC7.nii */ = {isa = PBXFileReference; lastKnownFileType = file; path = all_s3_IC7.nii; sourceTree = "<group>"; };
+		83ED57C4199445BF00FAE194 /* wire.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = wire.vsh; sourceTree = "<group>"; };
+		83ED57C51994463000FAE194 /* wire.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = wire.fsh; sourceTree = "<group>"; };
+		83F1727C19DB480500E5AB06 /* Aluminum.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Aluminum.framework; path = ../../../../../../Library/Frameworks/Aluminum.framework; sourceTree = "<group>"; };
+		83F1727E19DB52A500E5AB06 /* NiftiData.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = NiftiData.mm; sourceTree = "<group>"; };
+		83F1728219DB53D600E5AB06 /* NiftiImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NiftiImage.h; path = niftiViewer/NiftiImage.h; sourceTree = "<group>"; };
+		83F1728319DB53D600E5AB06 /* NiftiImage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NiftiImage.mm; sourceTree = "<group>"; };
+		83F1728519DB541D00E5AB06 /* NiftiData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NiftiData.h; path = niftiViewer/NiftiData.h; sourceTree = "<group>"; };
+		92A20F8F186168C800640343 /* Main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Main.mm; sourceTree = "<group>"; };
+		AF1C60F47E1E14BEB16E0E17 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AF1C655EE4FE4DC1B25A1AD2 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		AF1C668D306F787DE5E8A6D9 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		AF1C6CF7FFC6FE12E6DA059F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B5E384DA1780C9B400E8C57D /* niftiViewer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = niftiViewer; sourceTree = BUILT_PRODUCTS_DIR; };
+		D21322A418BD27850024DCB6 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = niftiViewer/niftilib/config.h; sourceTree = "<group>"; };
+		D21322A518BD27850024DCB6 /* nifti1_io.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = nifti1_io.c; path = niftiViewer/niftilib/nifti1_io.c; sourceTree = "<group>"; };
+		D21322A618BD27850024DCB6 /* nifti1_io.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nifti1_io.h; path = niftiViewer/niftilib/nifti1_io.h; sourceTree = "<group>"; };
+		D21322A718BD27850024DCB6 /* nifti1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nifti1.h; path = niftiViewer/niftilib/nifti1.h; sourceTree = "<group>"; };
+		D21322A818BD27850024DCB6 /* znzlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = znzlib.c; path = niftiViewer/niftilib/znzlib.c; sourceTree = "<group>"; };
+		D21322A918BD27850024DCB6 /* znzlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = znzlib.h; path = niftiViewer/niftilib/znzlib.h; sourceTree = "<group>"; };
+		D213233618BD29360024DCB6 /* ActionProxy.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ActionProxy.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5E384D71780C9B400E8C57D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83537F1619899A8000940A7E /* libz.dylib in Frameworks */,
+				83F1727D19DB480500E5AB06 /* Aluminum.framework in Frameworks */,
+				8330CD421982C1D40004660B /* AVFoundation.framework in Frameworks */,
+				8330CD431982C1D40004660B /* Carbon.framework in Frameworks */,
+				8330CD441982C1D40004660B /* Cocoa.framework in Frameworks */,
+				8330CD451982C1D40004660B /* CoreMedia.framework in Frameworks */,
+				8330CD461982C1D40004660B /* QuartzCore.framework in Frameworks */,
+				AF1C682900BD13EA359EDC78 /* OpenGL.framework in Frameworks */,
+				AF1C6A5BF480E07C71804794 /* AppKit.framework in Frameworks */,
+				AF1C6C0071FD7E4796FCF229 /* CoreFoundation.framework in Frameworks */,
+				AF1C603AF346E0CEE762D846 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C034873F2D11BC52F98A95C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				83ED57A51994371A00FAE194 /* orig */,
+				83D9D2F4198AFC5E006E6ACB /* brains */,
+				83D9D23B198AFB44006E6ACB /* clusters */,
+				83D9D261198AFB44006E6ACB /* models */,
+				83D9D299198AFB44006E6ACB /* shaders */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8371C500198C738D00EE1548 /* ball */ = {
+			isa = PBXGroup;
+			children = (
+				8371C501198C738D00EE1548 /* ball1.nii.gz */,
+				8371C502198C738D00EE1548 /* ball2.nii.gz */,
+				8371C503198C738D00EE1548 /* ball3.nii.gz */,
+				8371C504198C738D00EE1548 /* ball4.nii.gz */,
+				8371C505198C738D00EE1548 /* ball5.nii.gz */,
+				8371C506198C738D00EE1548 /* ball6.nii.gz */,
+				8371C507198C738D00EE1548 /* ball7.nii.gz */,
+				8371C508198C738D00EE1548 /* ball8.nii.gz */,
+				8371C509198C738D00EE1548 /* ball9.nii.gz */,
+			);
+			path = ball;
+			sourceTree = "<group>";
+		};
+		83D9D23B198AFB44006E6ACB /* clusters */ = {
+			isa = PBXGroup;
+			children = (
+				8371C500198C738D00EE1548 /* ball */,
+				83D9D23C198AFB44006E6ACB /* ice */,
+				83D9D251198AFB44006E6ACB /* wb1 */,
+			);
+			name = clusters;
+			path = resources/clusters;
+			sourceTree = "<group>";
+		};
+		83D9D23C198AFB44006E6ACB /* ice */ = {
+			isa = PBXGroup;
+			children = (
+				83D9D23D198AFB44006E6ACB /* IC11_s1.nii.gz */,
+				83D9D23E198AFB44006E6ACB /* IC11_s2.nii.gz */,
+				83D9D23F198AFB44006E6ACB /* IC11_s3.nii.gz */,
+				83D9D240198AFB44006E6ACB /* IC11_s4.nii.gz */,
+				83D9D241198AFB44006E6ACB /* IC12_s1.nii.gz */,
+				83D9D242198AFB44006E6ACB /* IC12_s2.nii.gz */,
+				83D9D243198AFB44006E6ACB /* IC12_s3.nii.gz */,
+				83D9D244198AFB44006E6ACB /* IC12_s4.nii.gz */,
+				83D9D245198AFB44006E6ACB /* IC18_s1.nii.gz */,
+				83D9D246198AFB44006E6ACB /* IC18_s2.nii.gz */,
+				83D9D247198AFB44006E6ACB /* IC18_s3.nii.gz */,
+				83D9D248198AFB44006E6ACB /* IC18_s4.nii.gz */,
+				83D9D249198AFB44006E6ACB /* IC2_s1.nii.gz */,
+				83D9D24A198AFB44006E6ACB /* IC2_s2.nii.gz */,
+				83D9D24B198AFB44006E6ACB /* IC2_s3.nii.gz */,
+				83D9D24C198AFB44006E6ACB /* IC2_s4.nii.gz */,
+				83D9D24D198AFB44006E6ACB /* IC4_s1.nii.gz */,
+				83D9D24E198AFB44006E6ACB /* IC4_s2.nii.gz */,
+				83D9D24F198AFB44006E6ACB /* IC4_s3.nii.gz */,
+				83D9D250198AFB44006E6ACB /* IC4_s4.nii.gz */,
+			);
+			path = ice;
+			sourceTree = "<group>";
+		};
+		83D9D251198AFB44006E6ACB /* wb1 */ = {
+			isa = PBXGroup;
+			children = (
+				83D9D252198AFB44006E6ACB /* all_s1_IC25_caez_2blur_LR.nii.gz */,
+				83D9D253198AFB44006E6ACB /* all_s1_IC2_caez_2blur_LR.nii.gz */,
+				83D9D254198AFB44006E6ACB /* all_s1_IC31_caez_2blur_LR.nii.gz */,
+				83D9D255198AFB44006E6ACB /* all_s1_IC39_caez_2blur_LR.nii.gz */,
+				83D9D256198AFB44006E6ACB /* all_s1_IC7_caez_2blur_LR.nii.gz */,
+				83D9D257198AFB44006E6ACB /* all_s2_IC25_caez_2blur_LR.nii.gz */,
+				83D9D258198AFB44006E6ACB /* all_s2_IC2_caez_2blur_LR.nii.gz */,
+				83D9D259198AFB44006E6ACB /* all_s2_IC31_caez_2blur_LR.nii.gz */,
+				83D9D25A198AFB44006E6ACB /* all_s2_IC39_caez_2blur_LR.nii.gz */,
+				83D9D25B198AFB44006E6ACB /* all_s2_IC7_caez_2blur_LR.nii.gz */,
+				83D9D25C198AFB44006E6ACB /* all_s3_IC25_caez_2blur_LR.nii.gz */,
+				83D9D25D198AFB44006E6ACB /* all_s3_IC2_caez_2blur_LR.nii.gz */,
+				83D9D25E198AFB44006E6ACB /* all_s3_IC31_caez_2blur_LR.nii.gz */,
+				83D9D25F198AFB44006E6ACB /* all_s3_IC39_caez_2blur_LR.nii.gz */,
+				83D9D260198AFB44006E6ACB /* all_s3_IC7_caez_2blur_LR.nii.gz */,
+			);
+			path = wb1;
+			sourceTree = "<group>";
+		};
+		83D9D261198AFB44006E6ACB /* models */ = {
+			isa = PBXGroup;
+			children = (
+				83D9D26B198AFB44006E6ACB /* wb1 */,
+			);
+			name = models;
+			path = resources/models;
+			sourceTree = "<group>";
+		};
+		83D9D26B198AFB44006E6ACB /* wb1 */ = {
+			isa = PBXGroup;
+			children = (
+				83D9D26C198AFB44006E6ACB /* mean_s1_IC2.1D */,
+				83D9D26D198AFB44006E6ACB /* mean_s1_IC25.1D */,
+				83D9D26E198AFB44006E6ACB /* mean_s1_IC31.1D */,
+				83D9D26F198AFB44006E6ACB /* mean_s1_IC39.1D */,
+				83D9D270198AFB44006E6ACB /* mean_s1_IC7.1D */,
+				83D9D271198AFB44006E6ACB /* mean_s2_IC2.1D */,
+				83D9D272198AFB44006E6ACB /* mean_s2_IC25.1D */,
+				83D9D273198AFB44006E6ACB /* mean_s2_IC31.1D */,
+				83D9D274198AFB44006E6ACB /* mean_s2_IC39.1D */,
+				83D9D275198AFB44006E6ACB /* mean_s2_IC7.1D */,
+				83D9D276198AFB44006E6ACB /* mean_s3_IC2.1D */,
+				83D9D277198AFB44006E6ACB /* mean_s3_IC25.1D */,
+				83D9D278198AFB44006E6ACB /* mean_s3_IC31.1D */,
+				83D9D279198AFB44006E6ACB /* mean_s3_IC39.1D */,
+				83D9D27A198AFB44006E6ACB /* mean_s3_IC7.1D */,
+				83D9D27B198AFB44006E6ACB /* std_s1_IC2.1D */,
+				83D9D27C198AFB44006E6ACB /* std_s1_IC25.1D */,
+				83D9D27D198AFB44006E6ACB /* std_s1_IC31.1D */,
+				83D9D27E198AFB44006E6ACB /* std_s1_IC39.1D */,
+				83D9D27F198AFB44006E6ACB /* std_s1_IC7.1D */,
+				83D9D280198AFB44006E6ACB /* std_s2_IC2.1D */,
+				83D9D281198AFB44006E6ACB /* std_s2_IC25.1D */,
+				83D9D282198AFB44006E6ACB /* std_s2_IC31.1D */,
+				83D9D283198AFB44006E6ACB /* std_s2_IC39.1D */,
+				83D9D284198AFB44006E6ACB /* std_s2_IC7.1D */,
+				83D9D285198AFB44006E6ACB /* std_s3_IC2.1D */,
+				83D9D286198AFB44006E6ACB /* std_s3_IC25.1D */,
+				83D9D287198AFB44006E6ACB /* std_s3_IC31.1D */,
+				83D9D288198AFB44006E6ACB /* std_s3_IC39.1D */,
+				83D9D289198AFB44006E6ACB /* std_s3_IC7.1D */,
+				83D9D28A198AFB44006E6ACB /* tmap_s1_IC2.1D */,
+				83D9D28B198AFB44006E6ACB /* tmap_s1_IC25.1D */,
+				83D9D28C198AFB44006E6ACB /* tmap_s1_IC31.1D */,
+				83D9D28D198AFB44006E6ACB /* tmap_s1_IC39.1D */,
+				83D9D28E198AFB44006E6ACB /* tmap_s1_IC7.1D */,
+				83D9D28F198AFB44006E6ACB /* tmap_s2_IC2.1D */,
+				83D9D290198AFB44006E6ACB /* tmap_s2_IC25.1D */,
+				83D9D291198AFB44006E6ACB /* tmap_s2_IC31.1D */,
+				83D9D292198AFB44006E6ACB /* tmap_s2_IC39.1D */,
+				83D9D293198AFB44006E6ACB /* tmap_s2_IC7.1D */,
+				83D9D294198AFB44006E6ACB /* tmap_s3_IC2.1D */,
+				83D9D295198AFB44006E6ACB /* tmap_s3_IC25.1D */,
+				83D9D296198AFB44006E6ACB /* tmap_s3_IC31.1D */,
+				83D9D297198AFB44006E6ACB /* tmap_s3_IC39.1D */,
+				83D9D298198AFB44006E6ACB /* tmap_s3_IC7.1D */,
+			);
+			path = wb1;
+			sourceTree = "<group>";
+		};
+		83D9D299198AFB44006E6ACB /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				83BFE5C819ABF049009E5C84 /* blend.fsh */,
+				83BFE5C719ABF03A009E5C84 /* blend.vsh */,
+				8371C513198C891700EE1548 /* axis.fsh */,
+				8371C514198C891700EE1548 /* axis.vsh */,
+				83D9D29A198AFB44006E6ACB /* ice.fsh */,
+				83D9D29B198AFB44006E6ACB /* ice.vsh */,
+				83D9D29C198AFB44006E6ACB /* wb1.fsh */,
+				83D9D29D198AFB44006E6ACB /* wb1.vsh */,
+				83ED57C4199445BF00FAE194 /* wire.vsh */,
+				83ED57C51994463000FAE194 /* wire.fsh */,
+				83BFE5C519ABDF12009E5C84 /* cluster.vsh */,
+				83BFE5C619ABDF12009E5C84 /* cluster.fsh */,
+				8374636719A54ED400F71A2A /* brain.fsh */,
+				8374636819A54ED400F71A2A /* brain.vsh */,
+			);
+			name = shaders;
+			path = resources/shaders;
+			sourceTree = "<group>";
+		};
+		83D9D2F4198AFC5E006E6ACB /* brains */ = {
+			isa = PBXGroup;
+			children = (
+				831FF056199034AC008005F7 /* kyle_brain.nii.gz */,
+				83D9D2F5198AFC5E006E6ACB /* MNI_2mm.nii.gz */,
+				83D9D2F6198AFC5E006E6ACB /* MNI_caez_N27.nii.gz */,
+			);
+			name = brains;
+			path = resources/brains;
+			sourceTree = "<group>";
+		};
+		83ED57A51994371A00FAE194 /* orig */ = {
+			isa = PBXGroup;
+			children = (
+				83ED57A61994371A00FAE194 /* all_s1_IC2.nii */,
+				83ED57A71994371A00FAE194 /* all_s1_IC25.nii */,
+				83ED57A81994371A00FAE194 /* all_s1_IC31.nii */,
+				83ED57A91994371A00FAE194 /* all_s1_IC39.nii */,
+				83ED57AA1994371A00FAE194 /* all_s1_IC7.nii */,
+				83ED57AB1994371A00FAE194 /* all_s2_IC2.nii */,
+				83ED57AC1994371A00FAE194 /* all_s2_IC25.nii */,
+				83ED57AD1994371A00FAE194 /* all_s2_IC31.nii */,
+				83ED57AE1994371A00FAE194 /* all_s2_IC39.nii */,
+				83ED57AF1994371A00FAE194 /* all_s2_IC7.nii */,
+				83ED57B01994371A00FAE194 /* all_s3_IC2.nii */,
+				83ED57B11994371A00FAE194 /* all_s3_IC25.nii */,
+				83ED57B21994371A00FAE194 /* all_s3_IC31.nii */,
+				83ED57B31994371A00FAE194 /* all_s3_IC39.nii */,
+				83ED57B41994371A00FAE194 /* all_s3_IC7.nii */,
+			);
+			name = orig;
+			path = resources/clusters/orig;
+			sourceTree = "<group>";
+		};
+		83F1728019DB52F500E5AB06 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				83F1728519DB541D00E5AB06 /* NiftiData.h */,
+				83F1728219DB53D600E5AB06 /* NiftiImage.h */,
+				4C034D9E41282D3A90DC046F /* ActionProxy.h */,
+				83F1728119DB531200E5AB06 /* niftilib */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		83F1728119DB531200E5AB06 /* niftilib */ = {
+			isa = PBXGroup;
+			children = (
+				D21322A418BD27850024DCB6 /* config.h */,
+				D21322A618BD27850024DCB6 /* nifti1_io.h */,
+				D21322A718BD27850024DCB6 /* nifti1.h */,
+				D21322A918BD27850024DCB6 /* znzlib.h */,
+			);
+			name = niftilib;
+			sourceTree = "<group>";
+		};
+		B5E384D11780C9B400E8C57D = {
+			isa = PBXGroup;
+			children = (
+				83F1728019DB52F500E5AB06 /* Headers */,
+				B5E384DC1780C9B400E8C57D /* Source */,
+				4C034873F2D11BC52F98A95C /* Resources */,
+				B5E3853D17821BEF00E8C57D /* Frameworks */,
+				B5E384DB1780C9B400E8C57D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5E384DB1780C9B400E8C57D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5E384DA1780C9B400E8C57D /* niftiViewer */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5E384DC1780C9B400E8C57D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				92A20F8F186168C800640343 /* Main.mm */,
+				83F1727E19DB52A500E5AB06 /* NiftiData.mm */,
+				83F1728319DB53D600E5AB06 /* NiftiImage.mm */,
+				8330CD58198328D20004660B /* NiftiViewer.mm */,
+				D213233618BD29360024DCB6 /* ActionProxy.mm */,
+				B5E3852D1780D8DD00E8C57D /* niftilib */,
+			);
+			name = Source;
+			path = niftiViewer;
+			sourceTree = "<group>";
+		};
+		B5E3852D1780D8DD00E8C57D /* niftilib */ = {
+			isa = PBXGroup;
+			children = (
+				D21322A518BD27850024DCB6 /* nifti1_io.c */,
+				8330CD561982E4960004660B /* nifti1_test.c */,
+				D21322A818BD27850024DCB6 /* znzlib.c */,
+			);
+			name = niftilib;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		B5E3853D17821BEF00E8C57D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83537F1519899A8000940A7E /* libz.dylib */,
+				83F1727C19DB480500E5AB06 /* Aluminum.framework */,
+				8330CD3D1982C1D40004660B /* AVFoundation.framework */,
+				8330CD3E1982C1D40004660B /* Carbon.framework */,
+				8330CD3F1982C1D40004660B /* Cocoa.framework */,
+				8330CD401982C1D40004660B /* CoreMedia.framework */,
+				8330CD411982C1D40004660B /* QuartzCore.framework */,
+				AF1C655EE4FE4DC1B25A1AD2 /* OpenGL.framework */,
+				AF1C6CF7FFC6FE12E6DA059F /* AppKit.framework */,
+				AF1C668D306F787DE5E8A6D9 /* CoreFoundation.framework */,
+				AF1C60F47E1E14BEB16E0E17 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5E384D91780C9B400E8C57D /* niftiViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5E384E31780C9B400E8C57D /* Build configuration list for PBXNativeTarget "niftiViewer" */;
+			buildPhases = (
+				B5E384D61780C9B400E8C57D /* Sources */,
+				B5E384D71780C9B400E8C57D /* Frameworks */,
+				B5E384D81780C9B400E8C57D /* Copy Files (86 items) */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = niftiViewer;
+			productName = niftiViewer;
+			productReference = B5E384DA1780C9B400E8C57D /* niftiViewer */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5E384D21780C9B400E8C57D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Angus Forbes";
+			};
+			buildConfigurationList = B5E384D51780C9B400E8C57D /* Build configuration list for PBXProject "niftiViewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B5E384D11780C9B400E8C57D;
+			productRefGroup = B5E384DB1780C9B400E8C57D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5E384D91780C9B400E8C57D /* niftiViewer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5E384D61780C9B400E8C57D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83537F0F198997D800940A7E /* nifti1_io.c in Sources */,
+				83F1728419DB53D600E5AB06 /* NiftiImage.mm in Sources */,
+				83537F10198997D800940A7E /* nifti1_io.h in Sources */,
+				83F1727F19DB52A500E5AB06 /* NiftiData.mm in Sources */,
+				83537F11198997D800940A7E /* nifti1.h in Sources */,
+				83537F13198997D800940A7E /* znzlib.c in Sources */,
+				83537F14198997D800940A7E /* znzlib.h in Sources */,
+				8330CD5B198344A10004660B /* Main.mm in Sources */,
+				8330CD5A198328D20004660B /* NiftiViewer.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B5E384E11780C9B400E8C57D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /opt/local/include;
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B5E384E21780C9B400E8C57D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /opt/local/include;
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B5E384E41780C9B400E8C57D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/niftiViewer/niftilib\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B5E384E51780C9B400E8C57D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/niftiViewer/niftilib\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5E384D51780C9B400E8C57D /* Build configuration list for PBXProject "niftiViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5E384E11780C9B400E8C57D /* Debug */,
+				B5E384E21780C9B400E8C57D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5E384E31780C9B400E8C57D /* Build configuration list for PBXNativeTarget "niftiViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5E384E41780C9B400E8C57D /* Debug */,
+				B5E384E51780C9B400E8C57D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5E384D21780C9B400E8C57D /* Project object */;
+}

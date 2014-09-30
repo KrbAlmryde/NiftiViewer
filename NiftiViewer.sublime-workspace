@@ -1,0 +1,905 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"po",
+				"position"
+			],
+			[
+				"poin",
+				"pointLight"
+			],
+			[
+				"Po",
+				"pointLight"
+			],
+			[
+				"sp",
+				"sphereMaterial"
+			],
+			[
+				"base",
+				"buildDataset"
+			],
+			[
+				"Freq",
+				"FreqDist"
+			],
+			[
+				"pre",
+				"preprocessing"
+			],
+			[
+				"classif",
+				"classification"
+			],
+			[
+				"constru",
+				"constructFeatureIndex"
+			],
+			[
+				"filt",
+				"filterFeatureFrequency"
+			],
+			[
+				"feature",
+				"featureDist"
+			],
+			[
+				"token",
+				"tokenNegation"
+			],
+			[
+				"twi",
+				"twokenizer"
+			],
+			[
+				"emoji",
+				"emojiRE"
+			],
+			[
+				"class",
+				"class	class"
+			],
+			[
+				"cc",
+				"cc	shortcut - case class"
+			],
+			[
+				"case",
+				"case	case"
+			],
+			[
+				"for",
+				"for	for - Yield"
+			],
+			[
+				"useCl",
+				"useCluster4"
+			],
+			[
+				"def",
+				"define"
+			],
+			[
+				"pr",
+				"prn-str"
+			],
+			[
+				"prn",
+				"prn-str"
+			],
+			[
+				"stim",
+				"stimListPath"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 115.0,
+		"selected_items":
+		[
+			[
+				"powe",
+				"Set Syntax: Powershell v2"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"JSO",
+				"Set Syntax: JSON"
+			],
+			[
+				"color",
+				"Color Picker"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"c++",
+				"Set Syntax: C++"
+			],
+			[
+				"lat",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"py",
+				"Set Syntax: Python"
+			],
+			[
+				"snipp",
+				"Snippet: Tabular"
+			],
+			[
+				"snippet",
+				"Snippet: Chapter"
+			],
+			[
+				"sca",
+				"Set Syntax: Scala Improved"
+			],
+			[
+				"scala",
+				"Set Syntax: Scala"
+			],
+			[
+				"pyt",
+				"Set Syntax: Python"
+			],
+			[
+				"pyth",
+				"Set Syntax: Python Improved"
+			],
+			[
+				"PY",
+				"Set Syntax: Python Improved"
+			],
+			[
+				"c",
+				"Set Syntax: C++"
+			],
+			[
+				"hask",
+				"Set Syntax: Haskell"
+			],
+			[
+				"bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"scal",
+				"Set Syntax: Scala Improved"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"disa",
+				"SublimeCodeIntel: Disable Plugin"
+			],
+			[
+				"ov",
+				"Set Syntax: Objective-C++"
+			],
+			[
+				"scala ",
+				"Set Syntax: Scala Improved"
+			],
+			[
+				"Scala",
+				"Set Syntax: Scala"
+			],
+			[
+				"Pyth",
+				"Set Syntax: Python Improved"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"scaa",
+				"SublimeREPL: Scala"
+			],
+			[
+				"re",
+				"SublimeREPL: Scala"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"glsl",
+				"Set Syntax: GLSL"
+			],
+			[
+				"gl",
+				"Set Syntax: GLSL"
+			],
+			[
+				"obj",
+				"Set Syntax: Objective-C"
+			],
+			[
+				"syn",
+				"Set Syntax: C"
+			],
+			[
+				"synt C",
+				"Set Syntax: C"
+			],
+			[
+				"objc",
+				"Set Syntax: Objective-C"
+			],
+			[
+				"snippet	",
+				"Snippet: Do While Loop"
+			],
+			[
+				"xm",
+				"Set Syntax: XML"
+			],
+			[
+				"repl",
+				"SublimeREPL: Clojure"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pow",
+				"Set Syntax: Powershell v2"
+			],
+			[
+				"power",
+				"Set Syntax: Powershell v2"
+			],
+			[
+				"synsh",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"bat",
+				"Set Syntax: Batch File"
+			],
+			[
+				"py	",
+				"Set Syntax: Python"
+			],
+			[
+				"ma",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"M",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"remp",
+				"Package Control: Remove Package"
+			],
+			[
+				"mat",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"symat",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 507.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/krbalmryde/.bash_aliases",
+		"/Users/krbalmryde/.bash_functions",
+		"/Users/krbalmryde/.bash_profile",
+		"/Users/krbalmryde/Dropbox/XCodeProjects/aluminum/linux/scripts/installAluminumLinux.sh",
+		"/Users/krbalmryde/Dropbox/XCodeProjects/aluminum/.git/MERGE_MSG",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs251/HW1/sortAlgComparisons.cpp",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs251/HW1/SortComparisonData.txt",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs251/lecture/sortAlgComparisons.cpp",
+		"/Users/krbalmryde/Dropbox/Class-Projects/Class.sublime-project",
+		"/Users/krbalmryde/Dropbox/XCodeProjects/aluminum/osx/examples/rubix/rubix/RubixCube.mm",
+		"/Users/krbalmryde/Dropbox/XCodeProjects/aluminum/osx/examples/rubix/rubix/RubixCube.hpp",
+		"/Users/krbalmryde/Dropbox/Class-projects/cs533/HW5/HW5/homework5.cpp",
+		"/Users/krbalmryde/Dropbox/Class-projects/ISTA555/AnalyzeHappiness/Project1.py",
+		"/Users/krbalmryde/Downloads/rips/imgur_dRrDl/index.txt",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA555/AnalyzeHappiness/Project1.py",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA516/HW5/secretgraffiti/graffitiScene.js",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW5/HW5/homework5.cpp",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW5/HW5/Utilities.hpp",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW4/HW4/homework4.cpp",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW4/HW4/homework4",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW5/HW5/homework5",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW2/homework3",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/ISTA130v1.0/howMany.py",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/doc/paintdemo2/glew/auto/extensions/GL_HP_occlusion_test",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/doc/glsl_lighting/scene.c",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW3/HW3/homework3.cpp",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA516/HW5/secretgraffiti/index.html",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA516/HW5/secretgraffiti/tut1.js",
+		"/Users/krbalmryde/Library/Application Support/Sublime Text 3/Packages/User/html.sublime-build",
+		"/Users/krbalmryde/Downloads/sample/index.html",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA516/HW5/js/Detector.js",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA116/RData/UsingR/DESCRIPTION",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA516/HW5/webgltut04.html",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA516/HW5/tut1.js",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA516/HW5/Secret-Graffiti.html",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA516/HW5/1st.html",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/.metadata/.plugins/org.eclipse.debug.core/.launches/HunterTest.launch",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA555/ExtractPeopleAndOrg/target/.history",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/.metadata/.lock",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA516/HW5/tut04.html",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA516/HW5/secretgraffiti/.git/config",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA516/HW5/js/system.min.js",
+		"/Users/krbalmryde/Dropbox/Class-projects/Class.sublime-project",
+		"/Users/krbalmryde/Desktop/ccl.html",
+		"/Users/krbalmryde/Dropbox/Class-projects/ISTA516/Usability/Usability.tex",
+		"/Users/krbalmryde/Dropbox/Class-projects/ISTA516/HW7/ShortParagraphs.txt",
+		"/Users/krbalmryde/Dropbox/class-projects/cs533/HW4/.gitignore",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW4/HW4/Makefile",
+		"/Users/krbalmryde/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW3/HW3/Makefile",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW3/HW3/README.md",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW4/HW4/README.md",
+		"/Users/krbalmryde/Dropbox/class-projects/cs533/HW4/.git/config",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs227/SortTest.java",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/.metadata/.plugins/com.python.pydev.analysis/python_v1_bm109oo8jsa5gnqmc06ekl12p/v1_indexcache/test.test_support_48no.v1_indexcache",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/AlphaSuperAwesomeCoolDynamiteWolfSquadron/Characters/Voldemort.java",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.team.cvs.ui.prefs",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/.metadata/.plugins/org.eclipse.debug.core/.launches/ArmorTest.launch",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA555/YouAreWhatYouEat/docs/EmojiSources.txt",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.team.ui.prefs",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/.metadata/.plugins/com.python.pydev.analysis/python_v1_bm109oo8jsa5gnqmc06ekl12p/v1_indexcache/include_server.mirror_path_test_c45a.v1_indexcache",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/.metadata/.plugins/org.eclipse.debug.core/.launches/RoomTests.launch",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/Lab11/YearsOfService.txt",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/.metadata/.plugins/com.python.pydev.analysis/python_v1_bm109oo8jsa5gnqmc06ekl12p/v1_indexcache/setuptools.command.rotate_hgtx.v1_indexcache",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/AlphaSuperAwesomeCoolDynamiteWolfSquadron/MUDUserStoryImport.csv",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs227/GameOfLife/toString_workthrough.txt",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/doc/paintdemo2/glew/auto/extensions/GL_SGI_texture_color_table",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/AlphaSuperAwesomeCoolDynamiteWolfSquadron/Lands/North.java",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/AlphaSuperAwesomeCoolDynamiteWolfSquadron/Items/Portal.java",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA555/NSAInterview/docs/project3_data/org_top_membersSLASHemployees.train.optional",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA555/ExtractPeopleAndOrg/docs/project3_data/org_top_membersSLASHemployees.train.optional",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA555/NSAInterview/docs/project3_data/org_top_membersSLASHemployees.train",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA555/NSAInterview/docs/project3_data/org_top_membersSLASHemployees.test",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA555/ExtractPeopleAndOrg/docs/project3_data/org_top_membersSLASHemployees.train",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA555/ExtractPeopleAndOrg/docs/project3_data/org_top_membersSLASHemployees.test",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/AlphaSuperAwesomeCoolDynamiteWolfSquadron/Test/PortalTest.java",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/SECTION_Persistence/serializedObjects/transactionCollection.object",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/BankTeller/serializedObjects/transactionCollection.object",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/AlphaSuperAwesomeCoolDynamiteWolfSquadron/Test/NorthTest.java",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA555/NSAInterview/docs/project3_data/org_top_membersSLASHemployees",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA555/ExtractPeopleAndOrg/docs/project3_data/org_top_membersSLASHemployees",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs227/OrderedSet/OrderedSet.java",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/finalreviewsol/output/story.txt",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/finalreviewsol/implement/story.txt",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/finalreviewsol/errors/story.txt",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/finalreviewsol/convert/story.txt",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/finalreviewsol/bugs/story.txt",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/finalreview/output/story.txt",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/finalreview/implement/story.txt",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/finalreview/errors/story.txt",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/finalreview/convert/story.txt",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/finalreview/bugs/story.txt",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs227/doc/OrderedMapTest.java",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/doc/paintdemo2/glew/auto/extensions/GL_SGI_color_table",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs227/MineSweeper/scores.txt",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs372/ass3/splitLineWorkThrough.hs",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/HuntTheWumpus/src/test/RoomTests.java",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/.metadata/.plugins/com.python.pydev.analysis/python_v1_bm109oo8jsa5gnqmc06ekl12p/v1_indexcache/zope.interface.tests.test_sorting_dy4p.v1_indexcache",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/.metadata/.plugins/com.python.pydev.analysis/python_v1_bm109oo8jsa5gnqmc06ekl12p/v1_indexcache/test.sortperf_171m.v1_indexcache",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/AlphaSuperAwesomeCoolDynamiteWolfSquadron/Test/ArmorTest.java",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/.metadata/.plugins/com.python.pydev.analysis/python_v1_bm109oo8jsa5gnqmc06ekl12p/v1_indexcache/test.test_sort_ap4w.v1_indexcache",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs227/OrderedSet/OrderedSetTest.java",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/.metadata/.plugins/com.python.pydev.analysis/python_v1_bm109oo8jsa5gnqmc06ekl12p/v1_indexcache/ScrolledText_obzp.v1_indexcache",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs227/Seconds.java",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW3/HW3/HW3/homework3.cpp",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW3/HW3/HW3/Makefile",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW3/HW3/ImageResize.py",
+		"/Users/krbalmryde/Library/Application Support/Sublime Text 3/Packages/User/hm3.sublime-build",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW3/homework3.cpp",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW3/homework3",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW2/HW2/homework2",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW2/.etc/homework2",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW2/homework2.h",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW2/homework2.cxx",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW1/homework1.cxx",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW2/homework2",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW3/ImageResize.py",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW3/ImageCrop.py",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA555/.YouAreWhatYouEat/.idea/libraries/Maven__nz_ac_waikato_cms_weka_multiInstanceLearning_1_0_7.xml",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA555/.YouAreWhatYouEat/.idea/libraries/Maven__nz_ac_waikato_cms_weka_multiInstanceFilters_1_0_5.xml",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA116/Homework/Completed/ISTA 116 Quiz 5 (100%)",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/.metadata/.plugins/com.python.pydev.analysis/python_v1_bm109oo8jsa5gnqmc06ekl12p/v1_indexcache/twisted.test.stdio_test_writeseq_1ln1.v1_indexcache",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW1/HW1/HW1.xcodeproj/project.xcworkspace/xcuserdata/kylealmryde.xcuserdatad/UserInterfaceState.xcuserstate",
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA555/YouAreWhatYouEat/docs/view-source-http-::apps.timwhitlock.info:emoji:tables:unicode#block-1-emoticons.txt",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/.metadata/.plugins/com.python.pydev.analysis/python_v1_bm109oo8jsa5gnqmc06ekl12p/v1_indexcache/numpy.doc.howtofind_1rwp.v1_indexcache",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW2/HW2/Debug/CL.read.1.tlog",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW2/HW2/Debug/cl.command.1.tlog",
+		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW1/HW1/.idea/workspace.xml"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"Evaluator",
+			"TweetParser",
+			"texIDs",
+			"glUniform1i",
+			"FreqDist",
+			"]]",
+			"head[i",
+			"sceneCycle",
+			"cube",
+			"VIEW_ANGLE",
+			"HEIGHT",
+			"WIDTH",
+			"var renderer",
+			"renderer",
+			"CODE",
+			";",
+			"homework3",
+			"--------------------------",
+			"x,y,z,xl,yl,zl);",
+			"x",
+			"case",
+			"break;",
+			" break;",
+			"break;",
+			"worldZ",
+			"0.0",
+			"thetaY",
+			"F1",
+			"floor",
+			"                std",
+			"image",
+			"= 0",
+			"float",
+			"modf",
+			"modf(",
+			"0.0",
+			"mod",
+			"int ",
+			"theColor",
+			"[n]",
+			"c",
+			"i",
+			"\\\\\n",
+			"mapped[1]",
+			"mapped[0]",
+			".0",
+			"double",
+			"key_CB",
+			"int",
+			"jpeg_write_scanlines",
+			"int",
+			"height",
+			"win",
+			"rotate_flag",
+			"mapPixel",
+			"x",
+			"y",
+			"/2",
+			"y \" \"",
+			"hshift",
+			"offset",
+			"        ",
+			"    \n",
+			"0.05",
+			"std",
+			"+",
+			"0.5",
+			"mapPixel",
+			"offset",
+			"degrees",
+			"mapPixel",
+			"degrees",
+			"pixel",
+			"vshift",
+			"/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1197.1.1)",
+			"/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 120.0.0)",
+			"/opt/local/lib/libjpeg.9.dylib (compatibility version 10.0.0, current version 10.0.0)",
+			"/System/Library/Frameworks/GLUT.framework/Versions/A/GLUT (compatibility version 1.0.0, current version 1.0.0)",
+			"/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL (compatibility version 1.0.0, current version 1.0.0)\n",
+			"/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon (compatibility version 2.0.0, current version 157.0.0)",
+			"local",
+			";",
+			"opt",
+			"paintdemo",
+			"demo",
+			"include",
+			"c",
+			"noindent",
+			":",
+			"Median",
+			"intermediate",
+			"beginner",
+			".00",
+			".0",
+			"    ",
+			"   ",
+			"class",
+			"buildDataset",
+			"S::\"+emoticon",
+			"emoticon",
+			"getFeatureNames",
+			"print",
+			"result",
+			"cvSplitData",
+			"bsData",
+			"elif",
+			"getFeatureNames",
+			"train_Labels",
+			"data",
+			"getMatrix",
+			"test_Labels",
+			"gold",
+			"train_Labels, test_Labels",
+			",",
+			"or",
+			"naive_bayes",
+			"ND",
+			":",
+			"NY\\t",
+			"bi_Dist",
+			"uniDist",
+			"dev",
+			"File",
+			"Proj",
+			"bi_dev",
+			"make_feature_dist",
+			"🙌",
+			"💃"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			";\\n",
+			"\"\"\"\n",
+			"\n",
+			"\n\n",
+			"\n",
+			"\n\n",
+			"\n",
+			"\n\n",
+			"",
+			"\n",
+			"\\n",
+			"\n",
+			"",
+			"\n",
+			"\n\n\n",
+			"\n",
+			"",
+			"\n",
+			"!Audio\\DING.wav,\"0,0,0\",700",
+			"/",
+			"",
+			"2",
+			"",
+			".wav",
+			"2.wa",
+			"	",
+			"    ",
+			"\\t",
+			" "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 41.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 126.0
+	},
+	"project": "NiftiViewer.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"home4",
+				"cs533/HW4/HW4/homework4.cpp"
+			],
+			[
+				"homewo5",
+				"cs533/HW5/HW5/homework5.cpp"
+			],
+			[
+				"detec",
+				"ISTA516/HW5/js/Detector.js"
+			],
+			[
+				"1",
+				"ISTA516/HW5/1st.html"
+			],
+			[
+				"sort",
+				"cs227/SortTest.java"
+			],
+			[
+				"home",
+				"cs533/HW3/homework3.cpp"
+			],
+			[
+				"hw1",
+				"cs533/HW1/hw1.cxx"
+			],
+			[
+				"demo",
+				"cs533/HW1/paintdemo_mac/demo.cxx"
+			],
+			[
+				"geo",
+				"ISTA555/Docs/twitter_code/GeoTag.scala"
+			],
+			[
+				"emo",
+				"ISTA555/YouAreWhatYouEat/data/Emoji-FreqDist.txt"
+			],
+			[
+				"emoj",
+				"ISTA555/YouAreWhatYouEat/data/etc/emoji-codes.txt"
+			],
+			[
+				"project4",
+				"ISTA555/YouAreWhatYouEat/docs/Project4Notes.txt"
+			],
+			[
+				"use",
+				"ISTA555/YouAreWhatYouEat/src/useful.py"
+			],
+			[
+				"project2",
+				"ISTA555/GoodMovieOrBad/docs/project2_key.py"
+			],
+			[
+				"project4.",
+				"ISTA555/YouAreWhatYouEat/src/Project4.py"
+			],
+			[
+				"proj2",
+				"ISTA555/GoodMovieOrBad/docs/project2_key.py"
+			],
+			[
+				"project4re",
+				"ISTA555/YouAreWhatYouEat/docs/Project 4 Report.txt"
+			],
+			[
+				"proj4",
+				"ISTA555/YouAreWhatYouEat/src/Project4.py"
+			],
+			[
+				"perspouse",
+				"ISTA555/NSAInterview/docs/project3_data/per_spouse.test"
+			],
+			[
+				"movi",
+				"ISTA555/GoodMovieOrBad/src/MovieSentiment.scala"
+			],
+			[
+				"slice",
+				"osx/examples/niftiViewer/niftiViewer/Slices.mm"
+			],
+			[
+				"pro",
+				"src/Program.cpp"
+			],
+			[
+				"pr",
+				"src/Program.cpp"
+			],
+			[
+				"in",
+				"osx/Includes.hpp"
+			],
+			[
+				"be",
+				"src/Behavior.cpp"
+			],
+			[
+				"co",
+				"osx/CocoaGL.mm"
+			],
+			[
+				"ren",
+				"osx/RendererOSX.mm"
+			],
+			[
+				"ma",
+				"niftiViewer/niftiViewer/Main.mm"
+			],
+			[
+				"prog",
+				"src/Program.cpp"
+			],
+			[
+				"",
+				"osx/CocoaGL.h"
+			],
+			[
+				"progr",
+				"src/Program.cpp"
+			],
+			[
+				"mri",
+				"Utilities/.Utilities.backup/MRI.py"
+			],
+			[
+				"java",
+				"Scripts/Java/JavaBatRecursion/JavaBat_Recursion.java"
+			],
+			[
+				"ass2",
+				"CLASS/cs372/ass2.hs"
+			],
+			[
+				"javab",
+				"Scripts/Java/JavaBatRecursion/JavaBat_Recursion.java"
+			],
+			[
+				"pig",
+				"Scripts/CLOJURE/piglatin.clj"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Dropbox/XCodeProjects/aluminum/osx/examples/niftiViewer/NiftiViewer.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 204.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

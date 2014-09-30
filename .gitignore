@@ -1,0 +1,9 @@
+*.nii
+*.nii.gz
+resources/models/
+resources/clusters/
+resources/brains
+Basic.mm
+Raycast*.mm
+misc/
+niftilib/

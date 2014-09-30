@@ -1,0 +1,57 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "niftiViewer"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "Resources"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "manuscript"
+		},
+		{
+			"follow_symlinks": true,
+			"name": "aluminum",
+			"path": "/Users/krbalmryde/Dropbox/XCodeProjects/aluminum/src"
+		},
+		{
+			"file_exclude_patterns":
+			[
+				"*.sh",
+				"*.command"
+			],
+			"folder_exclude_patterns":
+			[
+				"misc"
+			],
+			"follow_symlinks": true,
+			"path": "/Users/krbalmryde/Dropbox/XCodeProjects/aluminum/osx"
+		},
+		{
+			"file_exclude_patterns":
+			[
+				"*.sh",
+				"*.command"
+			],
+			"folder_exclude_patterns":
+			[
+				"misc",
+				"utils"
+			],
+			"follow_symlinks": true,
+			"path": "/Users/krbalmryde/Dropbox/XCodeProjects/aluminum/ios"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/OpenGL"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/C:C++/afni_src"
+		}
+	]
+}

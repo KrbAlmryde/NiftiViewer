@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B4A1F1F3-51EB-41A8-83D0-3C0D489A403D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>niftiViewer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3118B1F95F63627D71A3A58DDED7755CD5EFC92D</key>
+		<string>https://github.com/KrbAlmryde/NiftiViewer.git</string>
+		<key>87CE086DE70070CBF4C590CEAEBED9F6AA156F83</key>
+		<string>https://github.com/CreativeCodingLab/aluminum.git</string>
+		<key>92841D9B2B28E1B3035674DCBD51D0B505D0B52F</key>
+		<string>https://github.com/KrbAlmryde/Code-Projects.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>niftiViewer.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3118B1F95F63627D71A3A58DDED7755CD5EFC92D</key>
+		<string>../..</string>
+		<key>87CE086DE70070CBF4C590CEAEBED9F6AA156F83</key>
+		<string>../../../aluminum</string>
+		<key>92841D9B2B28E1B3035674DCBD51D0B505D0B52F</key>
+		<string>../../../Code-Projects</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/KrbAlmryde/NiftiViewer.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3118B1F95F63627D71A3A58DDED7755CD5EFC92D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>87CE086DE70070CBF4C590CEAEBED9F6AA156F83</string>
+			<key>IDESourceControlWCCName</key>
+			<string>aluminum</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>92841D9B2B28E1B3035674DCBD51D0B505D0B52F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Code-Projects</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3118B1F95F63627D71A3A58DDED7755CD5EFC92D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NiftiViewer</string>
+		</dict>
+	</array>
+</dict>
+</plist>
