@@ -9,6 +9,8 @@
 #include <Aluminum/Aluminum.h>
 #include "nifti1_io.h"
 #include "NiftiData.h"
+#include "NiftiImage.h"
+
 //#include "ActionProxy.h"
 
 using namespace std;
@@ -32,7 +34,7 @@ public:
     NiftiData nd;
     
     // Setup Aluminum specific stuff
-    vector<Texture> images;
+    vector<NiftiImage> images;
     Camera camera;
     ResourceHandler rh;
     MeshBuffer cubeMB, lCubeMB, rCubeMB, axisMB;
@@ -83,7 +85,7 @@ public:
     virtual void onCreate() {
 
         initFBOs();
-        nd.load_wb1_orig_images(images);
+        nd.load_wb1_images(images);
         
         printf("\nloading shaders now\n");
         rh.loadProgram(brainShader, "brain", 0, -1, -1, -1);
@@ -177,32 +179,6 @@ public:
 //        proj = camera.projection;
 
     }
-    
-    void load_wb1_images(){
-        
-        int i = 0;
-        images.clear(); images.resize(16);
-        
-        read_nifti_file(rh.pathToResource("MNI_caez_N27","nii.gz"), images[i++]);
-        //        read_nifti_file(rh.pathToResource("kyle_brain","nii.gz"), images[i++]);
-        read_nifti_file(rh.pathToResource("all_s1_IC2_caez_2blur_LR","nii.gz"), images[i++]);
-        read_nifti_file(rh.pathToResource("all_s1_IC7_caez_2blur_LR","nii.gz"), images[i++]);
-        read_nifti_file(rh.pathToResource("all_s1_IC25_caez_2blur_LR","nii.gz"), images[i++]);
-        read_nifti_file(rh.pathToResource("all_s1_IC31_caez_2blur_LR","nii.gz"), images[i++]);
-        read_nifti_file(rh.pathToResource("all_s1_IC39_caez_2blur_LR","nii.gz"), images[i++]);
-        
-        read_nifti_file(rh.pathToResource("all_s2_IC2_caez_2blur_LR","nii.gz"), images[i++]);
-        read_nifti_file(rh.pathToResource("all_s2_IC7_caez_2blur_LR","nii.gz"), images[i++]);
-        read_nifti_file(rh.pathToResource("all_s2_IC25_caez_2blur_LR","nii.gz"), images[i++]);
-        read_nifti_file(rh.pathToResource("all_s2_IC31_caez_2blur_LR","nii.gz"), images[i++]);
-        read_nifti_file(rh.pathToResource("all_s2_IC39_caez_2blur_LR","nii.gz"), images[i++]);
-        
-        read_nifti_file(rh.pathToResource("all_s3_IC2_caez_2blur_LR","nii.gz"), images[i++]);
-        read_nifti_file(rh.pathToResource("all_s3_IC7_caez_2blur_LR","nii.gz"), images[i++]);
-        read_nifti_file(rh.pathToResource("all_s3_IC25_caez_2blur_LR","nii.gz"), images[i++]);
-        read_nifti_file(rh.pathToResource("all_s3_IC31_caez_2blur_LR","nii.gz"), images[i++]);
-        read_nifti_file(rh.pathToResource("all_s3_IC39_caez_2blur_LR","nii.gz"), images[i++]);
-    }
 
     /*=============================
      *          intiFBO()         *
@@ -217,45 +193,6 @@ public:
         fboB.texture.wrapMode(GL_CLAMP_TO_EDGE);
         fboB.texture.minFilter(GL_LINEAR);
         fboB.texture.maxFilter(GL_LINEAR);
-    }
-
-
-    /*=============================
-     *      read_nifti_file()     *
-     =============================*/
-    static int read_nifti_file(string fname, Texture &tex) {
-
-        nifti_image * nim = nifti_image_read(fname.c_str(), 1);
-        znzFile fp = znzopen(nim->iname, "rb", nifti_is_gzfile(nim->iname));
-
-        if (nim == NULL)
-            exit(1);
-
-        nifti_image_infodump(nim);
-
-        /** save to 3D Texture **/
-        switch (nim->datatype) {
-            case 2:
-                load_nifti_texture<unsigned char>(fp, nim, tex);
-                break;
-            case 4:
-                load_nifti_texture<signed short>(fp, nim, tex);
-                break;
-            case 8:
-                load_nifti_texture<signed int>(fp, nim, tex);
-                break;
-            case 16:
-                load_nifti_texture<float>(fp, nim, tex);
-                break;
-            case 64:
-                load_nifti_texture<double>(fp, nim, tex);
-                break;
-            default :
-                printf("data type %d is not supported... exiting...\n", nim->datatype);
-                exit(1);
-        }
-
-        return 0;
     }
 
     /*=============================

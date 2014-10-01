@@ -7,6 +7,7 @@
 //
 
 #import "NiftiData.h"
+
 using namespace std;
 
 
@@ -15,106 +16,105 @@ NiftiData::NiftiData() {} // Constructor
 /*=============================
  *      load_wb1_images()     *
  =============================*/
-void load_wb1_images(vector<Texture>& images){
-    
+void NiftiData::load_wb1_images(vector<NiftiImage> &images) {
+    printf("in load_wb1_images\n");
+//    int i = 0;
+    images.clear(); images.resize(16);
+    images.push_back(NiftiImage("MNI_caez_N27.nii.gz"));
+    images.push_back(NiftiImage("all_s1_IC2_caez_2blur_LR.nii.gz"));
+    images.push_back(NiftiImage("all_s1_IC7_caez_2blur_LR.nii.gz"));
+    images.push_back(NiftiImage("all_s1_IC25_caez_2blur_LR.nii.gz"));
+    images.push_back(NiftiImage("all_s1_IC31_caez_2blur_LR.nii.gz"));
+    images.push_back(NiftiImage("all_s1_IC39_caez_2blur_LR.nii.gz"));
+
+    images.push_back(NiftiImage("all_s2_IC2_caez_2blur_LR.nii.gz"));
+    images.push_back(NiftiImage("all_s2_IC7_caez_2blur_LR.nii.gz"));
+    images.push_back(NiftiImage("all_s2_IC25_caez_2blur_LR.nii.gz"));
+    images.push_back(NiftiImage("all_s2_IC31_caez_2blur_LR.nii.gz"));
+    images.push_back(NiftiImage("all_s2_IC39_caez_2blur_LR.nii.gz"));
+
+    images.push_back(NiftiImage("all_s3_IC2_caez_2blur_LR.nii.gz"));
+    images.push_back(NiftiImage("all_s3_IC7_caez_2blur_LR.nii.gz"));
+    images.push_back(NiftiImage("all_s3_IC25_caez_2blur_LR.nii.gz"));
+    images.push_back(NiftiImage("all_s3_IC31_caez_2blur_LR.nii.gz"));
+    images.push_back(NiftiImage("all_s3_IC39_caez_2blur_LR.nii.gz"));
+}
+
+void NiftiData::load_wb1_orig_images(vector<NiftiImage> &images){
+    printf("in load_wb1_orig_images\n");
     int i = 0;
     images.clear(); images.resize(16);
     
-    read_nifti_file(rh.pathToResource("MNI_caez_N27","nii.gz"), images[i++]);
-    //        read_nifti_file(rh.pathToResource("kyle_brain","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s1_IC2_caez_2blur_LR","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s1_IC7_caez_2blur_LR","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s1_IC25_caez_2blur_LR","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s1_IC31_caez_2blur_LR","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s1_IC39_caez_2blur_LR","nii.gz"), images[i++]);
+    images[i++] = NiftiImage("MNI_2mm","nii.gz");
     
-    read_nifti_file(rh.pathToResource("all_s2_IC2_caez_2blur_LR","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s2_IC7_caez_2blur_LR","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s2_IC25_caez_2blur_LR","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s2_IC31_caez_2blur_LR","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s2_IC39_caez_2blur_LR","nii.gz"), images[i++]);
+    images[i++] = NiftiImage("all_s1_IC2","nii");
+    images[i++] = NiftiImage("all_s1_IC7","nii");
+    images[i++] = NiftiImage("all_s1_IC25","nii");
+    images[i++] = NiftiImage("all_s1_IC31","nii");
+    images[i++] = NiftiImage("all_s1_IC39","nii");
     
-    read_nifti_file(rh.pathToResource("all_s3_IC2_caez_2blur_LR","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s3_IC7_caez_2blur_LR","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s3_IC25_caez_2blur_LR","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s3_IC31_caez_2blur_LR","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s3_IC39_caez_2blur_LR","nii.gz"), images[i++]);
+    images[i++] = NiftiImage("all_s2_IC2","nii");
+    images[i++] = NiftiImage("all_s2_IC7","nii");
+    images[i++] = NiftiImage("all_s2_IC25","nii");
+    images[i++] = NiftiImage("all_s2_IC31","nii");
+    images[i++] = NiftiImage("all_s2_IC39","nii");
+    
+    images[i++] = NiftiImage("all_s3_IC2","nii");
+    images[i++] = NiftiImage("all_s3_IC7","nii");
+    images[i++] = NiftiImage("all_s3_IC25","nii");
+    images[i++] = NiftiImage("all_s3_IC31","nii");
+    images[i++] = NiftiImage("all_s3_IC39","nii");
 }
 
-void load_wb1_orig_images(vector<Texture>& images){
-    
-    int i = 0;
-    images.clear(); images.resize(16);
-    
-    read_nifti_file(rh.pathToResource("MNI_2mm","nii.gz"), images[i++]);
-    //        read_nifti_file(rh.pathToResource("kyle_brain","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s1_IC2","nii"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s1_IC7","nii"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s1_IC25","nii"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s1_IC31","nii"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s1_IC39","nii"), images[i++]);
-    
-    read_nifti_file(rh.pathToResource("all_s2_IC2","nii"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s2_IC7","nii"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s2_IC25","nii"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s2_IC31","nii"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s2_IC39","nii"), images[i++]);
-    
-    read_nifti_file(rh.pathToResource("all_s3_IC2","nii"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s3_IC7","nii"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s3_IC25","nii"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s3_IC31","nii"), images[i++]);
-    read_nifti_file(rh.pathToResource("all_s3_IC39","nii"), images[i++]);
-}
-
-void load_ice_images(vector<Texture>& images){
+void NiftiData::load_ice_images(vector<NiftiImage>& images){
     
     int i = 0;
     images.clear(); images.resize(20);
     
-    read_nifti_file(rh.pathToResource("MNI_2mm","nii.gz"), images[i++]);
+    images[i++] = NiftiImage("MNI_2mm","nii.gz");
     
-    read_nifti_file(rh.pathToResource("IC2_s1","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("IC4_s1","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("IC11_s1","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("IC12_s1","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("IC18_s1","nii.gz"), images[i++]);
+    images[i++] = NiftiImage("IC2_s1","nii.gz");
+    images[i++] = NiftiImage("IC4_s1","nii.gz");
+    images[i++] = NiftiImage("IC11_s1","nii.gz");
+    images[i++] = NiftiImage("IC12_s1","nii.gz");
+    images[i++] = NiftiImage("IC18_s1","nii.gz");
     
-    read_nifti_file(rh.pathToResource("IC2_s2","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("IC4_s2","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("IC11_s2","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("IC12_s2","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("IC18_s2","nii.gz"), images[i++]);
+    images[i++] = NiftiImage("IC2_s2","nii.gz");
+    images[i++] = NiftiImage("IC4_s2","nii.gz");
+    images[i++] = NiftiImage("IC11_s2","nii.gz");
+    images[i++] = NiftiImage("IC12_s2","nii.gz");
+    images[i++] = NiftiImage("IC18_s2","nii.gz");
     
-    read_nifti_file(rh.pathToResource("IC2_s3","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("IC4_s3","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("IC11_s3","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("IC12_s3","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("IC18_s3","nii.gz"), images[i++]);
+    images[i++] = NiftiImage("IC2_s3","nii.gz");
+    images[i++] = NiftiImage("IC4_s3","nii.gz");
+    images[i++] = NiftiImage("IC11_s3","nii.gz");
+    images[i++] = NiftiImage("IC12_s3","nii.gz");
+    images[i++] = NiftiImage("IC18_s3","nii.gz");
     
-    read_nifti_file(rh.pathToResource("IC2_s4","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("IC4_s4","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("IC11_s4","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("IC12_s4","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("IC18_s4","nii.gz"), images[i++]);
+    images[i++] = NiftiImage("IC2_s4","nii.gz");
+    images[i++] = NiftiImage("IC4_s4","nii.gz");
+    images[i++] = NiftiImage("IC11_s4","nii.gz");
+    images[i++] = NiftiImage("IC12_s4","nii.gz");
+    images[i++] = NiftiImage("IC18_s4","nii.gz");
 }
 
-void load_test_balls(vector<Texture>& images){
+void NiftiData::load_test_balls(vector<NiftiImage>& images){
     
     int i = 0;
     images.clear(); images.resize(10);
     
-    read_nifti_file(rh.pathToResource("MNI_caez_N27","nii.gz"), images[i++]);
+    images[i++] = NiftiImage("MNI_caez_N27","nii.gz");
     
-    read_nifti_file(rh.pathToResource("ball1","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("ball2","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("ball3","nii.gz"), images[i++]);
+    images[i++] = NiftiImage("ball1","nii.gz");
+    images[i++] = NiftiImage("ball2","nii.gz");
+    images[i++] = NiftiImage("ball3","nii.gz");
     
-    read_nifti_file(rh.pathToResource("ball4","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("ball5","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("ball6","nii.gz"), images[i++]);
+    images[i++] = NiftiImage("ball4","nii.gz");
+    images[i++] = NiftiImage("ball5","nii.gz");
+    images[i++] = NiftiImage("ball6","nii.gz");
     
-    read_nifti_file(rh.pathToResource("ball7","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("ball8","nii.gz"), images[i++]);
-    read_nifti_file(rh.pathToResource("ball9","nii.gz"), images[i++]);
+    images[i++] = NiftiImage("ball7","nii.gz");
+    images[i++] = NiftiImage("ball8","nii.gz");
+    images[i++] = NiftiImage("ball9","nii.gz");
 }
+

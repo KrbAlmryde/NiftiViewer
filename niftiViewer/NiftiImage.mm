@@ -6,13 +6,11 @@
 #include "NiftiImage.h"
 #include <numeric>
 
-template <typename T>
-using nii = std::pair<std::string, T>;
-
+NiftiImage::NiftiImage() {};
 
 /*
-    These two functions were taken from this thread via Stack Overflow, very helpful!
-    http://stackoverflow.com/questions/236129/how-to-split-a-string-in-c
+ These two functions were taken from this thread via Stack Overflow, very helpful!
+ http://stackoverflow.com/questions/236129/how-to-split-a-string-in-c
  */
 std::vector<std::string> &split(const std::string &s, char delim, std::vector<std::string> &elems) {
     std::stringstream ss(s);
@@ -29,11 +27,10 @@ std::vector<std::string> split(const std::string &s, char delim) {
     return elems;
 }
 
-
 /*
-    And this thread helped with this function...
-    http://stackoverflow.com/questions/9277906/stdvector-to-string-with-custom-delimiter
-*/
+ And this thread helped with this function...
+ http://stackoverflow.com/questions/9277906/stdvector-to-string-with-custom-delimiter
+ */
 std::string join(const vector<std::string> vec, const std::string delim="."){
     stringstream s;
     copy(vec.begin(),vec.end(),std::ostream_iterator<std::string>(s,delim.c_str()));
@@ -42,34 +39,32 @@ std::string join(const vector<std::string> vec, const std::string delim="."){
     return result;
 }
 
-const Texture &NiftiImage::operator [](int idx) const {
-    return texture[idx];
+
+void assignName(vector<std::string> tokens, std::string &name, std::string &type){
+    if(tokens.back() == "gz")
+        type = "nii.gz";
+    else if(tokens.back() == "gz")
+        type = "nii";
+    else if(tokens.back() == "1D")
+        type = "1D";
+
+    name = tokens[0];
+    printf("\n In assignName...%s.%s\n",name.c_str(), type.c_str());
 }
-
-Texture &NiftiImage::operator [](int idx) {
-    return texture[idx];
-}
-
-
-NiftiImage::NiftiImage() {};
 
 // This calls the niftiUtils function to load a nifti File into a texture
 NiftiImage::NiftiImage(string fname) {
+    std::string type, name;
     vector<string> tokens = split(fname, '.');
-    std::string type = tokens.back(); tokens.pop_back();
-    std::string name = join(tokens);
-    printf("%s.%s",name.c_str(), type.c_str());
-//    read_nifti_file(rh.pathToResource(name, type));
-
-    // temporarilly refer to nifti images on the desktop instead of copying them to the bundle
-    string PATHTOFILE = "/Users/krbalmryde/Desktop/nifti/";
-    read_nifti_file(PATHTOFILE + fname);
+    assignName(tokens, name, type);
+    printf("\n In assignName...%s.%s\n",name.c_str(), type.c_str());
+    read_nifti_file(rh.pathToResource(name, type));
 }
 
 NiftiImage::NiftiImage(string fname, glm::vec4 rgba) {
+    std::string type, name;
     vector<string> tokens = split(fname, '.');
-    std::string type = tokens.back(); tokens.pop_back();
-    std::string name = join(tokens);
+    assignName(tokens, name, type);
     read_nifti_file(rh.pathToResource(name, type));
     setColor(rgba);
 }
@@ -100,7 +95,8 @@ NiftiImage::NiftiImage(string image_name, string model_name, glm::vec4 rgba) {
     tokens = split(model_name, '.');
     std::string model_type = tokens.back(); tokens.pop_back();
     std::string model = join(tokens);
-    loadVector(rh.pathToResource(model,model_type));    setColor(rgba);
+    loadVector(rh.pathToResource(model,model_type));
+    setColor(rgba);
 }
 
 void NiftiImage::load3DTexture(string fname){
@@ -147,22 +143,17 @@ void NiftiImage::updateTexture(string image_name){
 
 
 void NiftiImage::bind(GLenum textureUnit){
-    for(auto& tex:texture){
-        tex.bind(textureUnit); //    glDeleteTextures(0, (GLuint const*)texture.id());
-    }
+
+    texture.bind(textureUnit); //    glDeleteTextures(0, (GLuint const*)texture.id());
+
 }
 
 void NiftiImage::unbind(GLenum textureUnit){
-    for(auto& tex:texture){
-        tex.unbind(textureUnit); //    glDeleteTextures(0, (GLuint const*)texture.id());
-    }
+    texture.unbind(textureUnit); //    glDeleteTextures(0, (GLuint const*)texture.id());
 }
 
 void NiftiImage::destroy(){
-    for(auto& tex:texture){
-        tex.destroy(); //    glDeleteTextures(0, (GLuint const*)texture.id());
-    }
-    texture.clear();  // Clear the memory stores
+    texture.destroy(); //    glDeleteTextures(0, (GLuint const*)texture.id());
 }
 
 void NiftiImage::setColor(float _r, float _g, float _b, float _a){
@@ -176,13 +167,6 @@ void NiftiImage::setColor(float _r, float _g, float _b, float _a){
 void NiftiImage::setColor(glm::vec4 rgba){
     color = rgba;
 }
-
-
-void NiftiImage::hdrDump(){
-//    print_nifti_header_info();
-}
-
-
 
 void NiftiImage::loadVector(string name) {
     ifstream infile(name);
@@ -199,227 +183,102 @@ void NiftiImage::loadVector(string name) {
     infile.close();
 }
 
-void NiftiImage::print_nifti_header_info() {
-    /* print a little header information */
-    fprintf(stderr, "\nXYZT dimensions: %d %d %d %d", hdr.dim[1], hdr.dim[2], hdr.dim[3], hdr.dim[4]);
-    fprintf(stderr, "\nDatatype code and bits/pixel: %d %d", hdr.datatype, hdr.bitpix);
-    fprintf(stderr, "\nScaling slope and intercept: %.6f %.6f", hdr.scl_slope, hdr.scl_inter);
-    fprintf(stderr, "\nByte offset to data in datafile: %ld", (long) (hdr.vox_offset));
-    fprintf(stderr, "\n");
-}
+/*=============================
+ *      read_nifti_file()     *
+ =============================*/
+int NiftiImage::read_nifti_file(string fname) {
 
+    nifti_image * nim = nifti_image_read(fname.c_str(), 1);
+    znzFile fp = znzopen(nim->iname, "rb", nifti_is_gzfile(nim->iname));
 
-void NiftiImage::open_nifti_header(std::string data_file) {
-    /********** open and read header */
-    fp = znzopen(data_file.c_str(), "r", 0);
-    if (znz_isnull(fp)) {
-        perror(data_file.c_str());
-        fprintf(stderr, "\nError opening header file %p\n", data_file.c_str());
+    if (!nim)
         exit(1);
-    }
-}
 
-void NiftiImage::read_nifti_header(std::string data_file) {
-    long ret;
-    //read header data
-    ret = znzread(&hdr, MIN_HEADER_SIZE, 1, fp);
-    if (ret != 1) {
-        perror(data_file.c_str());
-        fprintf(stderr, "\nError reading header file %p\n", data_file.c_str());
-        exit(1);
-    }
+    nifti_image_infodump(nim);
 
-    printf("In read_nifti_header! vox_offset is %f", hdr.vox_offset);
-    //move file pointer to end of header data
-    if(hdr.vox_offset < 0)
-        ret = znzseek(fp, (long) (-1*hdr.vox_offset), SEEK_SET);
-    else
-        ret = znzseek(fp, (long) (hdr.vox_offset), SEEK_SET);
-
-    if (ret != 0) {
-        perror(data_file.c_str());
-        fprintf(stderr, "\nError doing znzseek() to %ld in data file %p\n", (long) (hdr.vox_offset), data_file.c_str());
-        exit(1);
-    }
-}
-
-
-int NiftiImage::read_nifti_file(std::string data_file) {
-//    hdr = nifti_read_header(data_file.c_str(), 0, 1);
-//    fp = nifti_image_open(data_file.c_str(), (char *) "rb", &nim);
-    open_nifti_header(data_file);
-    read_nifti_header(data_file);
-    print_nifti_header_info();
-
-
-    switch (hdr.datatype) {
-        case 2 :
-            return read_nifti_data<unsigned char>(fp, hdr, texture);
-        case 4 :
-            return read_nifti_data<signed short>(fp, hdr, texture);
-        case 8 :
-            return read_nifti_data<signed int>(fp, hdr, texture);
-        case 16 :
-            return read_nifti_data<float>(fp, hdr, texture);
+    /** save to 3D Texture **/
+    switch (nim->datatype) {
+        case 2:
+            load_nifti_texture<unsigned char>(fp, nim, texture);
+            break;
+        case 4:
+            load_nifti_texture<signed short>(fp, nim, texture);
+            break;
+        case 8:
+            load_nifti_texture<signed int>(fp, nim, texture);
+            break;
+        case 16:
+            load_nifti_texture<float>(fp, nim, texture);
+            break;
+        case 64:
+            load_nifti_texture<double>(fp, nim, texture);
+            break;
         default :
-            printf("data type %d is not supported... exiting...\n", hdr.datatype);
+            printf("data type %d is not supported... exiting...\n", nim->datatype);
             exit(1);
     }
+
+    return 0;
 }
 
-//template<class T> static int do_stuff(nifti_image &nim, vector<Texture> &tex) {
-//
-//    size_t nBytesPerVol = nifti_get_volsize(&nim);
-//    int i, total, step, vol, max = 0;
-//    /********** print mean of data */
-//
-//    for (vol = 0; vol < nim.dim[4]; vol++){
-//        if (vol >= 10) {
-//            nifti_image_unload(&nim);
-//            return(0);
-//        }
-//
-//        total = 0;
-//        step = 0;
-//        max = 0;
-//
-//        for (i = step; i < nBytesPerVol*(vol+1); i++) {
-//            total += data[i];
-//            if (data[i] > max) {
-//                printf("%d\n", data[i]);
-//                max = data[i];
-//            }
-//        }
-////            total /= (hdr.dim[1] * hdr.dim[2] * hdr.dim[3] * hdr.dim[4]);
-//
-//        /** save to 3D Texture **/
-//        GLubyte *oneVolume = (GLubyte *) malloc(sizeof(GLubyte) * (nim.nvox));
-//
-//        int idx = 0;
-//        for (i = step; i < nBytesPerVol*(vol+1); i++) {
-//            if ( ( (float) max / (float) data[i] ) < 80.00) // Trying to filter data
-//                oneVolume[idx++] = (GLubyte) (((float) data[i] / (float) max) * 255);
-//            else
-//                oneVolume[idx++] = (GLubyte) 0.0;
-//        }
-//
-//        glPixelStorei(GL_PACK_ALIGNMENT, 1);
-//        glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
-////            tex.push_back(Texture(oneVolume, hdr.dim[1], hdr.dim[2], hdr.dim[3], GL_RGBA, GL_RED, GL_FLOAT));
-//        tex.push_back(Texture(oneVolume, nim.dim[1], nim.dim[2], nim.dim[3], GL_RGBA, GL_RED, GL_UNSIGNED_BYTE));
-//        tex[vol].minFilter(GL_LINEAR);
-//        tex[vol].maxFilter(GL_LINEAR);
-//        step += nim.nvox;
-//    }
-//    nifti_image_unload(&nim);
-//    return(0);
-//}
 
-//
-//template<typename T>
-//int load_nifti_texture(T &data, nifti_image *nim, vector<Texture> &tex)
-//{
-//    printf("Made it to load_nifti_texture!!!\n Working with %s\n",nim->iname);
-//
-//    int i, total, step, vol, max;
-//    size_t nBytesPerVol = (size_t) nim->dim[1] * nim->dim[2] * nim->dim[3]; //nifti_get_volsize(nim);
-//
-////    for (vol = 0; vol < nim->dim[4]; vol++){
-////        if (vol >= 10) {
-////            nifti_image_unload(nim);
-////            return(0);
-////        }
-////
-////    }
-//    total = 0;
-////    step = 0;
-//    max = 0;
-//
-//    for (i = 0; i <  nBytesPerVol ; i++) {
-//        total += data[i];
-//        if (data[i] > max) {
-//            printf("%d\n", data[i]);
-//            max = data[i];
-//        }
-//        printf("%d\t%d\n", max, data[i]);
-//    }
-////            total /= (hdr.dim[1] * hdr.dim[2] * hdr.dim[3] * hdr.dim[4]);
-//
-//    /** save to 3D Texture **/
-//    GLubyte *oneVolume = (GLubyte *) malloc(sizeof(GLubyte) * (nim->nvox));
-//
-//    int idx = 0;
-//    for (i = 0; i < nBytesPerVol*(vol+1); i++) {
-//        float voxelValue = ( data[i]/ (float) max );
-//        oneVolume[idx++] = (GLubyte) (voxelValue < 80.00 ? (voxelValue * 255)+2 : 1.0);
-//    }
-//
-//    glPixelStorei(GL_PACK_ALIGNMENT, 1);
-//    glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
-////            tex.push_back(Texture(oneVolume, hdr.dim[1], hdr.dim[2], hdr.dim[3], GL_RGBA, GL_RED, GL_FLOAT));
-//
-//    tex.push_back(Texture(oneVolume, nim->dim[1], nim->dim[2], nim->dim[3], GL_RGBA, GL_RED, GL_UNSIGNED_BYTE));
-//    tex[vol].minFilter(GL_LINEAR);
-//    tex[vol].maxFilter(GL_LINEAR);
-//
-////    step += nim->nvox;
-//    nifti_image_unload(nim);
-//    return(0);
-//}
+template<class T> int NiftiImage::load_nifti_texture(znzFile fp, nifti_image *nim, Texture &tex){
+
+    int i;
+    int max = 0;
+    double total = 0.0;
+    unsigned long ret;
+
+    T *data = (T *) malloc(sizeof(T) * nim->nvox);  // Allocate memory for nifti image data
+    GLubyte *oneVolume = (GLubyte *) malloc(sizeof(GLubyte) * nim->nvox);  // Allocate memory for Texture
+
+    if (data == NULL) {  // Make sure data is not NULL, otherwise exit.
+        fprintf(stderr, "\nError allocating data buffer\n"); // for %s\n",data_file.c_str());
+        exit(1);
+    }
+
+    if (znzseek(fp, nim->iname_offset, 0) < 0) { // Position file point to actual data based on image offset
+        fprintf(stderr,"** could not seek to offset %u in file '%s'\n", (unsigned)nim->iname_offset, nim->iname);
+        exit(1);
+    }
+
+    ret = znzread(data, sizeof(T), nim->nvox, fp);  // read in data
+
+    if (ret != nim->nvox) { // make sure all data was read in correctly
+        fprintf(stderr, "error loading volume data from file...\n");
+        exit(1);
+    } else {
+        printf("ret = %ld,  size = %zu\n", ret, nim->nvox);
+        znzclose(fp);
+    }
 
 
-//int NiftiImage::read_nifti_file(std::string data_file) {
-//
-//    printf("Made it to read_nifti_file!!\n");
-//    hdr = nifti_read_header(data_file.c_str(), 0, 1);
-//    fp = nifti_image_open(data_file.c_str(), (char *) "rb", &nim);
-//
-//    size_t nBytesPerVol = nifti_get_volsize(nim);
-//
-//    if(nifti_image_load(nim)==1) exit(1);
-//
-//    if (nim->datatype == 2){
-//        unsigned char* data = (unsigned char*) malloc(sizeof(unsigned char*) * nBytesPerVol);
-//        return load_nifti_texture(data, nim, texture);
-//
-//    } else if (nim->datatype == 4){
-//        signed short* data = (signed short*) malloc(sizeof(signed short*) * nBytesPerVol);
-//        return load_nifti_texture(data, nim, texture);
-//
-//    } else if (nim->datatype == 8){
-//        signed int* data = (signed int*)malloc(sizeof(signed int*) * nBytesPerVol);
-//        return load_nifti_texture(data, nim, texture);
-//
-//    } else if (nim->datatype == 16){
-//        float* data = (float*)malloc(sizeof(float*) * nBytesPerVol);
-//        return load_nifti_texture(data, nim, texture);
-//
-//    } else if (nim->datatype == 64){
-//        double* data = (double*)malloc(sizeof(double*) * nBytesPerVol);
-//        return load_nifti_texture(data, nim, texture);
-//
-//    } else {
-//        printf("Whoa! data type %d is not supported... exiting...\n", hdr->datatype);
-//        exit(1);
-//
-//    }
-//}
+    for (i = 0; i < nim->nvox; i++) {
+        total += data[i];
+        if (data[i] > max){
+            max = data[i];
+        }
+    }
 
-//    switch(nim->datatype){
-//
-//        case 2 :
-//            return load_nifti_texture((unsigned char*)malloc(sizeof(unsigned char) * nBytesPerVol), nim, texture);
-//        case 4:
-//            return load_nifti_texture((signed short*)malloc(sizeof(signed short) * nBytesPerVol), nim, texture);
-//        case 8:
-//            return load_nifti_texture((signed int*)malloc(sizeof(signed int) * nBytesPerVol), nim, texture);
-//        case 16:
-//            return load_nifti_texture((float*)malloc(sizeof(float) * nBytesPerVol), nim, texture);
-//        case 64:
-//            return load_nifti_texture((double*)malloc(sizeof(double) * nBytesPerVol), nim, texture);
-//        default:
-//          printf("Whoa! data type %d is not supported... exiting...\n", hdr->datatype);
-//          exit(1);
-//    }
+    int idx = 0;
+    for (i = 0; i < nim->nvox; i++) {
+        oneVolume[idx++] = (GLubyte) (((float) data[i] / (float) max) * 255);
+    }
+
+    glPixelStorei(GL_PACK_ALIGNMENT, 1);
+    glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+
+    tex = Texture(oneVolume, nim->dim[1], nim->dim[2], nim->dim[3], GL_RGBA, GL_RED, GL_UNSIGNED_BYTE);
+    tex.wrapMode(GL_CLAMP_TO_EDGE);
+    tex.minFilter(GL_LINEAR);
+    tex.maxFilter(GL_LINEAR);
+
+    free(data);
+    free(oneVolume);
+    nifti_image_free(nim);
+
+    return 0;
+}
+
 
 

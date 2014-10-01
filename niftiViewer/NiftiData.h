@@ -11,18 +11,19 @@
 
 
 #include <Aluminum/Aluminum.h>
+#import "NiftiImage.h"
 
 
 class NiftiData {
 public:
     ResourceHandler rh;
-    
+//    vector<Texture> &tex
     NiftiData();  // Constructor, takes no arguments
 
-    void load_wb1_images(vector<Texture>& images);
-    void load_wb1_orig_images(vector<Texture>& images);
-    void load_test_balls(vector<Texture>& images);
-    void load_ice_images(vector<Texture>& images);
+    void load_wb1_images(vector<NiftiImage> &images);
+    void load_wb1_orig_images(vector<NiftiImage> &images);
+    void load_test_balls(vector<NiftiImage>& images);
+    void load_ice_images(vector<NiftiImage>& images);
 };
 
 #endif
