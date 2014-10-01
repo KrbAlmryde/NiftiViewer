@@ -32,8 +32,10 @@
 		8371C512198C739E00EE1548 /* ball9.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C509198C738D00EE1548 /* ball9.nii.gz */; };
 		8371C515198C892900EE1548 /* axis.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C513198C891700EE1548 /* axis.fsh */; };
 		8371C516198C892900EE1548 /* axis.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C514198C891700EE1548 /* axis.vsh */; };
-		83BFE5C919ABF168009E5C84 /* blend.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83BFE5C819ABF049009E5C84 /* blend.fsh */; };
-		83BFE5CA19ABF168009E5C84 /* blend.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83BFE5C719ABF03A009E5C84 /* blend.vsh */; };
+		837D68C619DCA22C00685334 /* simple.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 837D68C219DC383C00685334 /* simple.fsh */; };
+		837D68C719DCA22C00685334 /* simple.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 837D68C419DC385900685334 /* simple.vsh */; };
+		837D68CA19DCB7CC00685334 /* blend.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 837D68C819DCB7CC00685334 /* blend.fsh */; };
+		837D68CB19DCB7CC00685334 /* blend.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 837D68C919DCB7CC00685334 /* blend.vsh */; };
 		83BFE5CB19ABF168009E5C84 /* cluster.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83BFE5C519ABDF12009E5C84 /* cluster.vsh */; };
 		83BFE5CC19ABF168009E5C84 /* cluster.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83BFE5C619ABDF12009E5C84 /* cluster.fsh */; };
 		83BFE5CD19ABF168009E5C84 /* brain.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8374636719A54ED400F71A2A /* brain.fsh */; };
@@ -112,8 +114,6 @@
 		83ED57C61994466A00FAE194 /* wire.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83ED57C4199445BF00FAE194 /* wire.vsh */; };
 		83ED57C71994466A00FAE194 /* wire.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83ED57C51994463000FAE194 /* wire.fsh */; };
 		83F1727D19DB480500E5AB06 /* Aluminum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F1727C19DB480500E5AB06 /* Aluminum.framework */; };
-		83F1727F19DB52A500E5AB06 /* NiftiData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83F1727E19DB52A500E5AB06 /* NiftiData.mm */; };
-		83F1728419DB53D600E5AB06 /* NiftiImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83F1728319DB53D600E5AB06 /* NiftiImage.mm */; };
 		AF1C603AF346E0CEE762D846 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1C60F47E1E14BEB16E0E17 /* Foundation.framework */; };
 		AF1C682900BD13EA359EDC78 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1C655EE4FE4DC1B25A1AD2 /* OpenGL.framework */; };
 		AF1C6A5BF480E07C71804794 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1C6CF7FFC6FE12E6DA059F /* AppKit.framework */; };
@@ -127,8 +127,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				83BFE5C919ABF168009E5C84 /* blend.fsh in Copy Files (86 items) */,
-				83BFE5CA19ABF168009E5C84 /* blend.vsh in Copy Files (86 items) */,
 				83BFE5CB19ABF168009E5C84 /* cluster.vsh in Copy Files (86 items) */,
 				83BFE5CC19ABF168009E5C84 /* cluster.fsh in Copy Files (86 items) */,
 				83BFE5CD19ABF168009E5C84 /* brain.fsh in Copy Files (86 items) */,
@@ -202,6 +200,10 @@
 				83D9D2C3198AFB9E006E6ACB /* mean_s1_IC2.1D in Copy Files (86 items) */,
 				83D9D2C4198AFB9E006E6ACB /* mean_s1_IC25.1D in Copy Files (86 items) */,
 				83D9D2C5198AFB9E006E6ACB /* mean_s1_IC31.1D in Copy Files (86 items) */,
+				837D68C619DCA22C00685334 /* simple.fsh in Copy Files (86 items) */,
+				837D68CA19DCB7CC00685334 /* blend.fsh in Copy Files (86 items) */,
+				837D68CB19DCB7CC00685334 /* blend.vsh in Copy Files (86 items) */,
+				837D68C719DCA22C00685334 /* simple.vsh in Copy Files (86 items) */,
 				83D9D2C6198AFB9E006E6ACB /* mean_s1_IC39.1D in Copy Files (86 items) */,
 				83D9D2C7198AFB9E006E6ACB /* mean_s1_IC7.1D in Copy Files (86 items) */,
 				83D9D2C8198AFB9E006E6ACB /* mean_s2_IC2.1D in Copy Files (86 items) */,
@@ -248,10 +250,14 @@
 		8371C514198C891700EE1548 /* axis.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = axis.vsh; sourceTree = "<group>"; };
 		8374636719A54ED400F71A2A /* brain.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = brain.fsh; sourceTree = "<group>"; };
 		8374636819A54ED400F71A2A /* brain.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = brain.vsh; sourceTree = "<group>"; };
+		837D68C019DB936F00685334 /* raycaster.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = raycaster.fsh; sourceTree = "<group>"; };
+		837D68C119DB936F00685334 /* raycaster.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = raycaster.vsh; sourceTree = "<group>"; };
+		837D68C219DC383C00685334 /* simple.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = simple.fsh; sourceTree = "<group>"; };
+		837D68C419DC385900685334 /* simple.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = simple.vsh; sourceTree = "<group>"; };
+		837D68C819DCB7CC00685334 /* blend.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = blend.fsh; sourceTree = "<group>"; };
+		837D68C919DCB7CC00685334 /* blend.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = blend.vsh; sourceTree = "<group>"; };
 		83BFE5C519ABDF12009E5C84 /* cluster.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = cluster.vsh; sourceTree = "<group>"; };
 		83BFE5C619ABDF12009E5C84 /* cluster.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = cluster.fsh; sourceTree = "<group>"; };
-		83BFE5C719ABF03A009E5C84 /* blend.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = blend.vsh; path = ../../niftiViewer/blend.vsh; sourceTree = "<group>"; };
-		83BFE5C819ABF049009E5C84 /* blend.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = blend.fsh; path = ../../niftiViewer/blend.fsh; sourceTree = "<group>"; };
 		83D9D23D198AFB44006E6ACB /* IC11_s1.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC11_s1.nii.gz; sourceTree = "<group>"; };
 		83D9D23E198AFB44006E6ACB /* IC11_s2.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC11_s2.nii.gz; sourceTree = "<group>"; };
 		83D9D23F198AFB44006E6ACB /* IC11_s3.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC11_s3.nii.gz; sourceTree = "<group>"; };
@@ -356,10 +362,6 @@
 		83ED57C4199445BF00FAE194 /* wire.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = wire.vsh; sourceTree = "<group>"; };
 		83ED57C51994463000FAE194 /* wire.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = wire.fsh; sourceTree = "<group>"; };
 		83F1727C19DB480500E5AB06 /* Aluminum.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Aluminum.framework; path = ../../../../../../Library/Frameworks/Aluminum.framework; sourceTree = "<group>"; };
-		83F1727E19DB52A500E5AB06 /* NiftiData.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = NiftiData.mm; sourceTree = "<group>"; };
-		83F1728219DB53D600E5AB06 /* NiftiImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NiftiImage.h; path = niftiViewer/NiftiImage.h; sourceTree = "<group>"; };
-		83F1728319DB53D600E5AB06 /* NiftiImage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NiftiImage.mm; sourceTree = "<group>"; };
-		83F1728519DB541D00E5AB06 /* NiftiData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NiftiData.h; path = niftiViewer/NiftiData.h; sourceTree = "<group>"; };
 		92A20F8F186168C800640343 /* Main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Main.mm; sourceTree = "<group>"; };
 		AF1C60F47E1E14BEB16E0E17 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AF1C655EE4FE4DC1B25A1AD2 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -423,6 +425,15 @@
 				8371C509198C738D00EE1548 /* ball9.nii.gz */,
 			);
 			path = ball;
+			sourceTree = "<group>";
+		};
+		837D68BF19DB936F00685334 /* legacy */ = {
+			isa = PBXGroup;
+			children = (
+				837D68C019DB936F00685334 /* raycaster.fsh */,
+				837D68C119DB936F00685334 /* raycaster.vsh */,
+			);
+			path = legacy;
 			sourceTree = "<group>";
 		};
 		83D9D23B198AFB44006E6ACB /* clusters */ = {
@@ -549,8 +560,11 @@
 		83D9D299198AFB44006E6ACB /* shaders */ = {
 			isa = PBXGroup;
 			children = (
-				83BFE5C819ABF049009E5C84 /* blend.fsh */,
-				83BFE5C719ABF03A009E5C84 /* blend.vsh */,
+				837D68BF19DB936F00685334 /* legacy */,
+				837D68C819DCB7CC00685334 /* blend.fsh */,
+				837D68C919DCB7CC00685334 /* blend.vsh */,
+				837D68C219DC383C00685334 /* simple.fsh */,
+				837D68C419DC385900685334 /* simple.vsh */,
 				8371C513198C891700EE1548 /* axis.fsh */,
 				8371C514198C891700EE1548 /* axis.vsh */,
 				83D9D29A198AFB44006E6ACB /* ice.fsh */,
@@ -605,8 +619,6 @@
 		83F1728019DB52F500E5AB06 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				83F1728519DB541D00E5AB06 /* NiftiData.h */,
-				83F1728219DB53D600E5AB06 /* NiftiImage.h */,
 				4C034D9E41282D3A90DC046F /* ActionProxy.h */,
 				83F1728119DB531200E5AB06 /* niftilib */,
 			);
@@ -647,8 +659,6 @@
 			isa = PBXGroup;
 			children = (
 				92A20F8F186168C800640343 /* Main.mm */,
-				83F1727E19DB52A500E5AB06 /* NiftiData.mm */,
-				83F1728319DB53D600E5AB06 /* NiftiImage.mm */,
 				8330CD58198328D20004660B /* NiftiViewer.mm */,
 				D213233618BD29360024DCB6 /* ActionProxy.mm */,
 				B5E3852D1780D8DD00E8C57D /* niftilib */,
@@ -738,9 +748,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83537F0F198997D800940A7E /* nifti1_io.c in Sources */,
-				83F1728419DB53D600E5AB06 /* NiftiImage.mm in Sources */,
 				83537F10198997D800940A7E /* nifti1_io.h in Sources */,
-				83F1727F19DB52A500E5AB06 /* NiftiData.mm in Sources */,
 				83537F11198997D800940A7E /* nifti1.h in Sources */,
 				83537F13198997D800940A7E /* znzlib.c in Sources */,
 				83537F14198997D800940A7E /* znzlib.h in Sources */,

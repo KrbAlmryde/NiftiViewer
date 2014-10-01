@@ -11,25 +11,8 @@
 		},
 		{
 			"follow_symlinks": true,
-			"path": "manuscript"
-		},
-		{
-			"follow_symlinks": true,
 			"name": "aluminum",
-			"path": "/Users/krbalmryde/Dropbox/XCodeProjects/aluminum/src"
-		},
-		{
-			"file_exclude_patterns":
-			[
-				"*.sh",
-				"*.command"
-			],
-			"folder_exclude_patterns":
-			[
-				"misc"
-			],
-			"follow_symlinks": true,
-			"path": "/Users/krbalmryde/Dropbox/XCodeProjects/aluminum/osx"
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/aluminum/src/Aluminum"
 		},
 		{
 			"file_exclude_patterns":
@@ -40,10 +23,15 @@
 			"folder_exclude_patterns":
 			[
 				"misc",
-				"utils"
+				"include",
+				"scripts",
+				"utils",
+				"Framework",
+				"examples/basic"
 			],
 			"follow_symlinks": true,
-			"path": "/Users/krbalmryde/Dropbox/XCodeProjects/aluminum/ios"
+			"name": "osx",
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/aluminum/osx"
 		},
 		{
 			"follow_symlinks": true,
