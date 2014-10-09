@@ -256,6 +256,8 @@
 		837D68C419DC385900685334 /* simple.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = simple.vsh; sourceTree = "<group>"; };
 		837D68C819DCB7CC00685334 /* blend.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = blend.fsh; sourceTree = "<group>"; };
 		837D68C919DCB7CC00685334 /* blend.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = blend.vsh; sourceTree = "<group>"; };
+		83B8D0CC19E6DF6500E0C97A /* texture.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = texture.fsh; sourceTree = "<group>"; };
+		83B8D0CE19E6DF8A00E0C97A /* texture.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = texture.vsh; path = ../../texture.vsh; sourceTree = "<group>"; };
 		83BFE5C519ABDF12009E5C84 /* cluster.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = cluster.vsh; sourceTree = "<group>"; };
 		83BFE5C619ABDF12009E5C84 /* cluster.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = cluster.fsh; sourceTree = "<group>"; };
 		83D9D23D198AFB44006E6ACB /* IC11_s1.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC11_s1.nii.gz; sourceTree = "<group>"; };
@@ -561,6 +563,8 @@
 			isa = PBXGroup;
 			children = (
 				837D68BF19DB936F00685334 /* legacy */,
+				83B8D0CC19E6DF6500E0C97A /* texture.fsh */,
+				83B8D0CE19E6DF8A00E0C97A /* texture.vsh */,
 				837D68C819DCB7CC00685334 /* blend.fsh */,
 				837D68C919DCB7CC00685334 /* blend.vsh */,
 				837D68C219DC383C00685334 /* simple.fsh */,

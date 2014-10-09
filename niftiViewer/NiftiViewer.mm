@@ -23,7 +23,7 @@ public:
         vec4 color = vec4(0.f);
         
         void bind(GLenum textureUnit) { image.bind(textureUnit); }
-        void unbind(GLenum textureUnit) { image.bind(textureUnit); }
+        void unbind(GLenum textureUnit) { image.unbind(textureUnit); }
         
     };
     // MNI_2mm.nii
@@ -50,7 +50,7 @@ public:
     
     
     // Ready Shader program objects
-    Program simpleShader;
+    Program simpleShader, textShader;
     Program wb1Shader, axisShader, wireShader;
     Program blendShader, brainShader, clustShader;
 
@@ -128,7 +128,7 @@ public:
 
         initFBOs();
         load_wb1_orig_images(clusters);
-        read_nifti_file(rh.pathToResource("MNI_2mm","nii.gz"), brain.image); brain.color = vec4(0.50, 0.50, 0.5, 1.0);
+        read_nifti_file(rh.pathToResource("MNI_2mm","nii.gz"), brain.image); brain.color = vec4(0.00, 1.00, 0.0, 1.0);
         
         printf("\nloading shaders now\n");
 //        rh.loadProgram(brainShader, "brain", 0, -1, -1, -1);
@@ -145,8 +145,8 @@ public:
 
         MeshData md1, md2;
         addCube(md1,mdDim);
-        addRectangle(md2, mdDim, mdDim);
-        
+        //addRectangle(md2, mdDim, mdDim);
+        md2 = MeshUtils::makeClipRectangle();
         // Setup our ray cube
 //        axisMB.init(makeAxis(1.0), 0, -1, -1, 1);
         cubeMB.init(md1, 0, -1, 1, -1);
@@ -177,7 +177,7 @@ public:
         //get the camera position
         camPos = glm::vec3(glm::inverse(MV) * glm::vec4(0, 0, 0, 1));
 
-        glScissor(0, 0, width, height);
+       // glScissor(0, 0, width, height);
         glViewport(0, 0, (GLsizei) width, (GLsizei) height);
 
         glClearColor(0.0, 0.0, 0.0, 0.0);
@@ -195,25 +195,27 @@ public:
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);  //glBlendFunc(GL_ZERO, GL_SRC_COLOR); //glBlendFuncSeparate(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA, GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
         
         
-//        drawNiiFBO(simpleShader, fboA, brainOpacity, brain);
-//        drawNiiFBO(simpleShader, fboB, timePerc, clusters[0]);
-//
-//        blendShader.bind();
-//        {
-//            glUniformMatrix4fv(blendShader.uniform("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));  // Used in Vertex Shader
-//            glUniform1i(blendShader.uniform("vVol0"), 0);
-//            glUniform1i(blendShader.uniform("vVol1"), 1);
-//            fboA.texture.bind(GL_TEXTURE0);
-//            fboB.texture.bind(GL_TEXTURE1);
-//                rectMB.draw();
-//            fboA.texture.unbind(GL_TEXTURE0);
-//            fboB.texture.unbind(GL_TEXTURE1);
-//        }
-//        blendShader.unbind();
-//        
+        drawNiiFBO(simpleShader, fboA, brainOpacity, brain);
+        drawNiiFBO(simpleShader, fboB, timePerc, clusters[0]);
         
-        drawNii(simpleShader,brainOpacity, brain);
-        drawNii(simpleShader,timePerc, clusters[0]);
+        glViewport(0,0,width,height);
+        blendShader.bind();
+        {
+//            glUniformMatrix4fv(blendShader.uniform("MVP"), 1, GL_FALSE, glm::value_ptr(mat4()));  // Used in Vertex Shader
+            glUniformMatrix4fv(blendShader.uniform("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));  // Used in Vertex Shader
+            glUniform1i(blendShader.uniform("vVol0"), 0);
+            glUniform1i(blendShader.uniform("vVol1"), 1);
+            fboA.texture.bind(GL_TEXTURE0);
+            fboB.texture.bind(GL_TEXTURE1);
+                rectMB.draw();
+            fboA.texture.unbind(GL_TEXTURE0);
+            fboB.texture.unbind(GL_TEXTURE1);
+        }
+        blendShader.unbind();
+        
+        
+//        drawNii(simpleShader,brainOpacity, brain);
+//        drawNii(simpleShader,timePerc, clusters[0]);
         
     }
 
@@ -243,8 +245,9 @@ public:
             glUniform1f(shader.uniform("DELTA"), DELTA);
             glUniform1i(shader.uniform("MAX_SAMPLES"), 300);
             
-            glUniform4fv(shader.uniform("vColor0"), 1, glm::value_ptr(image.color));
             glUniform1i(shader.uniform("vVol0"), 0);
+            glUniform4fv(shader.uniform("vColor0"), 1, glm::value_ptr(image.color));
+
             
             //render the cube
             fbo.bind();
@@ -526,56 +529,56 @@ public:
 
         if (keysDown[kVK_ANSI_0]) {
             keysDown[kVK_ANSI_0] = false;
-            if (clusterColors[0].a == 0.0)
-                clusterColors[0].a = 1.0;
+            if (clusters[0].color.a == 0.0)
+                clusters[0].color.a = 1.0;
             else
-                clusterColors[0].a = 0.0;
-            printf("clusterColors[0].a = %f\n",clusterColors[0].a);
+                clusters[0].color.a = 0.0;
+            printf("clusters[0].color.a = %f\n",clusters[0].color.a);
         }
 
         if (keysDown[kVK_ANSI_1]) {
             keysDown[kVK_ANSI_1] = false;
-            if (clusterColors[1].a == 0.0)
-                clusterColors[1].a = 1.0;
+            if (clusters[1].color.a == 0.0)
+                clusters[1].color.a = 1.0;
             else
-                clusterColors[1].a = 0.0;
-            printf("clusterColors[1].a = %f\n",clusterColors[1].a);
+                clusters[1].color.a = 0.0;
+            printf("clusters[1].color.a = %f\n",clusters[1].color.a);
         }
 
         if (keysDown[kVK_ANSI_2]) {
             keysDown[kVK_ANSI_2] = false;
-            if (clusterColors[2].a == 0.0)
-                clusterColors[2].a = 1.0;
+            if (clusters[2].color.a == 0.0)
+                clusters[2].color.a = 1.0;
             else
-                clusterColors[2].a = 0.0;
-            printf("clusterColors[2].a = %f\n",clusterColors[2].a);
+                clusters[2].color.a = 0.0;
+            printf("clusters[1].color.a = %f\n",clusters[2].color.a);
         }
 
         if (keysDown[kVK_ANSI_3]) {
             keysDown[kVK_ANSI_3] = false;
-            if (clusterColors[3].a == 0.0)
-                clusterColors[3].a = 1.0;
+            if (clusters[3].color.a == 0.0)
+                clusters[3].color.a = 1.0;
             else
-                clusterColors[3].a = 0.0;
-            printf("clusterColors[3].a = %f\n",clusterColors[3].a);
+                clusters[3].color.a = 0.0;
+            printf("clusters[3].color.a = %f\n",clusters[3].color.a);
         }
 
         if (keysDown[kVK_ANSI_4]) {
             keysDown[kVK_ANSI_4] = false;
-            if (clusterColors[4].a == 0.0)
-                clusterColors[4].a = 1.0;
+            if (clusters[4].color.a == 0.0)
+                clusters[4].color.a = 1.0;
             else
-                clusterColors[4].a = 0.0;
-            printf("clusterColors[4].a = %f\n",clusterColors[4].a);
+                clusters[4].color.a = 0.0;
+            printf("clusters[4].color.a = %f\n",clusters[4].color.a);
         }
 
         if (keysDown[kVK_ANSI_5]) {
             keysDown[kVK_ANSI_5] = false;
-            if (clusterColors[5].a == 0.0)
-                clusterColors[5].a = 1.0;
+            if (clusters[5].color.a == 0.0)
+                clusters[5].color.a = 1.0;
             else
-                clusterColors[5].a = 0.0;
-            printf("clusterColors[5].a = %f\n",clusterColors[5].a);
+                clusters[5].color.a = 0.0;
+            printf("clusters[5].color.a = %f\n",clusters[5].color.a);
         }
     }
 

@@ -35,11 +35,11 @@
 		},
 		{
 			"follow_symlinks": true,
-			"path": "/Users/krbalmryde/Dropbox/Code-Projects/OpenGL"
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/misc/OpenGL"
 		},
 		{
 			"follow_symlinks": true,
-			"path": "/Users/krbalmryde/Dropbox/Code-Projects/C:C++/afni_src"
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/misc/C:C++/afni_src"
 		}
 	]
 }
