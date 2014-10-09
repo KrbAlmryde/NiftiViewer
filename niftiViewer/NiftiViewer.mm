@@ -8,7 +8,7 @@
 
 #include <Aluminum/Aluminum.h>
 #include "nifti1_io.h"
-#include "NiftiData.h"
+//#include "NiftiData.h"
 //#include "ActionProxy.h"
 
 using namespace std;
@@ -29,7 +29,7 @@ public:
     const static int YDIM = 109;//240;
     const static int ZDIM = 91;//256;
 
-    NiftiData nd;
+//    NiftiData nd;
     
     // Setup Aluminum specific stuff
     vector<Texture> images;
@@ -83,7 +83,7 @@ public:
     virtual void onCreate() {
 
         initFBOs();
-        nd.load_wb1_orig_images(images);
+        load_wb1_images();
         
         printf("\nloading shaders now\n");
         rh.loadProgram(brainShader, "brain", 0, -1, -1, -1);
@@ -165,7 +165,7 @@ public:
     virtual void onReshape() {
 
         glViewport(0, 0, (GLsizei) width, (GLsizei) height);
-        camera = Camera(60.0, (float) width / height, 0.001, 100.0).translateZ(-2);
+        camera = Camera(radians(60.0), (float) width / height, 0.001, 100.0).translateZ(-2);
 
 //        if (USE_STEREO)
 //            camera.perspective(60.0, (float) width / height, 0.001, 100.0).stereo(USE_STEREO);

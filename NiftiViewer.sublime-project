@@ -16,7 +16,7 @@
 		{
 			"follow_symlinks": true,
 			"name": "aluminum",
-			"path": "/Users/krbalmryde/Dropbox/XCodeProjects/aluminum/src"
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/aluminum/src"
 		},
 		{
 			"file_exclude_patterns":
@@ -29,29 +29,19 @@
 				"misc"
 			],
 			"follow_symlinks": true,
-			"path": "/Users/krbalmryde/Dropbox/XCodeProjects/aluminum/osx"
-		},
-		{
-			"file_exclude_patterns":
-			[
-				"*.sh",
-				"*.command"
-			],
-			"folder_exclude_patterns":
-			[
-				"misc",
-				"utils"
-			],
-			"follow_symlinks": true,
-			"path": "/Users/krbalmryde/Dropbox/XCodeProjects/aluminum/ios"
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/aluminum/osx"
 		},
 		{
 			"follow_symlinks": true,
-			"path": "/Users/krbalmryde/Dropbox/Code-Projects/OpenGL"
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/misc/OpenGL"
 		},
 		{
 			"follow_symlinks": true,
-			"path": "/Users/krbalmryde/Dropbox/Code-Projects/C:C++/afni_src"
+			"path": "/Users/krbalmryde/Dropbox/Code-Projects/misc/C:C++/afni_src"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Users/krbalmryde/Desktop/MarchingCubes"
 		}
 	]
 }
