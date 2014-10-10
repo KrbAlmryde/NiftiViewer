@@ -24,12 +24,13 @@ public:
         
         void bind(GLenum textureUnit) { image.bind(textureUnit); }
         void unbind(GLenum textureUnit) { image.unbind(textureUnit); }
-        
     };
+    
+    
     // MNI_2mm.nii
-    const static int XDIM = 91;//176
-    const static int YDIM = 109;//240;
-    const static int ZDIM = 91;//256;
+     int XDIM = 91;//176
+     int YDIM = 109;//240;
+     int ZDIM = 91;//256;
     
     // Setup Aluminum specific stuff
 
@@ -44,8 +45,9 @@ public:
     Camera camera;
     ResourceHandler rh;
 
+    Texture ttt, ttt2;
     
-    MeshBuffer cubeMB, rectMB, axisMB;
+    MeshBuffer cubeMB, cubeMB2, rectMB, axisMB;
     vector <MeshBuffer> mbSlice;
     
     
@@ -81,27 +83,17 @@ public:
     GLuint vaoX, vaoY, vaoZ;
     GLuint vboX, vboY, vboZ;
 
-
-    vec4 clusterColors[6] = {
-        vec4(0.50, 0.50, 0.5, 1.0),  // grey-Brain
-        vec4(1.00, 0.00, 0.0, 1.0),  // Red
-        vec4(1.00, 1.00, 0.0, 1.0),  // Yellow
-        vec4(1.00, 0.55, 0.0, 1.0),  // Orange
-        vec4(0.00, 1.00, 0.0, 1.0),  // Green
-        vec4(0.50, 0.00, 1.0, 1.0),  // Purple
-    };
-
     
     /*=============================
      *          intiFBO()         *
      =============================*/
     void initFBOs() {
-        fboA.create(XDIM, YDIM);
+        fboA.create(512, 512);
         fboA.texture.wrapMode(GL_CLAMP_TO_EDGE);
         fboA.texture.minFilter(GL_LINEAR);
         fboA.texture.maxFilter(GL_LINEAR);
         
-        fboB.create(XDIM, YDIM);
+        fboB.create(512, 512);
         fboB.texture.wrapMode(GL_CLAMP_TO_EDGE);
         fboB.texture.minFilter(GL_LINEAR);
         fboB.texture.maxFilter(GL_LINEAR);
@@ -114,10 +106,10 @@ public:
      =============================================================*/
     void load_wb1_orig_images(vector<Nii>& clusters){
 
-        clusters.clear(); clusters.resize(16);
+        clusters.clear(); clusters.resize(3);
         read_nifti_file(rh.pathToResource("all_s1_IC2","nii"), clusters[0].image); clusters[0].color = vec4(1.00, 0.00, 0.0, 1.0);
-        read_nifti_file(rh.pathToResource("all_s2_IC2","nii"), clusters[1].image); clusters[1].color = vec4(1.00, 0.00, 0.0, 1.0);
-        read_nifti_file(rh.pathToResource("all_s3_IC2","nii"), clusters[2].image); clusters[2].color = vec4(1.00, 0.00, 0.0, 1.0);
+        read_nifti_file(rh.pathToResource("all_s1_IC7","nii"), clusters[1].image); clusters[1].color = vec4(0.00, 1.00, 0.0, 1.0);
+        read_nifti_file(rh.pathToResource("all_s1_IC25","nii"), clusters[2].image); clusters[2].color = vec4(0.00, 0.00, 1.0, 1.0);
     }
     
 
@@ -128,29 +120,35 @@ public:
 
         initFBOs();
         load_wb1_orig_images(clusters);
-        read_nifti_file(rh.pathToResource("MNI_2mm","nii.gz"), brain.image); brain.color = vec4(0.00, 1.00, 0.0, 1.0);
+        read_nifti_file(rh.pathToResource("MNI_2mm","nii.gz"), brain.image); brain.color = vec4(0.5, 0.5, 0.5, 1.0);
         
         printf("\nloading shaders now\n");
 //        rh.loadProgram(brainShader, "brain", 0, -1, -1, -1);
 //        rh.loadProgram(clustShader, "cluster", 0, -1, -1, -1);
-        rh.loadProgram(blendShader, "blend", 0, -1, -1, -1);
+        rh.loadProgram(blendShader, "blend", 0, -1, 1, -1);
 //        rh.loadProgram(wb1Shader, "wb1", 0, -1, -1, -1);
         rh.loadProgram(simpleShader, "simple", 0, -1, -1, -1);
-
+        rh.loadProgram(textShader, "texture", 0, -1, 1, -1);
+        rh.loadTexture(ttt, "hubble.jpg");
+        rh.loadTexture(ttt2, "negz.jpg");
         // Setup camera
         camera = Camera(radians(60.0),
                         (float) width / height,
                         0.01,
                         100.0).translateZ(-2); // .convergence(10.0).eyeSep(1.0 / 30.0 * 10.0);
 
-        MeshData md1, md2;
-        addCube(md1,mdDim);
+        MeshData md1a, md1b, md2;
+        addCube(md1a,mdDim);
+        addCube(md1b,mdDim*0.5);
         //addRectangle(md2, mdDim, mdDim);
         md2 = MeshUtils::makeClipRectangle();
         // Setup our ray cube
 //        axisMB.init(makeAxis(1.0), 0, -1, -1, 1);
-        cubeMB.init(md1, 0, -1, 1, -1);
+        cubeMB.init(md1a, 0, -1, 1, -1);
+        cubeMB2.init(md1b, 0, -1, 1, -1);
         rectMB.init(md2, 0, -1, 1, -1);
+        
+        glClearColor(0.2,0.2,0.2,1.0);
     }
 
 
@@ -158,6 +156,7 @@ public:
      *        onFrame()           *
      =============================*/
     virtual void onFrame() {
+        
         handleMouse();
         handleKeys();
 
@@ -177,12 +176,13 @@ public:
         //get the camera position
         camPos = glm::vec3(glm::inverse(MV) * glm::vec4(0, 0, 0, 1));
 
+        
        // glScissor(0, 0, width, height);
-        glViewport(0, 0, (GLsizei) width, (GLsizei) height);
+//        glViewport(0, 0, (GLsizei) width, (GLsizei) height);
 
-        glClearColor(0.0, 0.0, 0.0, 0.0);
+//        glClearColor(0.0, 0.0, 0.0, 0.0);
 
-        glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
+    //    glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
 
         //enable blending and bind the cube vertex array object
         glEnable(GL_BLEND);
@@ -194,15 +194,118 @@ public:
         glDepthFunc(GL_LEQUAL);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);  //glBlendFunc(GL_ZERO, GL_SRC_COLOR); //glBlendFuncSeparate(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA, GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
         
+       
         
-        drawNiiFBO(simpleShader, fboA, brainOpacity, brain);
-        drawNiiFBO(simpleShader, fboB, timePerc, clusters[0]);
+
         
-        glViewport(0,0,width,height);
+        drawNii(simpleShader, fboA, brainOpacity, brain);
+        drawNiiFBO(simpleShader, fboB, timePerc, clusters);
+        
+//        glViewport(0,0,width,height);
+
+        
+  //      drawNii(simpleShader,brainOpacity, brain);
+        //drawNii(simpleShader,timePerc, clusters[0]);
+        
+/*
+        fboA.bind(); 
+        {
+            glDisable(GL_DEPTH_TEST);
+            glEnable(GL_BLEND);
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);  //glBlendFunc(GL_ZERO, GL_SRC_COLOR); //glBlendFuncSeparate(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA, GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+            
+            glViewport(0, 0, (GLsizei) 512, (GLsizei) 512);
+            
+            glClearColor(0.0, 0.0, 0.0, 0.0);
+            
+            glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
+
+//            simpleShader.bind(); 
+//            {
+//                //pass shader uniforms
+//                
+//                glUniformMatrix4fv(simpleShader.uniform("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));  // Used in Vertex Shader
+//                glUniform1f(simpleShader.uniform("alpha"), brainOpacity);
+//                glUniform4f(simpleShader.uniform("vColor0"), 1.0,0.0,0.0,0.5);
+//                
+//                //render the cube
+//                brain.bind(GL_TEXTURE0);
+//                    cubeMB.draw();
+//                brain.unbind(GL_TEXTURE0);
+//            } 
+//            simpleShader.unbind();
+            textShader.bind();
+            {
+                //pass shader uniforms
+                glUniformMatrix4fv(textShader.uniform("MVP"), 1, GL_FALSE, glm::value_ptr(mat4(1.0)) );  // Used in Vertex Shader
+                glUniform1i(textShader.uniform("tex0"), 0);
+                
+                //render the cube
+                ttt2.bind(GL_TEXTURE0);
+                rectMB.draw();
+                ttt2.unbind(GL_TEXTURE0);
+                
+            }
+            textShader.unbind();
+        
+        } 
+        fboA.unbind();
+    
+         
+        fboB.bind(); 
+        {
+            //pass shader uniforms
+           
+
+            glDisable(GL_DEPTH_TEST);
+            glEnable(GL_BLEND);
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);  //glBlendFunc(GL_ZERO, GL_SRC_COLOR); //glBlendFuncSeparate(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA, GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+            
+            
+            glViewport(0, 0, (GLsizei) 512, (GLsizei) 512);
+            glClearColor(0.0, 0.0, 0.0, 0.0);
+            glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
+            
+//            mat4 MVP2 = glm::translate(MVP,vec3(0.3,0.f,0.f));
+            textShader.bind();
+            {
+                //pass shader uniforms
+                glUniformMatrix4fv(textShader.uniform("MVP"), 1, GL_FALSE, glm::value_ptr(mat4(1.0)) );  // Used in Vertex Shader
+                glUniform1i(textShader.uniform("tex0"), 0);
+                
+                //render the cube
+                ttt.bind(GL_TEXTURE0);
+                rectMB.draw();
+                ttt.unbind(GL_TEXTURE0);
+                
+            } 
+            textShader.unbind();
+            
+//            simpleShader.bind(); 
+//            {
+//                //pass shader uniforms
+//                glUniformMatrix4fv(simpleShader.uniform("MVP"), 1, GL_FALSE, glm::value_ptr(MVP2));  // Used in Vertex Shader
+//                glUniform1f(simpleShader.uniform("alpha"), timePerc);
+//                glUniform4f(simpleShader.uniform("vColor0"), 0.0,1.0,0.0,0.5);
+//                
+//                //render the cube
+//                brain.bind(GL_TEXTURE0);
+//                    cubeMB2.draw();
+//                brain.unbind(GL_TEXTURE0);
+//            } 
+//            simpleShader.unbind();
+            
+        } 
+        fboB.unbind();
+*/
+        
+      
+        glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
+
+
         blendShader.bind();
         {
-//            glUniformMatrix4fv(blendShader.uniform("MVP"), 1, GL_FALSE, glm::value_ptr(mat4()));  // Used in Vertex Shader
-            glUniformMatrix4fv(blendShader.uniform("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));  // Used in Vertex Shader
+            glUniformMatrix4fv(blendShader.uniform("MVP"), 1, GL_FALSE, glm::value_ptr(mat4(1.0)) );  // Used in Vertex Shader
             glUniform1i(blendShader.uniform("vVol0"), 0);
             glUniform1i(blendShader.uniform("vVol1"), 1);
             fboA.texture.bind(GL_TEXTURE0);
@@ -213,9 +316,6 @@ public:
         }
         blendShader.unbind();
         
-        
-//        drawNii(simpleShader,brainOpacity, brain);
-//        drawNii(simpleShader,timePerc, clusters[0]);
         
     }
 
@@ -233,55 +333,95 @@ public:
     /*=============================
      *          drawNii()         *
      =============================*/
-    void drawNiiFBO(Program shader, FBO &fbo, float alpha, Nii &image) {
-        shader.bind();
+    void drawNiiFBO(Program shader, FBO &fbo, float alpha, vector<Nii> &images) {
+        fbo.bind();
         {
-            //pass shader uniforms
-            glUniformMatrix4fv(shader.uniform("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));  // Used in Vertex Shader
-            glUniform3fv(shader.uniform("camPos"),  1, glm::value_ptr(camPos));
-            glUniform3f(shader.uniform("step_size"), 1.0f/XDIM, 1.0f/YDIM, 1.0f/ZDIM);
-            glUniform1f(shader.uniform("alpha"), alpha);
-            glUniform1f(shader.uniform("iso"), iso);
-            glUniform1f(shader.uniform("DELTA"), DELTA);
-            glUniform1i(shader.uniform("MAX_SAMPLES"), 300);
-            
-            glUniform1i(shader.uniform("vVol0"), 0);
-            glUniform4fv(shader.uniform("vColor0"), 1, glm::value_ptr(image.color));
 
+//            glDisable(GL_DEPTH_TEST);
+            glEnable(GL_BLEND);
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);  //glBlendFunc(GL_ZERO, GL_SRC_COLOR); //glBlendFuncSeparate(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA, GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
             
-            //render the cube
-            fbo.bind();
+            glViewport(0, 0, (GLsizei) height, (GLsizei) width);
+            
+//            glClearColor(1.0, 0.0, 0.0, 1.0);
+            
+            glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
+            
+            shader.bind();
             {
+                //pass shader uniforms
+                glUniformMatrix4fv(shader.uniform("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));  // Used in Vertex Shader
+                glUniform3fv(shader.uniform("camPos"),  1, glm::value_ptr(camPos));
+                glUniform3f(shader.uniform("step_size"), 1.0f/XDIM, 1.0f/YDIM, 1.0f/ZDIM);
+                glUniform1f(shader.uniform("alpha"), alpha);
+                glUniform1f(shader.uniform("iso"), iso);
+                glUniform1f(shader.uniform("DELTA"), DELTA);
+                glUniform1i(shader.uniform("MAX_SAMPLES"), 300);
+                glUniform1i(shader.uniform("vVol0"), 0);
+
+                for (int i=0; i < images.size(); i++) {
+                    //pass 1 for first cluster
+                    glUniform4fv(shader.uniform("vColor0"), 1, glm::value_ptr(images[0].color));
+                    
+                    //render the cube
+                    images[0].bind(GL_TEXTURE0);
+                        cubeMB.draw();
+                    images[0].unbind(GL_TEXTURE0);
+
+                }
+            
+                /*
+                //pass 2 for first cluster /etc...
+                glUniform4fv(shader.uniform("vColor0"), 1, glm::value_ptr(image.color));
+                
+                //render the cube
                 image.bind(GL_TEXTURE0);
-                    cubeMB.draw();
+                cubeMB.draw();
                 image.unbind(GL_TEXTURE0);
+                */
             }
-            fbo.unbind();
+            shader.unbind();
         }
-        shader.unbind();
+        fbo.unbind();
+
     }
     
-    void drawNii(Program shader, float alpha, Nii &image) {
-        shader.bind();
+    void drawNii(Program shader, FBO &fbo, float alpha, Nii &image) {
+        fbo.bind();
         {
-            //pass shader uniforms
-            glUniformMatrix4fv(shader.uniform("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));  // Used in Vertex Shader
-            glUniform3fv(shader.uniform("camPos"),  1, glm::value_ptr(camPos));
-            glUniform3f(shader.uniform("step_size"), 1.0f/XDIM, 1.0f/YDIM, 1.0f/ZDIM);
-            glUniform1f(shader.uniform("alpha"), alpha);
-            glUniform1f(shader.uniform("iso"), iso);
-            glUniform1f(shader.uniform("DELTA"), DELTA);
-            glUniform1i(shader.uniform("MAX_SAMPLES"), 300);
             
-            glUniform4fv(shader.uniform("vColor0"), 1, glm::value_ptr(image.color));
-            glUniform1i(shader.uniform("vVol0"), 0);
+                //            glDisable(GL_DEPTH_TEST);
+                glEnable(GL_BLEND);
+                glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);  //glBlendFunc(GL_ZERO, GL_SRC_COLOR); //glBlendFuncSeparate(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA, GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+                
+                glViewport(0, 0, (GLsizei) height, (GLsizei) width);
+                
+                //            glClearColor(1.0, 0.0, 0.0, 1.0);
+                
+                glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
             
-            //render the cube
-            image.bind(GL_TEXTURE0);
-            cubeMB.draw();
-            image.unbind(GL_TEXTURE0);
+            shader.bind();
+            {
+                //pass shader uniforms
+                glUniformMatrix4fv(shader.uniform("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));  // Used in Vertex Shader
+                glUniform3fv(shader.uniform("camPos"),  1, glm::value_ptr(camPos));
+                glUniform3f(shader.uniform("step_size"), 1.0f/XDIM, 1.0f/YDIM, 1.0f/ZDIM);
+                glUniform1f(shader.uniform("alpha"), alpha);
+                glUniform1f(shader.uniform("iso"), iso);
+                glUniform1f(shader.uniform("DELTA"), DELTA);
+                glUniform1i(shader.uniform("MAX_SAMPLES"), 300);
+                
+                glUniform4fv(shader.uniform("vColor0"), 1, glm::value_ptr(image.color));
+                glUniform1i(shader.uniform("vVol0"), 0);
+                
+                //render the cube
+                image.bind(GL_TEXTURE0);
+                cubeMB.draw();
+                image.unbind(GL_TEXTURE0);
+            }
+            shader.unbind();
         }
-        shader.unbind();
+        fbo.unbind();
     }
     
     /*=============================
@@ -529,6 +669,15 @@ public:
 
         if (keysDown[kVK_ANSI_0]) {
             keysDown[kVK_ANSI_0] = false;
+            if (brain.color.a == 0.0)
+                brain.color.a = 1.0;
+            else
+                brain.color.a = 0.0;
+            printf("brain.color.a = %f\n",brain.color.a);
+        }
+
+        if (keysDown[kVK_ANSI_1]) {
+            keysDown[kVK_ANSI_1] = false;
             if (clusters[0].color.a == 0.0)
                 clusters[0].color.a = 1.0;
             else
@@ -536,8 +685,8 @@ public:
             printf("clusters[0].color.a = %f\n",clusters[0].color.a);
         }
 
-        if (keysDown[kVK_ANSI_1]) {
-            keysDown[kVK_ANSI_1] = false;
+        if (keysDown[kVK_ANSI_2]) {
+            keysDown[kVK_ANSI_2] = false;
             if (clusters[1].color.a == 0.0)
                 clusters[1].color.a = 1.0;
             else
@@ -545,31 +694,22 @@ public:
             printf("clusters[1].color.a = %f\n",clusters[1].color.a);
         }
 
-        if (keysDown[kVK_ANSI_2]) {
-            keysDown[kVK_ANSI_2] = false;
+        if (keysDown[kVK_ANSI_3]) {
+            keysDown[kVK_ANSI_3] = false;
             if (clusters[2].color.a == 0.0)
                 clusters[2].color.a = 1.0;
             else
                 clusters[2].color.a = 0.0;
-            printf("clusters[1].color.a = %f\n",clusters[2].color.a);
+            printf("clusters[2].color.a = %f\n",clusters[2].color.a);
         }
 
-        if (keysDown[kVK_ANSI_3]) {
-            keysDown[kVK_ANSI_3] = false;
+        if (keysDown[kVK_ANSI_4]) {
+            keysDown[kVK_ANSI_4] = false;
             if (clusters[3].color.a == 0.0)
                 clusters[3].color.a = 1.0;
             else
                 clusters[3].color.a = 0.0;
             printf("clusters[3].color.a = %f\n",clusters[3].color.a);
-        }
-
-        if (keysDown[kVK_ANSI_4]) {
-            keysDown[kVK_ANSI_4] = false;
-            if (clusters[4].color.a == 0.0)
-                clusters[4].color.a = 1.0;
-            else
-                clusters[4].color.a = 0.0;
-            printf("clusters[4].color.a = %f\n",clusters[4].color.a);
         }
 
         if (keysDown[kVK_ANSI_5]) {

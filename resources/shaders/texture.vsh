@@ -6,7 +6,7 @@ uniform mat4 MVP;
 in vec4 vertexPosition;
 in vec4 vertexTexCoord;
 
-smooth out vec2 texCoord;
+out vec2 texCoord;
 
 void main() {
     texCoord = vertexTexCoord.xy;

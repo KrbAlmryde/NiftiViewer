@@ -15,51 +15,24 @@
 		8330CD461982C1D40004660B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8330CD411982C1D40004660B /* QuartzCore.framework */; };
 		8330CD5A198328D20004660B /* NiftiViewer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8330CD58198328D20004660B /* NiftiViewer.mm */; };
 		8330CD5B198344A10004660B /* Main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 92A20F8F186168C800640343 /* Main.mm */; };
+		83469EB819E85C89001BED5C /* texture.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83469EB719E85C89001BED5C /* texture.vsh */; };
+		83469EBA19E86129001BED5C /* negz.jpg in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83469EB919E86129001BED5C /* negz.jpg */; };
 		83537F0F198997D800940A7E /* nifti1_io.c in Sources */ = {isa = PBXBuildFile; fileRef = D21322A518BD27850024DCB6 /* nifti1_io.c */; };
 		83537F10198997D800940A7E /* nifti1_io.h in Sources */ = {isa = PBXBuildFile; fileRef = D21322A618BD27850024DCB6 /* nifti1_io.h */; };
 		83537F11198997D800940A7E /* nifti1.h in Sources */ = {isa = PBXBuildFile; fileRef = D21322A718BD27850024DCB6 /* nifti1.h */; };
 		83537F13198997D800940A7E /* znzlib.c in Sources */ = {isa = PBXBuildFile; fileRef = D21322A818BD27850024DCB6 /* znzlib.c */; };
 		83537F14198997D800940A7E /* znzlib.h in Sources */ = {isa = PBXBuildFile; fileRef = D21322A918BD27850024DCB6 /* znzlib.h */; };
 		83537F1619899A8000940A7E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 83537F1519899A8000940A7E /* libz.dylib */; };
-		8371C50A198C739E00EE1548 /* ball1.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C501198C738D00EE1548 /* ball1.nii.gz */; };
-		8371C50B198C739E00EE1548 /* ball2.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C502198C738D00EE1548 /* ball2.nii.gz */; };
-		8371C50C198C739E00EE1548 /* ball3.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C503198C738D00EE1548 /* ball3.nii.gz */; };
-		8371C50D198C739E00EE1548 /* ball4.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C504198C738D00EE1548 /* ball4.nii.gz */; };
-		8371C50E198C739E00EE1548 /* ball5.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C505198C738D00EE1548 /* ball5.nii.gz */; };
-		8371C50F198C739E00EE1548 /* ball6.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C506198C738D00EE1548 /* ball6.nii.gz */; };
-		8371C510198C739E00EE1548 /* ball7.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C507198C738D00EE1548 /* ball7.nii.gz */; };
-		8371C511198C739E00EE1548 /* ball8.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C508198C738D00EE1548 /* ball8.nii.gz */; };
-		8371C512198C739E00EE1548 /* ball9.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C509198C738D00EE1548 /* ball9.nii.gz */; };
-		8371C515198C892900EE1548 /* axis.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C513198C891700EE1548 /* axis.fsh */; };
-		8371C516198C892900EE1548 /* axis.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8371C514198C891700EE1548 /* axis.vsh */; };
 		837D68C619DCA22C00685334 /* simple.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 837D68C219DC383C00685334 /* simple.fsh */; };
 		837D68C719DCA22C00685334 /* simple.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 837D68C419DC385900685334 /* simple.vsh */; };
 		837D68CA19DCB7CC00685334 /* blend.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 837D68C819DCB7CC00685334 /* blend.fsh */; };
 		837D68CB19DCB7CC00685334 /* blend.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 837D68C919DCB7CC00685334 /* blend.vsh */; };
+		83B8D0D019E7485900E0C97A /* texture.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83B8D0CC19E6DF6500E0C97A /* texture.fsh */; };
+		83B8D0D319E749F100E0C97A /* hubble.jpg in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83B8D0D219E749F100E0C97A /* hubble.jpg */; };
 		83BFE5CB19ABF168009E5C84 /* cluster.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83BFE5C519ABDF12009E5C84 /* cluster.vsh */; };
 		83BFE5CC19ABF168009E5C84 /* cluster.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83BFE5C619ABDF12009E5C84 /* cluster.fsh */; };
 		83BFE5CD19ABF168009E5C84 /* brain.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8374636719A54ED400F71A2A /* brain.fsh */; };
 		83BFE5CE19ABF168009E5C84 /* brain.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 8374636819A54ED400F71A2A /* brain.vsh */; };
-		83D9D2A0198AFB9E006E6ACB /* IC11_s1.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D23D198AFB44006E6ACB /* IC11_s1.nii.gz */; };
-		83D9D2A1198AFB9E006E6ACB /* IC11_s2.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D23E198AFB44006E6ACB /* IC11_s2.nii.gz */; };
-		83D9D2A2198AFB9E006E6ACB /* IC11_s3.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D23F198AFB44006E6ACB /* IC11_s3.nii.gz */; };
-		83D9D2A3198AFB9E006E6ACB /* IC11_s4.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D240198AFB44006E6ACB /* IC11_s4.nii.gz */; };
-		83D9D2A4198AFB9E006E6ACB /* IC12_s1.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D241198AFB44006E6ACB /* IC12_s1.nii.gz */; };
-		83D9D2A5198AFB9E006E6ACB /* IC12_s2.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D242198AFB44006E6ACB /* IC12_s2.nii.gz */; };
-		83D9D2A6198AFB9E006E6ACB /* IC12_s3.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D243198AFB44006E6ACB /* IC12_s3.nii.gz */; };
-		83D9D2A7198AFB9E006E6ACB /* IC12_s4.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D244198AFB44006E6ACB /* IC12_s4.nii.gz */; };
-		83D9D2A8198AFB9E006E6ACB /* IC18_s1.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D245198AFB44006E6ACB /* IC18_s1.nii.gz */; };
-		83D9D2A9198AFB9E006E6ACB /* IC18_s2.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D246198AFB44006E6ACB /* IC18_s2.nii.gz */; };
-		83D9D2AA198AFB9E006E6ACB /* IC18_s3.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D247198AFB44006E6ACB /* IC18_s3.nii.gz */; };
-		83D9D2AB198AFB9E006E6ACB /* IC18_s4.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D248198AFB44006E6ACB /* IC18_s4.nii.gz */; };
-		83D9D2AC198AFB9E006E6ACB /* IC2_s1.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D249198AFB44006E6ACB /* IC2_s1.nii.gz */; };
-		83D9D2AD198AFB9E006E6ACB /* IC2_s2.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D24A198AFB44006E6ACB /* IC2_s2.nii.gz */; };
-		83D9D2AE198AFB9E006E6ACB /* IC2_s3.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D24B198AFB44006E6ACB /* IC2_s3.nii.gz */; };
-		83D9D2AF198AFB9E006E6ACB /* IC2_s4.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D24C198AFB44006E6ACB /* IC2_s4.nii.gz */; };
-		83D9D2B0198AFB9E006E6ACB /* IC4_s1.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D24D198AFB44006E6ACB /* IC4_s1.nii.gz */; };
-		83D9D2B1198AFB9E006E6ACB /* IC4_s2.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D24E198AFB44006E6ACB /* IC4_s2.nii.gz */; };
-		83D9D2B2198AFB9E006E6ACB /* IC4_s3.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D24F198AFB44006E6ACB /* IC4_s3.nii.gz */; };
-		83D9D2B3198AFB9E006E6ACB /* IC4_s4.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D250198AFB44006E6ACB /* IC4_s4.nii.gz */; };
 		83D9D2B4198AFB9E006E6ACB /* all_s1_IC25_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D252198AFB44006E6ACB /* all_s1_IC25_caez_2blur_LR.nii.gz */; };
 		83D9D2B5198AFB9E006E6ACB /* all_s1_IC2_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D253198AFB44006E6ACB /* all_s1_IC2_caez_2blur_LR.nii.gz */; };
 		83D9D2B6198AFB9E006E6ACB /* all_s1_IC31_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D254198AFB44006E6ACB /* all_s1_IC31_caez_2blur_LR.nii.gz */; };
@@ -75,25 +48,6 @@
 		83D9D2C0198AFB9E006E6ACB /* all_s3_IC31_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D25E198AFB44006E6ACB /* all_s3_IC31_caez_2blur_LR.nii.gz */; };
 		83D9D2C1198AFB9E006E6ACB /* all_s3_IC39_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D25F198AFB44006E6ACB /* all_s3_IC39_caez_2blur_LR.nii.gz */; };
 		83D9D2C2198AFB9E006E6ACB /* all_s3_IC7_caez_2blur_LR.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D260198AFB44006E6ACB /* all_s3_IC7_caez_2blur_LR.nii.gz */; };
-		83D9D2C3198AFB9E006E6ACB /* mean_s1_IC2.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D26C198AFB44006E6ACB /* mean_s1_IC2.1D */; };
-		83D9D2C4198AFB9E006E6ACB /* mean_s1_IC25.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D26D198AFB44006E6ACB /* mean_s1_IC25.1D */; };
-		83D9D2C5198AFB9E006E6ACB /* mean_s1_IC31.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D26E198AFB44006E6ACB /* mean_s1_IC31.1D */; };
-		83D9D2C6198AFB9E006E6ACB /* mean_s1_IC39.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D26F198AFB44006E6ACB /* mean_s1_IC39.1D */; };
-		83D9D2C7198AFB9E006E6ACB /* mean_s1_IC7.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D270198AFB44006E6ACB /* mean_s1_IC7.1D */; };
-		83D9D2C8198AFB9E006E6ACB /* mean_s2_IC2.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D271198AFB44006E6ACB /* mean_s2_IC2.1D */; };
-		83D9D2C9198AFB9E006E6ACB /* mean_s2_IC25.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D272198AFB44006E6ACB /* mean_s2_IC25.1D */; };
-		83D9D2CA198AFB9E006E6ACB /* mean_s2_IC31.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D273198AFB44006E6ACB /* mean_s2_IC31.1D */; };
-		83D9D2CB198AFB9E006E6ACB /* mean_s2_IC39.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D274198AFB44006E6ACB /* mean_s2_IC39.1D */; };
-		83D9D2CC198AFB9E006E6ACB /* mean_s2_IC7.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D275198AFB44006E6ACB /* mean_s2_IC7.1D */; };
-		83D9D2CD198AFB9E006E6ACB /* mean_s3_IC2.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D276198AFB44006E6ACB /* mean_s3_IC2.1D */; };
-		83D9D2CE198AFB9E006E6ACB /* mean_s3_IC25.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D277198AFB44006E6ACB /* mean_s3_IC25.1D */; };
-		83D9D2CF198AFB9E006E6ACB /* mean_s3_IC31.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D278198AFB44006E6ACB /* mean_s3_IC31.1D */; };
-		83D9D2D0198AFB9E006E6ACB /* mean_s3_IC39.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D279198AFB44006E6ACB /* mean_s3_IC39.1D */; };
-		83D9D2D1198AFB9E006E6ACB /* mean_s3_IC7.1D in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D27A198AFB44006E6ACB /* mean_s3_IC7.1D */; };
-		83D9D2F0198AFB9E006E6ACB /* ice.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D29A198AFB44006E6ACB /* ice.fsh */; };
-		83D9D2F1198AFB9E006E6ACB /* ice.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D29B198AFB44006E6ACB /* ice.vsh */; };
-		83D9D2F2198AFB9E006E6ACB /* wb1.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D29C198AFB44006E6ACB /* wb1.fsh */; };
-		83D9D2F3198AFB9E006E6ACB /* wb1.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D29D198AFB44006E6ACB /* wb1.vsh */; };
 		83D9D2F7198AFC74006E6ACB /* MNI_2mm.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D2F5198AFC5E006E6ACB /* MNI_2mm.nii.gz */; };
 		83D9D2F8198AFC74006E6ACB /* MNI_caez_N27.nii.gz in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83D9D2F6198AFC5E006E6ACB /* MNI_caez_N27.nii.gz */; };
 		83ED57B51994373400FAE194 /* all_s1_IC2.nii in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83ED57A61994371A00FAE194 /* all_s1_IC2.nii */; };
@@ -127,6 +81,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				83B8D0D019E7485900E0C97A /* texture.fsh in Copy Files (86 items) */,
+				83469EB819E85C89001BED5C /* texture.vsh in Copy Files (86 items) */,
 				83BFE5CB19ABF168009E5C84 /* cluster.vsh in Copy Files (86 items) */,
 				83BFE5CC19ABF168009E5C84 /* cluster.fsh in Copy Files (86 items) */,
 				83BFE5CD19ABF168009E5C84 /* brain.fsh in Copy Files (86 items) */,
@@ -148,40 +104,9 @@
 				83ED57C11994373400FAE194 /* all_s3_IC31.nii in Copy Files (86 items) */,
 				83ED57C21994373400FAE194 /* all_s3_IC39.nii in Copy Files (86 items) */,
 				83ED57C31994373400FAE194 /* all_s3_IC7.nii in Copy Files (86 items) */,
-				8371C515198C892900EE1548 /* axis.fsh in Copy Files (86 items) */,
-				8371C516198C892900EE1548 /* axis.vsh in Copy Files (86 items) */,
-				8371C50A198C739E00EE1548 /* ball1.nii.gz in Copy Files (86 items) */,
-				8371C50B198C739E00EE1548 /* ball2.nii.gz in Copy Files (86 items) */,
-				8371C50C198C739E00EE1548 /* ball3.nii.gz in Copy Files (86 items) */,
-				8371C50D198C739E00EE1548 /* ball4.nii.gz in Copy Files (86 items) */,
-				8371C50E198C739E00EE1548 /* ball5.nii.gz in Copy Files (86 items) */,
-				8371C50F198C739E00EE1548 /* ball6.nii.gz in Copy Files (86 items) */,
-				8371C510198C739E00EE1548 /* ball7.nii.gz in Copy Files (86 items) */,
-				8371C511198C739E00EE1548 /* ball8.nii.gz in Copy Files (86 items) */,
-				8371C512198C739E00EE1548 /* ball9.nii.gz in Copy Files (86 items) */,
 				83D9D2F7198AFC74006E6ACB /* MNI_2mm.nii.gz in Copy Files (86 items) */,
 				83D9D2F8198AFC74006E6ACB /* MNI_caez_N27.nii.gz in Copy Files (86 items) */,
-				83D9D2A0198AFB9E006E6ACB /* IC11_s1.nii.gz in Copy Files (86 items) */,
-				83D9D2A1198AFB9E006E6ACB /* IC11_s2.nii.gz in Copy Files (86 items) */,
-				83D9D2A2198AFB9E006E6ACB /* IC11_s3.nii.gz in Copy Files (86 items) */,
-				83D9D2A3198AFB9E006E6ACB /* IC11_s4.nii.gz in Copy Files (86 items) */,
-				83D9D2A4198AFB9E006E6ACB /* IC12_s1.nii.gz in Copy Files (86 items) */,
-				83D9D2A5198AFB9E006E6ACB /* IC12_s2.nii.gz in Copy Files (86 items) */,
-				83D9D2A6198AFB9E006E6ACB /* IC12_s3.nii.gz in Copy Files (86 items) */,
-				83D9D2A7198AFB9E006E6ACB /* IC12_s4.nii.gz in Copy Files (86 items) */,
-				83D9D2A8198AFB9E006E6ACB /* IC18_s1.nii.gz in Copy Files (86 items) */,
-				83D9D2A9198AFB9E006E6ACB /* IC18_s2.nii.gz in Copy Files (86 items) */,
-				83D9D2AA198AFB9E006E6ACB /* IC18_s3.nii.gz in Copy Files (86 items) */,
-				83D9D2AB198AFB9E006E6ACB /* IC18_s4.nii.gz in Copy Files (86 items) */,
-				83D9D2AC198AFB9E006E6ACB /* IC2_s1.nii.gz in Copy Files (86 items) */,
-				83D9D2AD198AFB9E006E6ACB /* IC2_s2.nii.gz in Copy Files (86 items) */,
-				83D9D2AE198AFB9E006E6ACB /* IC2_s3.nii.gz in Copy Files (86 items) */,
-				83D9D2AF198AFB9E006E6ACB /* IC2_s4.nii.gz in Copy Files (86 items) */,
-				83D9D2B0198AFB9E006E6ACB /* IC4_s1.nii.gz in Copy Files (86 items) */,
-				83D9D2B1198AFB9E006E6ACB /* IC4_s2.nii.gz in Copy Files (86 items) */,
-				83D9D2B2198AFB9E006E6ACB /* IC4_s3.nii.gz in Copy Files (86 items) */,
 				831FF057199034B2008005F7 /* kyle_brain.nii.gz in Copy Files (86 items) */,
-				83D9D2B3198AFB9E006E6ACB /* IC4_s4.nii.gz in Copy Files (86 items) */,
 				83D9D2B4198AFB9E006E6ACB /* all_s1_IC25_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
 				83D9D2B5198AFB9E006E6ACB /* all_s1_IC2_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
 				83D9D2B6198AFB9E006E6ACB /* all_s1_IC31_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
@@ -197,29 +122,12 @@
 				83D9D2C0198AFB9E006E6ACB /* all_s3_IC31_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
 				83D9D2C1198AFB9E006E6ACB /* all_s3_IC39_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
 				83D9D2C2198AFB9E006E6ACB /* all_s3_IC7_caez_2blur_LR.nii.gz in Copy Files (86 items) */,
-				83D9D2C3198AFB9E006E6ACB /* mean_s1_IC2.1D in Copy Files (86 items) */,
-				83D9D2C4198AFB9E006E6ACB /* mean_s1_IC25.1D in Copy Files (86 items) */,
-				83D9D2C5198AFB9E006E6ACB /* mean_s1_IC31.1D in Copy Files (86 items) */,
 				837D68C619DCA22C00685334 /* simple.fsh in Copy Files (86 items) */,
 				837D68CA19DCB7CC00685334 /* blend.fsh in Copy Files (86 items) */,
 				837D68CB19DCB7CC00685334 /* blend.vsh in Copy Files (86 items) */,
 				837D68C719DCA22C00685334 /* simple.vsh in Copy Files (86 items) */,
-				83D9D2C6198AFB9E006E6ACB /* mean_s1_IC39.1D in Copy Files (86 items) */,
-				83D9D2C7198AFB9E006E6ACB /* mean_s1_IC7.1D in Copy Files (86 items) */,
-				83D9D2C8198AFB9E006E6ACB /* mean_s2_IC2.1D in Copy Files (86 items) */,
-				83D9D2C9198AFB9E006E6ACB /* mean_s2_IC25.1D in Copy Files (86 items) */,
-				83D9D2CA198AFB9E006E6ACB /* mean_s2_IC31.1D in Copy Files (86 items) */,
-				83D9D2CB198AFB9E006E6ACB /* mean_s2_IC39.1D in Copy Files (86 items) */,
-				83D9D2CC198AFB9E006E6ACB /* mean_s2_IC7.1D in Copy Files (86 items) */,
-				83D9D2CD198AFB9E006E6ACB /* mean_s3_IC2.1D in Copy Files (86 items) */,
-				83D9D2CE198AFB9E006E6ACB /* mean_s3_IC25.1D in Copy Files (86 items) */,
-				83D9D2CF198AFB9E006E6ACB /* mean_s3_IC31.1D in Copy Files (86 items) */,
-				83D9D2D0198AFB9E006E6ACB /* mean_s3_IC39.1D in Copy Files (86 items) */,
-				83D9D2D1198AFB9E006E6ACB /* mean_s3_IC7.1D in Copy Files (86 items) */,
-				83D9D2F0198AFB9E006E6ACB /* ice.fsh in Copy Files (86 items) */,
-				83D9D2F1198AFB9E006E6ACB /* ice.vsh in Copy Files (86 items) */,
-				83D9D2F2198AFB9E006E6ACB /* wb1.fsh in Copy Files (86 items) */,
-				83D9D2F3198AFB9E006E6ACB /* wb1.vsh in Copy Files (86 items) */,
+				83469EBA19E86129001BED5C /* negz.jpg in Copy Files (86 items) */,
+				83B8D0D319E749F100E0C97A /* hubble.jpg in Copy Files (86 items) */,
 			);
 			name = "Copy Files (86 items)";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,6 +144,8 @@
 		8330CD411982C1D40004660B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8330CD561982E4960004660B /* nifti1_test.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = nifti1_test.c; path = niftiViewer/niftilib/nifti1_test.c; sourceTree = "<group>"; };
 		8330CD58198328D20004660B /* NiftiViewer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NiftiViewer.mm; sourceTree = "<group>"; };
+		83469EB719E85C89001BED5C /* texture.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = texture.vsh; sourceTree = "<group>"; };
+		83469EB919E86129001BED5C /* negz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = negz.jpg; path = resources/negz.jpg; sourceTree = "<group>"; };
 		83537F1519899A8000940A7E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		8371C501198C738D00EE1548 /* ball1.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = ball1.nii.gz; sourceTree = "<group>"; };
 		8371C502198C738D00EE1548 /* ball2.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = ball2.nii.gz; sourceTree = "<group>"; };
@@ -257,7 +167,7 @@
 		837D68C819DCB7CC00685334 /* blend.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = blend.fsh; sourceTree = "<group>"; };
 		837D68C919DCB7CC00685334 /* blend.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = blend.vsh; sourceTree = "<group>"; };
 		83B8D0CC19E6DF6500E0C97A /* texture.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = texture.fsh; sourceTree = "<group>"; };
-		83B8D0CE19E6DF8A00E0C97A /* texture.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = texture.vsh; path = ../../texture.vsh; sourceTree = "<group>"; };
+		83B8D0D219E749F100E0C97A /* hubble.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hubble.jpg; path = resources/hubble.jpg; sourceTree = "<group>"; };
 		83BFE5C519ABDF12009E5C84 /* cluster.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = cluster.vsh; sourceTree = "<group>"; };
 		83BFE5C619ABDF12009E5C84 /* cluster.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = cluster.fsh; sourceTree = "<group>"; };
 		83D9D23D198AFB44006E6ACB /* IC11_s1.nii.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = IC11_s1.nii.gz; sourceTree = "<group>"; };
@@ -408,9 +318,19 @@
 				83D9D2F4198AFC5E006E6ACB /* brains */,
 				83D9D23B198AFB44006E6ACB /* clusters */,
 				83D9D261198AFB44006E6ACB /* models */,
+				83469EBB19E86136001BED5C /* Images */,
 				83D9D299198AFB44006E6ACB /* shaders */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		83469EBB19E86136001BED5C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				83469EB919E86129001BED5C /* negz.jpg */,
+				83B8D0D219E749F100E0C97A /* hubble.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		8371C500198C738D00EE1548 /* ball */ = {
@@ -564,7 +484,7 @@
 			children = (
 				837D68BF19DB936F00685334 /* legacy */,
 				83B8D0CC19E6DF6500E0C97A /* texture.fsh */,
-				83B8D0CE19E6DF8A00E0C97A /* texture.vsh */,
+				83469EB719E85C89001BED5C /* texture.vsh */,
 				837D68C819DCB7CC00685334 /* blend.fsh */,
 				837D68C919DCB7CC00685334 /* blend.vsh */,
 				837D68C219DC383C00685334 /* simple.fsh */,
