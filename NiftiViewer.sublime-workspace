@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"v",
+				"vVol1"
+			],
+			[
+				"vV",
+				"vVol0"
+			],
+			[
+				"brain",
+				"brainOpacity"
+			],
+			[
 				"po",
 				"position"
 			],
@@ -99,46 +111,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "NiftiViewer.sublime-project",
-			"settings":
-			{
-				"buffer_size": 820,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "niftiViewer/NiftiViewer.mm",
-			"settings":
-			{
-				"buffer_size": 31651,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/aluminum/osx/src/Aluminum/ResourceHandler.mm",
-			"settings":
-			{
-				"buffer_size": 11953,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/aluminum/src/Aluminum/FBO.cpp",
-			"settings":
-			{
-				"buffer_size": 21361,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/krbalmryde/Dropbox/Code-Projects/misc/OpenGL/DevCookBook/Chapter2/src/GLSLShader.cpp",
-			"settings":
-			{
-				"buffer_size": 3013,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -395,8 +367,47 @@
 	],
 	"file_history":
 	[
-		"/Users/krbalmryde/Dropbox/Code-Projects/misc/C:C++/afni_src/Makefile.FreeBSD",
+		"/Users/krbalmryde/Dropbox/Code-Projects/EVL/NiftiViewer/Resources/shaders/texture.vsh",
+		"/Users/krbalmryde/Dropbox/Code-Projects/EVL/NiftiViewer/Resources/shaders/texture.fsh",
+		"/Users/krbalmryde/Dropbox/Code-Projects/EVL/NiftiViewer/Resources/shaders/blend.vsh",
+		"/Users/krbalmryde/Dropbox/Code-Projects/EVL/NiftiViewer/Resources/shaders/blend.fsh",
+		"/Users/krbalmryde/Dropbox/Code-Projects/EVL/NiftiViewer/Resources/shaders/simple.vsh",
+		"/Users/krbalmryde/Dropbox/Code-Projects/EVL/NiftiViewer/Resources/shaders/simple.fsh",
+		"/Users/krbalmryde/Dropbox/Code-Projects/KrbAlmryde.github.io/projects/bicyclerace.github.io/.git/MERGE_MSG",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/C:C++/afni_src/SUMA/SUMA_input.c",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/C:C++/afni_src/Simplexx.c",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/C:C++/afni_src/simplex.h",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/C:C++/afni_src/simplex.c",
+		"/Users/krbalmryde/Dropbox/Code-Projects/EVL/aluminum/src/Aluminum/Shapes.cpp",
+		"/Users/krbalmryde/Dropbox/Code-Projects/EVL/aluminum/osx/examples/xcode-demos/week3c_PingPonging/resources/texture.vsh",
+		"/Users/krbalmryde/Dropbox/Code-Projects/EVL/aluminum/osx/examples/xcode-demos/week3b_RenderToTexture/resources/texture.vsh",
+		"/Users/krbalmryde/Dropbox/Code-Projects/EVL/aluminum/osx/examples/xcode-demos/week2b_Texturing/resources/texture.vsh",
+		"/Users/krbalmryde/Dropbox/Code-Projects/EVL/aluminum/osx/examples/xcode-demos/week3b_RenderToTexture/resources/color.vsh",
+		"/Users/krbalmryde/Dropbox/Code-Projects/EVL/aluminum/osx/examples/xcode-demos/week3b_RenderToTexture/resources/phong.vsh",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/OpenGL/opengl-series/windows/02_textures/thirdparty/glm-0.9.4.0/glm/gtx/simd_vec4.hpp",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/OpenGL/opengl-series/windows/02_textures/thirdparty/glm-0.9.4.0/glm/gtx/verbose_operator.hpp",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/OpenGL/opengl-series/windows/02_textures/thirdparty/glm-0.9.4.0/glm/gtx/vector_access.hpp",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/OpenGL/opengl-series/windows/02_textures/thirdparty/glm-0.9.4.0/glm/virtrev/xstream.hpp",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/OpenGL/opengl-series/windows/02_textures/thirdparty/glm-0.9.4.0/glm/core/intrinsic_vector_relational.hpp",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/OpenGL/opengl-series/windows/02_textures/thirdparty/glm-0.9.4.0/glm/gtc/matrix_inverse.hpp",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/OpenGL/opengl-series/windows/02_textures/thirdparty/glm-0.9.4.0/test/external/gli/gtx/wavelet.hpp",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/OpenGL/Learning Modern 3D Graphics Programming/Tut 17 Spotlight on Textures/data/litTexture.vert",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/OpenGL/DevCookBook/Chapter7/HalfAngleSlicing/shaders/textureSlicer.vert",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/OpenGL/DevCookBook/Chapter7/3DTextureSlicingClassification/shaders/textureSlicer.vert",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/OpenGL/DevCookBook/Chapter7/3DTextureSlicing/shaders/textureSlicer.vert",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/OpenGL/SuperBible6/MacChapterSamples/StonehengeModel/text.vp",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/OpenGL/wikibooks-opengl-modern-tutorials/text02_atlas/text.v.glsl",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/OpenGL/wikibooks-opengl-modern-tutorials/text01_intro/text.v.glsl",
+		"/Users/krbalmryde/Dropbox/Code-Projects/EVL/aluminum/src/Aluminum/Texture.cpp",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/C:C++/afni_src/thd_editdaxes.c",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/C:C++/afni_src/matlab/BrikLoad.m",
+		"/Users/krbalmryde/Dropbox/Code-Projects/EVL/NiftiViewer/niftiViewer/Basic.mm",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/OpenGL/DevCookBook/Chapter2/src/GLSLShader.cpp",
 		"/Users/krbalmryde/Dropbox/Code-Projects/EVL/aluminum/src/Aluminum/FBO.cpp",
+		"/Users/krbalmryde/Dropbox/Code-Projects/EVL/aluminum/osx/src/Aluminum/ResourceHandler.mm",
+		"/Users/krbalmryde/Dropbox/Code-Projects/EVL/NiftiViewer/NiftiViewer.sublime-project",
+		"/Users/krbalmryde/Dropbox/Code-Projects/EVL/NiftiViewer/niftiViewer/NiftiViewer.mm",
+		"/Users/krbalmryde/Dropbox/Code-Projects/misc/C:C++/afni_src/Makefile.FreeBSD",
 		"/Users/krbalmryde/Dropbox/Code-Projects/misc/C:C++/afni_src/README.render_scripts",
 		"/Users/krbalmryde/Dropbox/Code-Projects/misc/C:C++/afni_src/readme_env.h",
 		"/Users/krbalmryde/Dropbox/Code-Projects/EVL/NiftiViewer/niftiViewer/Raycast.mm",
@@ -483,50 +494,11 @@
 		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/SECTION_Persistence/serializedObjects/transactionCollection.object",
 		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/BankTeller/serializedObjects/transactionCollection.object",
 		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/AlphaSuperAwesomeCoolDynamiteWolfSquadron/Test/NorthTest.java",
-		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA555/NSAInterview/docs/project3_data/org_top_membersSLASHemployees",
-		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA555/ExtractPeopleAndOrg/docs/project3_data/org_top_membersSLASHemployees",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs227/OrderedSet/OrderedSet.java",
-		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/finalreviewsol/output/story.txt",
-		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/finalreviewsol/implement/story.txt",
-		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/finalreviewsol/errors/story.txt",
-		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/finalreviewsol/convert/story.txt",
-		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/finalreviewsol/bugs/story.txt",
-		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/finalreview/output/story.txt",
-		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/finalreview/implement/story.txt",
-		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/finalreview/errors/story.txt",
-		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/finalreview/convert/story.txt",
-		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA130/finalreview/bugs/story.txt",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs227/doc/OrderedMapTest.java",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/doc/paintdemo2/glew/auto/extensions/GL_SGI_color_table",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs227/MineSweeper/scores.txt",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs372/ass3/splitLineWorkThrough.hs",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/HuntTheWumpus/src/test/RoomTests.java",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/.metadata/.plugins/com.python.pydev.analysis/python_v1_bm109oo8jsa5gnqmc06ekl12p/v1_indexcache/zope.interface.tests.test_sorting_dy4p.v1_indexcache",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/.metadata/.plugins/com.python.pydev.analysis/python_v1_bm109oo8jsa5gnqmc06ekl12p/v1_indexcache/test.sortperf_171m.v1_indexcache",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/AlphaSuperAwesomeCoolDynamiteWolfSquadron/Test/ArmorTest.java",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/.metadata/.plugins/com.python.pydev.analysis/python_v1_bm109oo8jsa5gnqmc06ekl12p/v1_indexcache/test.test_sort_ap4w.v1_indexcache",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs227/OrderedSet/OrderedSetTest.java",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs335/.metadata/.plugins/com.python.pydev.analysis/python_v1_bm109oo8jsa5gnqmc06ekl12p/v1_indexcache/ScrolledText_obzp.v1_indexcache",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs227/Seconds.java",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW3/HW3/HW3/homework3.cpp",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW3/HW3/HW3/Makefile",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW3/HW3/ImageResize.py",
-		"/Users/krbalmryde/Library/Application Support/Sublime Text 3/Packages/User/hm3.sublime-build",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW3/homework3.cpp",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW3/homework3",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW2/HW2/homework2",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW2/.etc/homework2",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW2/homework2.h",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW2/homework2.cxx",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW1/homework1.cxx",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW2/homework2",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW3/ImageResize.py",
-		"/Users/krbalmryde/Dropbox/Class-Projects/cs533/HW3/ImageCrop.py",
-		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA555/.YouAreWhatYouEat/.idea/libraries/Maven__nz_ac_waikato_cms_weka_multiInstanceLearning_1_0_7.xml"
+		"/Users/krbalmryde/Dropbox/Class-Projects/ISTA555/NSAInterview/docs/project3_data/org_top_membersSLASHemployees"
 	],
 	"find":
 	{
-		"height": 88.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -541,6 +513,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"vUV",
+			"texCoord",
 			"	if (status == GL_FALSE) {\n		GLint infoLogLength;\n		\n		glGet",
 			"Evaluator",
 			"TweetParser",
@@ -666,9 +640,7 @@
 			"dev",
 			"File",
 			"Proj",
-			"bi_dev",
-			"make_feature_dist",
-			"🙌"
+			"bi_dev"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -715,157 +687,13 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "NiftiViewer.sublime-project",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 820,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								795,
-								795
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 315.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "niftiViewer/NiftiViewer.mm",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 31651,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Objective-C/Objective-C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2207.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/aluminum/osx/src/Aluminum/ResourceHandler.mm",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11953,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1667,
-								1667
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Objective-C/Objective-C++.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 716.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/Users/krbalmryde/Dropbox/Code-Projects/EVL/aluminum/src/Aluminum/FBO.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 21361,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/Users/krbalmryde/Dropbox/Code-Projects/misc/OpenGL/DevCookBook/Chapter2/src/GLSLShader.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3013,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								895,
-								913
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 588.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
+			]
+		},
+		{
+			"sheets":
+			[
 			]
 		}
 	],
@@ -886,11 +714,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -919,6 +754,26 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"sim",
+				"Resources/shaders/simple.vsh"
+			],
+			[
+				"simple",
+				"Resources/shaders/simple.fsh"
+			],
+			[
+				"text",
+				"Resources/shaders/texture.vsh"
+			],
+			[
+				"blen",
+				"Resources/shaders/blend.vsh"
+			],
+			[
+				"blend",
+				"Resources/shaders/blend.fsh"
+			],
 			[
 				"fbo",
 				"aluminum/FBO.cpp"
@@ -1098,14 +953,14 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 204.0,
 	"status_bar_visible": true,
 	"template_settings":

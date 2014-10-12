@@ -148,7 +148,7 @@ public:
         cubeMB2.init(md1b, 0, -1, 1, -1);
         rectMB.init(md2, 0, -1, 1, -1);
         
-        glClearColor(0.2,0.2,0.2,1.0);
+//        glClearColor(0.2,0.2,0.2,1.0);
     }
 
 
@@ -194,9 +194,6 @@ public:
         glDepthFunc(GL_LEQUAL);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);  //glBlendFunc(GL_ZERO, GL_SRC_COLOR); //glBlendFuncSeparate(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA, GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
         
-       
-        
-
         
         drawNii(simpleShader, fboA, brainOpacity, brain);
         drawNiiFBO(simpleShader, fboB, timePerc, clusters);
@@ -315,8 +312,7 @@ public:
             fboB.texture.unbind(GL_TEXTURE1);
         }
         blendShader.unbind();
-        
-        
+
     }
 
 
@@ -361,12 +357,12 @@ public:
 
                 for (int i=0; i < images.size(); i++) {
                     //pass 1 for first cluster
-                    glUniform4fv(shader.uniform("vColor0"), 1, glm::value_ptr(images[0].color));
+                    glUniform4fv(shader.uniform("vColor0"), 1, glm::value_ptr(images[i].color));
                     
                     //render the cube
-                    images[0].bind(GL_TEXTURE0);
+                    images[i].bind(GL_TEXTURE0);
                         cubeMB.draw();
-                    images[0].unbind(GL_TEXTURE0);
+                    images[i].unbind(GL_TEXTURE0);
 
                 }
             
