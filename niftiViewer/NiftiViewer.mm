@@ -83,6 +83,8 @@ public:
     GLuint vaoX, vaoY, vaoZ;
     GLuint vboX, vboY, vboZ;
 
+    //background colour
+    glm::vec4 bg=glm::vec4(0.5,0.5,1,1);
     
     /*=============================
      *          intiFBO()         *
@@ -147,8 +149,7 @@ public:
         cubeMB.init(md1a, 0, -1, 1, -1);
         cubeMB2.init(md1b, 0, -1, 1, -1);
         rectMB.init(md2, 0, -1, 1, -1);
-        
-//        glClearColor(0.2,0.2,0.2,1.0);
+
     }
 
 
@@ -176,13 +177,6 @@ public:
         //get the camera position
         camPos = glm::vec3(glm::inverse(MV) * glm::vec4(0, 0, 0, 1));
 
-        
-       // glScissor(0, 0, width, height);
-//        glViewport(0, 0, (GLsizei) width, (GLsizei) height);
-
-//        glClearColor(0.0, 0.0, 0.0, 0.0);
-
-    //    glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
 
         //enable blending and bind the cube vertex array object
         glEnable(GL_BLEND);
@@ -192,109 +186,14 @@ public:
 
         //set the over blending function
         glDepthFunc(GL_LEQUAL);
-        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);  //glBlendFunc(GL_ZERO, GL_SRC_COLOR); //glBlendFuncSeparate(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA, GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+
+        //glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        //glBlendFunc(GL_ZERO, GL_SRC_COLOR);
+        glBlendFuncSeparate(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA, GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
         
         
         drawNii(simpleShader, fboA, brainOpacity, brain);
         drawNiiFBO(simpleShader, fboB, timePerc, clusters);
-        
-//        glViewport(0,0,width,height);
-
-        
-  //      drawNii(simpleShader,brainOpacity, brain);
-        //drawNii(simpleShader,timePerc, clusters[0]);
-        
-/*
-        fboA.bind(); 
-        {
-            glDisable(GL_DEPTH_TEST);
-            glEnable(GL_BLEND);
-            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);  //glBlendFunc(GL_ZERO, GL_SRC_COLOR); //glBlendFuncSeparate(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA, GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
-            
-            glViewport(0, 0, (GLsizei) 512, (GLsizei) 512);
-            
-            glClearColor(0.0, 0.0, 0.0, 0.0);
-            
-            glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
-
-//            simpleShader.bind(); 
-//            {
-//                //pass shader uniforms
-//                
-//                glUniformMatrix4fv(simpleShader.uniform("MVP"), 1, GL_FALSE, glm::value_ptr(MVP));  // Used in Vertex Shader
-//                glUniform1f(simpleShader.uniform("alpha"), brainOpacity);
-//                glUniform4f(simpleShader.uniform("vColor0"), 1.0,0.0,0.0,0.5);
-//                
-//                //render the cube
-//                brain.bind(GL_TEXTURE0);
-//                    cubeMB.draw();
-//                brain.unbind(GL_TEXTURE0);
-//            } 
-//            simpleShader.unbind();
-            textShader.bind();
-            {
-                //pass shader uniforms
-                glUniformMatrix4fv(textShader.uniform("MVP"), 1, GL_FALSE, glm::value_ptr(mat4(1.0)) );  // Used in Vertex Shader
-                glUniform1i(textShader.uniform("tex0"), 0);
-                
-                //render the cube
-                ttt2.bind(GL_TEXTURE0);
-                rectMB.draw();
-                ttt2.unbind(GL_TEXTURE0);
-                
-            }
-            textShader.unbind();
-        
-        } 
-        fboA.unbind();
-    
-         
-        fboB.bind(); 
-        {
-            //pass shader uniforms
-           
-
-            glDisable(GL_DEPTH_TEST);
-            glEnable(GL_BLEND);
-            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);  //glBlendFunc(GL_ZERO, GL_SRC_COLOR); //glBlendFuncSeparate(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA, GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
-            
-            
-            glViewport(0, 0, (GLsizei) 512, (GLsizei) 512);
-            glClearColor(0.0, 0.0, 0.0, 0.0);
-            glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
-            
-//            mat4 MVP2 = glm::translate(MVP,vec3(0.3,0.f,0.f));
-            textShader.bind();
-            {
-                //pass shader uniforms
-                glUniformMatrix4fv(textShader.uniform("MVP"), 1, GL_FALSE, glm::value_ptr(mat4(1.0)) );  // Used in Vertex Shader
-                glUniform1i(textShader.uniform("tex0"), 0);
-                
-                //render the cube
-                ttt.bind(GL_TEXTURE0);
-                rectMB.draw();
-                ttt.unbind(GL_TEXTURE0);
-                
-            } 
-            textShader.unbind();
-            
-//            simpleShader.bind(); 
-//            {
-//                //pass shader uniforms
-//                glUniformMatrix4fv(simpleShader.uniform("MVP"), 1, GL_FALSE, glm::value_ptr(MVP2));  // Used in Vertex Shader
-//                glUniform1f(simpleShader.uniform("alpha"), timePerc);
-//                glUniform4f(simpleShader.uniform("vColor0"), 0.0,1.0,0.0,0.5);
-//                
-//                //render the cube
-//                brain.bind(GL_TEXTURE0);
-//                    cubeMB2.draw();
-//                brain.unbind(GL_TEXTURE0);
-//            } 
-//            simpleShader.unbind();
-            
-        } 
-        fboB.unbind();
-*/
         
       
         glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
@@ -335,11 +234,13 @@ public:
 
 //            glDisable(GL_DEPTH_TEST);
             glEnable(GL_BLEND);
-            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);  //glBlendFunc(GL_ZERO, GL_SRC_COLOR); //glBlendFuncSeparate(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA, GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+            //glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+            //glBlendFunc(GL_ZERO, GL_SRC_COLOR);
+            glBlendFuncSeparate(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA, GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
             
             glViewport(0, 0, (GLsizei) height, (GLsizei) width);
             
-//            glClearColor(1.0, 0.0, 0.0, 1.0);
+            glClearColor(bg.r, bg.g, bg.b, bg.a);
             
             glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
             
@@ -365,16 +266,6 @@ public:
                     images[i].unbind(GL_TEXTURE0);
 
                 }
-            
-                /*
-                //pass 2 for first cluster /etc...
-                glUniform4fv(shader.uniform("vColor0"), 1, glm::value_ptr(image.color));
-                
-                //render the cube
-                image.bind(GL_TEXTURE0);
-                cubeMB.draw();
-                image.unbind(GL_TEXTURE0);
-                */
             }
             shader.unbind();
         }
@@ -388,12 +279,14 @@ public:
             
                 //            glDisable(GL_DEPTH_TEST);
                 glEnable(GL_BLEND);
-                glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);  //glBlendFunc(GL_ZERO, GL_SRC_COLOR); //glBlendFuncSeparate(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA, GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
-                
+                //glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+//                glBlendFunc(GL_ZERO, GL_SRC_COLOR);
+                glBlendFuncSeparate(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA, GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
+            
                 glViewport(0, 0, (GLsizei) height, (GLsizei) width);
                 
-                //            glClearColor(1.0, 0.0, 0.0, 1.0);
-                
+                glClearColor(bg.r, bg.g, bg.b, bg.a);
+            
                 glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
             
             shader.bind();

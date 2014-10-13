@@ -27,6 +27,9 @@
 		837D68C719DCA22C00685334 /* simple.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 837D68C419DC385900685334 /* simple.vsh */; };
 		837D68CA19DCB7CC00685334 /* blend.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 837D68C819DCB7CC00685334 /* blend.fsh */; };
 		837D68CB19DCB7CC00685334 /* blend.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 837D68C919DCB7CC00685334 /* blend.vsh */; };
+		839A5EED19EB594C00260110 /* NiftiMarcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 839A5EEC19EB594C00260110 /* NiftiMarcher.mm */; };
+		839A5EF019EB693E00260110 /* Tables.h in Sources */ = {isa = PBXBuildFile; fileRef = 839A5EEF19EB693E00260110 /* Tables.h */; };
+		839A5EF219EB69ED00260110 /* NiftiMarcher.h in Sources */ = {isa = PBXBuildFile; fileRef = 839A5EF119EB69ED00260110 /* NiftiMarcher.h */; };
 		83B8D0D019E7485900E0C97A /* texture.fsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83B8D0CC19E6DF6500E0C97A /* texture.fsh */; };
 		83B8D0D319E749F100E0C97A /* hubble.jpg in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83B8D0D219E749F100E0C97A /* hubble.jpg */; };
 		83BFE5CB19ABF168009E5C84 /* cluster.vsh in Copy Files (86 items) */ = {isa = PBXBuildFile; fileRef = 83BFE5C519ABDF12009E5C84 /* cluster.vsh */; };
@@ -166,6 +169,9 @@
 		837D68C419DC385900685334 /* simple.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = simple.vsh; sourceTree = "<group>"; };
 		837D68C819DCB7CC00685334 /* blend.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = blend.fsh; sourceTree = "<group>"; };
 		837D68C919DCB7CC00685334 /* blend.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = blend.vsh; sourceTree = "<group>"; };
+		839A5EEC19EB594C00260110 /* NiftiMarcher.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = NiftiMarcher.mm; sourceTree = "<group>"; };
+		839A5EEF19EB693E00260110 /* Tables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tables.h; sourceTree = "<group>"; };
+		839A5EF119EB69ED00260110 /* NiftiMarcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NiftiMarcher.h; sourceTree = "<group>"; };
 		83B8D0CC19E6DF6500E0C97A /* texture.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = texture.fsh; sourceTree = "<group>"; };
 		83B8D0D219E749F100E0C97A /* hubble.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hubble.jpg; path = resources/hubble.jpg; sourceTree = "<group>"; };
 		83BFE5C519ABDF12009E5C84 /* cluster.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = cluster.vsh; sourceTree = "<group>"; };
@@ -582,6 +588,9 @@
 		B5E384DC1780C9B400E8C57D /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				839A5EEF19EB693E00260110 /* Tables.h */,
+				839A5EF119EB69ED00260110 /* NiftiMarcher.h */,
+				839A5EEC19EB594C00260110 /* NiftiMarcher.mm */,
 				92A20F8F186168C800640343 /* Main.mm */,
 				8330CD58198328D20004660B /* NiftiViewer.mm */,
 				D213233618BD29360024DCB6 /* ActionProxy.mm */,
@@ -671,11 +680,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				839A5EF219EB69ED00260110 /* NiftiMarcher.h in Sources */,
+				839A5EF019EB693E00260110 /* Tables.h in Sources */,
 				83537F0F198997D800940A7E /* nifti1_io.c in Sources */,
 				83537F10198997D800940A7E /* nifti1_io.h in Sources */,
 				83537F11198997D800940A7E /* nifti1.h in Sources */,
 				83537F13198997D800940A7E /* znzlib.c in Sources */,
 				83537F14198997D800940A7E /* znzlib.h in Sources */,
+				839A5EED19EB594C00260110 /* NiftiMarcher.mm in Sources */,
 				8330CD5B198344A10004660B /* Main.mm in Sources */,
 				8330CD5A198328D20004660B /* NiftiViewer.mm in Sources */,
 			);
